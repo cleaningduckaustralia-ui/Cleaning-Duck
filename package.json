@@ -1,0 +1,17 @@
+{
+  "name": "cleaning-duck-australia",
+  "version": "1.0.0",
+  "description": "Cleaning Duck Australia — Full-stack MERN website",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "seed": "cd server && node utils/seeder.js",
+    "start": "cd server && node server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

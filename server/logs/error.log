@@ -1,0 +1,373 @@
+2026-07-13 11:41:29 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 13:49:39 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:24:31 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:24:41 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:24:42 [error]: Error: Not authorized to access this route
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:19:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:24:42 [error]: Error: Not authorized to access this route
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:19:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:24:42 [error]: Error: No refresh token
+    at exports.refresh (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\controllers\authController.js:76:27)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:24:51 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:24:52 [error]: MongooseError: Operation `testimonials.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-07-15 16:24:52 [error]: MongooseError: Operation `faqs.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-07-15 16:25:01 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:25:02 [error]: MongooseError: Operation `testimonials.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-07-15 16:25:02 [error]: MongooseError: Operation `faqs.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-07-15 16:25:11 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:25:21 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:25:31 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:25:41 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:25:51 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:26:01 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:26:10 [error]: Error: Not authorized to access this route
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:19:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:26:10 [error]: Error: Not authorized to access this route
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:19:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:26:10 [error]: Error: No refresh token
+    at exports.refresh (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\controllers\authController.js:76:27)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:26:11 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:26:21 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:26:31 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:26:41 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:26:45 [error]: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-07-15 16:26:51 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:26:59 [error]: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-07-15 16:27:01 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:27:11 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:27:21 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:27:31 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:27:41 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:27:51 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:27:54 [error]: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-07-15 16:28:01 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:28:11 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:28:21 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:28:31 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:28:41 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:28:51 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:29:01 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:29:05 [error]: Error: Not authorized to access this route
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:19:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:29:05 [error]: Error: Not authorized to access this route
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:19:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:29:05 [error]: Error: No refresh token
+    at exports.refresh (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\controllers\authController.js:76:27)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:29:11 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:29:15 [error]: MongooseError: Operation `testimonials.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-07-15 16:29:15 [error]: MongooseError: Operation `faqs.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-07-15 16:29:21 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:29:25 [error]: MongooseError: Operation `testimonials.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-07-15 16:29:25 [error]: MongooseError: Operation `faqs.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+2026-07-15 16:29:31 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:29:41 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:29:51 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:30:02 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:30:12 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:30:22 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:30:32 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:30:42 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:30:52 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:31:02 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:31:12 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:31:22 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:31:32 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:31:42 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:31:52 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:32:02 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:32:12 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:32:22 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:32:32 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:32:42 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:32:52 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:33:02 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:33:12 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:33:22 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:33:32 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:33:42 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:33:52 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:34:02 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:34:12 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:34:22 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:34:32 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:34:42 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:34:52 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:35:02 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:35:12 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:35:22 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:35:32 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:35:42 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:35:52 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:36:02 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:36:12 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:36:22 [error]: MongoDB Connection Error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+2026-07-15 16:36:28 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:36:33 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:36:38 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:36:43 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:36:48 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:36:53 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:36:58 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:37:03 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:37:08 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:37:13 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:37:18 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:37:23 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:37:28 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:37:33 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:37:38 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:37:43 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:37:48 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:37:53 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:37:58 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:38:04 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:38:09 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:38:14 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:38:19 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:38:24 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:38:29 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:38:34 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:38:39 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:38:44 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:38:49 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:38:54 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:38:59 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:39:04 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:39:09 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:39:14 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:39:19 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:39:24 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:39:29 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:39:34 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:39:39 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:39:44 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:39:49 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:39:54 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:39:59 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:40:04 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:40:09 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:40:14 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:40:19 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:40:24 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:40:29 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:40:34 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:40:39 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:40:45 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:40:50 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:40:55 [error]: MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nkmul7w.mongodb.net
+2026-07-15 16:43:01 [error]: Error: Not authorized to access this route
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:19:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:43:01 [error]: Error: Not authorized to access this route
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:19:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:43:01 [error]: Error: No refresh token
+    at exports.refresh (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\controllers\authController.js:76:27)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:48:22 [error]: Error: Not authorized to access this route
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:19:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:48:22 [error]: Error: Not authorized to access this route
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:19:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:48:22 [error]: Error: Not authorized to access this route
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:19:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:48:22 [error]: Error: Not authorized to access this route
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:19:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:54:39 [error]: Error: Media not found
+    at exports.deleteMedia (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\controllers\mediaController.js:40:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-07-15 16:58:44 [error]: Error: Token expired
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:43:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
+2026-07-15 16:58:44 [error]: Error: Token expired
+    at exports.protect (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\middlewares\auth.js:43:19)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ACER\.gemini\antigravity-ide\scratch\cleaning-duck-australia\server\node_modules\express\lib\router\index.js:280:10)
