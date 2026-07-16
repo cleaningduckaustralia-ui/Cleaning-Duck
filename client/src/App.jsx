@@ -53,7 +53,7 @@ const PublicLayout = ({ children }) => (
 const App = () => (
   <HelmetProvider>
     <AuthProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
         <Suspense fallback={<Spinner />}>
           <Routes>
