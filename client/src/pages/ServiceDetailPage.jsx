@@ -6,6 +6,7 @@ import QuoteFormSection from '../components/home/QuoteFormSection';
 import api from '../services/api';
 import { generateServiceSchema, generateBreadcrumbSchema, generateFAQSchema } from '../utils/seoData';
 import { BRAND } from '../utils/constants';
+import { publicAsset } from '../utils/pathHelpers';
 import galleryImages from '../data/galleryImages.json';
 
 // ─── Static fallback service data (used when API unavailable) ─────────────────
@@ -22,7 +23,7 @@ const STATIC_SERVICES = {
       'Wall spot cleaning', 'Bond-back guarantee',
     ],
     benefits: ['Guaranteed bond refund', '100% satisfaction guarantee', 'Same-day service available', 'Fully insured team'],
-    image: '/images/BondEnd of lease/IMG_3067.jpg',
+    image: publicAsset('/images/BondEnd of lease/IMG_3067.jpg'),
     galleryCategories: ['BondEnd of lease'],
     faq: [
       { question: 'Do you offer a bond-back guarantee?', answer: 'Yes! If your agent finds any issues related to our cleaning, we come back and fix it free of charge.' },
@@ -42,7 +43,7 @@ const STATIC_SERVICES = {
       'Moves light furniture', 'Eco-friendly products',
     ],
     benefits: ['Removes 99% of bacteria', 'Allergy-friendly process', 'No harsh chemicals', 'Extends carpet life'],
-    image: '/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg',
+    image: publicAsset('/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg'),
     pricing: { from: 'Starts from $33', displayText: 'Starts from $33' },
     galleryCategories: ['Carpet cleaning'],
     faq: [
@@ -57,7 +58,7 @@ const STATIC_SERVICES = {
     longDescription: '<p>We clean all types of upholstery including fabric sofas, leather lounges, dining chairs, and car seats. Our gentle yet effective process removes stains, odours, dust mites and bacteria without damaging delicate fabrics.</p>',
     features: ['All fabric types — microfibre, velvet, cotton', 'Leather cleaning & conditioning', 'Stain pre-treatment', 'Deodorising', 'Safe for kids & pets', 'Dining chairs & ottomans'],
     benefits: ['Extends furniture life', 'Removes allergens', 'Restores original colour', 'Fast drying'],
-    image: '/images/Upholstery/PHOTO-2026-02-09-16-11-51.jpg',
+    image: publicAsset('/images/Upholstery/PHOTO-2026-02-09-16-11-51.jpg'),
     pricing: { from: 'Starts from $33', displayText: 'Starts from $33' },
     galleryCategories: ['Upholstery'],
     faq: [{ question: 'Is cleaning safe for my leather sofa?', answer: 'Yes, we use specialist leather-safe cleaners and conditioners that clean and protect the leather.' }],
@@ -80,7 +81,7 @@ const STATIC_SERVICES = {
     longDescription: '<p>Our exterior house washing service uses a combination of soft washing and pressure washing techniques to safely remove mould, mildew, algae, dirt, and stains from all exterior surfaces including brick, render, weatherboard, and cladding.</p>',
     features: ['Walls, eaves & fascias', 'Driveway & paths', 'Fences & retaining walls', 'Soft wash for delicate surfaces', 'Mould & mildew treatment', 'Biodegradable detergents', 'Before & after photos', 'All house types'],
     benefits: ['Prevents long-term damage', 'Improves curb appeal', 'Removes health hazards', 'Protects paintwork'],
-    image: '/images/exterior-house.jpg',
+    image: publicAsset('/images/exterior-house.jpg'),
     galleryCategories: null,
     faq: [{ question: 'Will pressure washing damage my render?', answer: 'No — we use soft washing at low pressure for rendered surfaces to safely remove mould without causing damage.' }],
   },
@@ -91,7 +92,7 @@ const STATIC_SERVICES = {
     longDescription: '<p>Lichen, moss and algae don\'t just look bad — they can cause permanent damage to your roof tiles and shingles. Our specialist roof cleaning service uses safe, controlled techniques to restore your roof and prevent future regrowth.</p>',
     features: ['Lichen & moss removal', 'Algae treatment', 'Soft wash technique', 'All tile types — terracotta, concrete, metal', 'Preventative treatment', 'Gutter inspection included', 'Safe work practices', 'Fully insured'],
     benefits: ['Extends roof life by years', 'Prevents leaks', 'Improves home value', 'Regrowth prevention'],
-    image: '/images/Exterior Roof/IMG_2788.PNG',
+    image: publicAsset('/images/Exterior Roof/IMG_2788.PNG'),
     galleryCategories: ['Exterior Roof'],
     faq: [{ question: 'How long does roof cleaning take?', answer: 'Most residential roofs take 3–5 hours. Larger or heavily affected roofs may take longer.' }],
   },
@@ -102,7 +103,7 @@ const STATIC_SERVICES = {
     longDescription: '<p>Our commercial-grade pressure washing equipment delivers outstanding results on all hard surfaces. From oil-stained driveways to grimy patios, we restore surfaces to a like-new appearance safely and efficiently.</p>',
     features: ['Driveways & carports', 'Patios & entertaining areas', 'Decks & timber (soft wash)', 'Fences & walls', 'Pool surrounds', 'Oil & grease removal', 'Concrete & pavers', 'Commercial properties'],
     benefits: ['Removes years of buildup', 'Prevents slip hazards', 'Boosts property value', 'Fast results'],
-    image: '/images/Exterior Drivwway/80fff1e8-5098-4dde-ad47-45b979652525.JPG',
+    image: publicAsset('/images/Exterior Drivwway/80fff1e8-5098-4dde-ad47-45b979652525.JPG'),
     galleryCategories: ['Exterior Drivwway'],
     faq: [{ question: 'Can you remove oil stains from my driveway?', answer: 'Yes, we pre-treat oil and grease stains with specialist degreasers before pressure washing for best results.' }],
   },
@@ -113,7 +114,7 @@ const STATIC_SERVICES = {
     longDescription: '<p>Blocked gutters cause serious water damage to your roof, walls, and foundations. Our comprehensive gutter cleaning service removes all debris, flushes downpipes, and inspects for damage — protecting your home year-round.</p>',
     features: ['Full debris removal', 'Downpipe flushing', 'Roof valley clearing', 'Gutter guard inspection', 'Damage report provided', 'Before & after photos', 'All roof heights', '2-storey specialists'],
     benefits: ['Prevents water damage', 'Protects foundations', 'Avoids pest nesting', 'Extends gutter life'],
-    image: '/images/Exterior Gutter/86d3155f-9481-4660-b028-61cbea3678af.JPG',
+    image: publicAsset('/images/Exterior Gutter/86d3155f-9481-4660-b028-61cbea3678af.JPG'),
     galleryCategories: ['Exterior Gutter'],
     faq: [{ question: 'How often should gutters be cleaned?', answer: 'At least twice a year — before and after storm season. Properties near trees may need more frequent cleaning.' }],
   },
@@ -124,7 +125,7 @@ const STATIC_SERVICES = {
     longDescription: '<p>Dirty solar panels can lose up to 30% of their power output. Our specialist cleaning service uses purified water and gentle brushes to safely clean all panel types, maximising your energy generation and ROI.</p>',
     features: ['Purified water system', 'No harsh chemicals', 'Soft brush technique', 'All panel brands', 'Single & multi-storey', 'Safety harness certified', 'Output report available', 'Regular maintenance plans'],
     benefits: ['Restore up to 30% lost output', 'Extends panel warranty', 'Chemical-free process', 'Maximises ROI'],
-    image: '/images/Exterior Solar/f8492476-0ba0-4e1d-8d3e-55a102139a7b.JPG',
+    image: publicAsset('/images/Exterior Solar/f8492476-0ba0-4e1d-8d3e-55a102139a7b.JPG'),
     galleryCategories: ['Exterior Solar'],
     faq: [{ question: 'Will cleaning damage my panels?', answer: 'No — we use a purified water and soft brush system specifically designed for solar panels with no harsh chemicals.' }],
   },

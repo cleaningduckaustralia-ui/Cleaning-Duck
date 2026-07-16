@@ -1,55 +1,56 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { publicAsset } from '../../utils/pathHelpers';
 
 // ─── Reliable Unsplash gallery images ─────────────────────────────────────────
 const galleryImages = [
   {
-    src: '/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg',
+    src: publicAsset('/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg'),
     alt: 'Professional carpet steam cleaning result',
     label: 'Carpet Cleaning',
   },
   {
-    src: '/images/Exterior Roof/IMG_2788.PNG',
+    src: publicAsset('/images/Exterior Roof/IMG_2788.PNG'),
     alt: 'Roof tile cleaning Brisbane home',
     label: 'Roof Washing',
   },
   {
-    src: '/images/Exterior Drivwway/e8b10b9b-721e-4c77-b6ae-57bd5c2d8f42.JPG',
+    src: publicAsset('/images/Exterior Drivwway/e8b10b9b-721e-4c77-b6ae-57bd5c2d8f42.JPG'),
     alt: 'Pressure washing driveway concrete',
     label: 'Driveway Pressure Washing',
   },
   {
-    src: '/images/BondEnd of lease/IMG_3259.jpg',
+    src: publicAsset('/images/BondEnd of lease/IMG_3259.jpg'),
     alt: 'Sofa upholstery steam cleaning',
     label: 'Upholstery Cleaning',
   },
   {
-    src: '/images/Exterior Solar/f8492476-0ba0-4e1d-8d3e-55a102139a7b.JPG',
+    src: publicAsset('/images/Exterior Solar/f8492476-0ba0-4e1d-8d3e-55a102139a7b.JPG'),
     alt: 'Solar panel cleaning service Brisbane',
     label: 'Solar Panel Cleaning',
   },
   {
-    src: '/images/BondEnd of lease/IMG_3067.jpg',
+    src: publicAsset('/images/BondEnd of lease/IMG_3067.jpg'),
     alt: 'Bond cleaning spotless kitchen',
     label: 'End of Lease Cleaning',
   },
   {
-    src: '/images/exterior-house.jpg',
+    src: publicAsset('/images/exterior-house.jpg'),
     alt: 'Exterior house washing Brisbane',
     label: 'House Washing',
   },
   {
-    src: '/images/Exterior Gutter/29768303-e678-4624-aba9-ed2acb7d2dd7.JPG',
+    src: publicAsset('/images/Exterior Gutter/29768303-e678-4624-aba9-ed2acb7d2dd7.JPG'),
     alt: 'Gutter cleaning clearing debris',
     label: 'Gutter Cleaning',
   },
   {
-    src: '/images/Presale/IMG_3623.jpg',
+    src: publicAsset('/images/Presale/IMG_3623.jpg'),
     alt: 'Pre-sale cleaning spotless home',
     label: 'Pre Sale Cleaning',
   },
   {
-    src: '/images/Post con/IMG_3240.jpg',
+    src: publicAsset('/images/Post con/IMG_3240.jpg'),
     alt: 'Post construction cleaning new build',
     label: 'Post Construction Cleaning',
   },

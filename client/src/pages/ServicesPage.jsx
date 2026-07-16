@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import SEOHead from '../components/common/SEOHead';
 import { generateBreadcrumbSchema } from '../utils/seoData';
 import { BRAND } from '../utils/constants';
+import { publicAsset } from '../utils/pathHelpers';
 
 // ─── Specialised services ─────────────────────────────────────────────────────
 const SPECIALISED_SERVICES = [
@@ -13,7 +14,7 @@ const SPECIALISED_SERVICES = [
     subtitle: 'Bond-Back Guaranteed',
     description: 'Thorough end-of-lease cleaning to get your full bond back. Every room, appliance, surface and window cleaned to real estate inspection standards.',
     icon: '🏠',
-    image: '/images/BondEnd of lease/IMG_2811.jpg',
+    image: publicAsset('/images/BondEnd of lease/IMG_2811.jpg'),
     features: ['All rooms & bathrooms', 'Oven & appliances', 'Windows & skirting boards', 'Bond-back guarantee'],
     color: 'from-orange-500 to-red-500',
   },
@@ -23,7 +24,7 @@ const SPECIALISED_SERVICES = [
     subtitle: 'Builder Clean Specialists',
     description: 'Remove dust, debris, paint splatters, adhesive and construction residue from every surface. Get your new build or renovation handover-ready.',
     icon: '🏗️',
-    image: '/images/Post con/IMG_3239.jpg',
+    image: publicAsset('/images/Post con/IMG_3239.jpg'),
     features: ['Dust & debris removal', 'Paint splatter removal', 'Floor & tile cleaning', 'Window & glass clean'],
     color: 'from-slate-600 to-blue-700',
   },
@@ -33,7 +34,7 @@ const SPECIALISED_SERVICES = [
     subtitle: 'Sell Faster & For More',
     description: 'Maximise your sale price with a presentation-ready clean. We prep your home for photography, open homes, and buyer inspections.',
     icon: '🏡',
-    image: '/images/Presale/IMG_3341.jpg',
+    image: publicAsset('/images/Presale/IMG_3341.jpg'),
     features: ['Full interior deep clean', 'Carpet steam clean', 'Exterior & windows', 'Photo-ready finish'],
     color: 'from-emerald-600 to-teal-700',
   },
@@ -56,7 +57,7 @@ const INTERIOR_SERVICES = [
     description:
       'Professional steam carpet cleaning that removes deep stains, allergens, pet odours and bacteria — leaving carpets fresh, sanitised, and looking brand new.',
     icon: '🧹',
-    image: '/images/BondEnd of lease/IMG_3016.jpg',
+    image: publicAsset('/images/BondEnd of lease/IMG_3016.jpg'),
     features: ['Hot water extraction', 'Stain pre-treatment', 'Pet odour removal', 'Dry in 2–4 hours'],
     color: 'from-amber-500 to-orange-500',
     bg: 'bg-amber-50',
@@ -69,7 +70,7 @@ const INTERIOR_SERVICES = [
     description:
       'Restore your sofas, lounges, chairs and fabric surfaces with our safe deep-clean upholstery service. Safe for all fabric types including microfibre and velvet.',
     icon: '🛋️',
-    image: '/images/BondEnd of lease/IMG_3259.jpg',
+    image: publicAsset('/images/BondEnd of lease/IMG_3259.jpg'),
     features: ['All fabric types', 'Stain & odour removal', 'Safe for kids & pets', 'Fast drying'],
     color: 'from-orange-400 to-amber-500',
     bg: 'bg-orange-50',
@@ -85,7 +86,7 @@ const EXTERIOR_SERVICES = [
     description:
       'Professional roof cleaning to remove lichen, moss and algae — extending the life of your roof and dramatically improving your home\'s curb appeal.',
     icon: '🏗️',
-    image: '/images/Exterior Roof/IMG_2787.PNG',
+    image: publicAsset('/images/Exterior Roof/IMG_2787.PNG'),
     features: ['Lichen & moss removal', 'Soft wash technique', 'All roof types', 'Extends roof life'],
     color: 'from-slate-500 to-blue-500',
     bg: 'bg-slate-50',
@@ -98,7 +99,7 @@ const EXTERIOR_SERVICES = [
     description:
       'Complete exterior house wash that removes mould, mildew, dirt, and stains from walls, eaves, fences and pathways — restoring your home\'s original look.',
     icon: '🏡',
-    image: '/images/Presale/IMG_3456.jpg',
+    image: publicAsset('/images/Presale/IMG_3456.jpg'),
     features: ['Soft & pressure wash', 'Mould & mildew removal', 'Eaves & gutters', 'All surface types'],
     color: 'from-blue-500 to-teal-500',
     bg: 'bg-blue-50',
@@ -111,7 +112,7 @@ const EXTERIOR_SERVICES = [
     description:
       'Restore your solar panel efficiency with our specialist cleaning — removing dust, bird droppings and grime that reduce power output by up to 30%.',
     icon: '☀️',
-    image: '/images/Exterior Solar/f8492476-0f73-4554-ba5e-85c13e51d454.PNG',
+    image: publicAsset('/images/Exterior Solar/f8492476-0f73-4554-ba5e-85c13e51d454.PNG'),
     features: ['Purified water system', 'No harsh chemicals', 'All panel types', 'Output optimised'],
     color: 'from-yellow-400 to-orange-400',
     bg: 'bg-yellow-50',
@@ -124,7 +125,7 @@ const EXTERIOR_SERVICES = [
     description:
       'High-pressure wash for driveways, patios, decks, fences and concrete — blasting away years of grime, oil stains, algae and discolouration.',
     icon: '💦',
-    image: '/images/Exterior Drivwway/e8b10b98-b80c-4dd0-97eb-bd8eecdd9822.PNG',
+    image: publicAsset('/images/Exterior Drivwway/e8b10b98-b80c-4dd0-97eb-bd8eecdd9822.PNG'),
     features: ['Driveways & patios', 'Decks & fences', 'Oil & grease removal', 'Concrete & pavers'],
     color: 'from-cyan-500 to-blue-500',
     bg: 'bg-cyan-50',
@@ -137,7 +138,7 @@ const EXTERIOR_SERVICES = [
     description:
       'Keep your gutters flowing freely. We clear leaves, debris and blockages to protect your home from water damage, leaks and overflow.',
     icon: '🌿',
-    image: '/images/Exterior Gutter/86d3155f-8706-4fcb-8914-cf9da4eef2eb.PNG',
+    image: publicAsset('/images/Exterior Gutter/86d3155f-8706-4fcb-8914-cf9da4eef2eb.PNG'),
     features: ['Leaf & debris removal', 'Downpipe flush', 'Damage inspection', 'Before & after photos'],
     color: 'from-green-500 to-teal-500',
     bg: 'bg-green-50',

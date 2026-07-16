@@ -2,30 +2,31 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { BRAND } from '../../utils/constants';
+import { publicAsset } from '../../utils/pathHelpers';
 
 const heroSlides = [
   {
-    url: '/images/exterior-house.jpg',
+    url: publicAsset('/images/exterior-house.jpg'),
     alt: 'Professional exterior house washing',
     link: '/services/exterior-house-washing',
   },
   {
-    url: '/images/BondEnd of lease/IMG_3067.jpg',
+    url: publicAsset('/images/BondEnd of lease/IMG_3067.jpg'),
     alt: 'Detailed end of lease cleaning',
     link: '/services/end-of-lease-cleaning',
   },
   {
-    url: '/images/Exterior Roof/IMG_2788.PNG',
+    url: publicAsset('/images/Exterior Roof/IMG_2788.PNG'),
     alt: 'Pressure washing roof and solar panels',
     link: '/services/roof-cleaning',
   },
   {
-    url: '/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg',
+    url: publicAsset('/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg'),
     alt: 'Professional carpet steam cleaning',
     link: '/services/carpet-cleaning',
   },
   {
-    url: '/images/Exterior Drivwway/e8b10b9b-721e-4c77-b6ae-57bd5c2d8f42.JPG',
+    url: publicAsset('/images/Exterior Drivwway/e8b10b9b-721e-4c77-b6ae-57bd5c2d8f42.JPG'),
     alt: 'Driveway pressure cleaning',
     link: '/services/pressure-cleaning',
   },

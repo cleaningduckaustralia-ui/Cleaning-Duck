@@ -37,7 +37,7 @@ const PostConstructionPage = () => {
       <div className="page-hero">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="/images/Post construction/IMG_3252.jpg"
+            src={publicAsset('/images/Post construction/IMG_3252.jpg')}
             alt="Post construction cleaning"
             className="w-full h-full object-cover"
           />
@@ -122,7 +122,7 @@ const PostConstructionPage = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <img
-                src="/images/Post construction/IMG_3241.jpg"
+                src={publicAsset('/images/Post construction/IMG_3241.jpg')}
                 alt="Post construction clean property"
                 className="rounded-3xl shadow-2xl w-full h-80 object-cover"
               />

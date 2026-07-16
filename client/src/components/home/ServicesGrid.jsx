@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { publicAsset } from '../../utils/pathHelpers';
 
 const INTERIOR_SERVICES = [
   {
@@ -10,7 +11,7 @@ const INTERIOR_SERVICES = [
     shortDescription:
       'Professional steam carpet cleaning that removes deep stains, allergens, and odours — leaving carpets fresh and like new.',
     icon: '🧹',
-    image: '/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg',
+    image: publicAsset('/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg'),
     color: 'from-amber-500 to-orange-500',
   },
   {
@@ -20,7 +21,7 @@ const INTERIOR_SERVICES = [
     shortDescription:
       'Restore your sofas, lounges, chairs and fabric surfaces with our safe, deep-clean upholstery service.',
     icon: '🛋️',
-    image: '/images/BondEnd of lease/IMG_3259.jpg',
+    image: publicAsset('/images/BondEnd of lease/IMG_3259.jpg'),
     color: 'from-orange-400 to-amber-500',
   },
 ];
@@ -33,7 +34,7 @@ const EXTERIOR_SERVICES = [
     shortDescription:
       'Complete exterior house wash that removes mould, mildew, dirt, and stains from walls, eaves, and pathways.',
     icon: '🏡',
-    image: '/images/exterior-house.jpg',
+    image: publicAsset('/images/exterior-house.jpg'),
     color: 'from-blue-500 to-teal-500',
   },
   {
@@ -43,7 +44,7 @@ const EXTERIOR_SERVICES = [
     shortDescription:
       'Professional roof cleaning to remove lichen, moss and algae — extending the life of your roof and improving curb appeal.',
     icon: '🏗️',
-    image: '/images/Exterior Roof/IMG_2788.PNG',
+    image: publicAsset('/images/Exterior Roof/IMG_2788.PNG'),
     color: 'from-slate-500 to-blue-500',
   },
   {
@@ -53,7 +54,7 @@ const EXTERIOR_SERVICES = [
     shortDescription:
       'High-pressure wash for driveways, patios, decks, fences, and concrete — blasting away years of grime and grease.',
     icon: '💦',
-    image: '/images/Exterior Drivwway/80fff1e8-5098-4dde-ad47-45b979652525.JPG',
+    image: publicAsset('/images/Exterior Drivwway/80fff1e8-5098-4dde-ad47-45b979652525.JPG'),
     color: 'from-cyan-500 to-blue-500',
   },
   {
@@ -63,7 +64,7 @@ const EXTERIOR_SERVICES = [
     shortDescription:
       'Keep your gutters flowing freely. We clear leaves, debris and blockages to protect your home from water damage.',
     icon: '🌿',
-    image: '/images/Exterior Gutter/29768303-e678-4624-aba9-ed2acb7d2dd7.JPG',
+    image: publicAsset('/images/Exterior Gutter/29768303-e678-4624-aba9-ed2acb7d2dd7.JPG'),
     color: 'from-green-500 to-teal-500',
   },
   {
@@ -73,7 +74,7 @@ const EXTERIOR_SERVICES = [
     shortDescription:
       'Restore your solar panel efficiency with our specialist cleaning service — removing dust, bird droppings, and grime.',
     icon: '☀️',
-    image: '/images/Exterior Solar/f8492476-0ba0-4e1d-8d3e-55a102139a7b.JPG',
+    image: publicAsset('/images/Exterior Solar/f8492476-0ba0-4e1d-8d3e-55a102139a7b.JPG'),
     color: 'from-yellow-400 to-orange-400',
   },
 ];

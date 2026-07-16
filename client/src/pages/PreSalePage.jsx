@@ -36,7 +36,7 @@ const PreSalePage = () => {
       <div className="page-hero">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="/images/Presale/IMG_3623.jpg"
+            src={publicAsset('/images/Presale/IMG_3623.jpg')}
             alt="Pre-sale property cleaning"
             className="w-full h-full object-cover"
           />
@@ -126,7 +126,7 @@ const PreSalePage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <img
-                src="/images/Presale/IMG_3451.jpg"
+                src={publicAsset('/images/Presale/IMG_3451.jpg')}
                 alt="Sparkling clean home ready for sale"
                 className="rounded-3xl shadow-2xl w-full h-80 object-cover"
               />
