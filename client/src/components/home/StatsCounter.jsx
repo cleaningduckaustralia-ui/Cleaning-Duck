@@ -4,13 +4,11 @@ import { motion } from 'framer-motion';
 import { STATS } from '../../utils/constants';
 
 const Counter = ({ value, suffix, duration = 2000 }) => {
-  const [count, setCount]   = useState(0);
-  const [started, setStarted] = useState(false);
-  const { ref, inView }     = useInView({ triggerOnce: true, threshold: 0.3 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (inView && !started) {
-      setStarted(true);
+    if (inView) {
       const steps = 60;
       const increment = value / steps;
       let current = 0;
@@ -25,10 +23,10 @@ const Counter = ({ value, suffix, duration = 2000 }) => {
       }, duration / steps);
       return () => clearInterval(timer);
     }
-  }, [inView, value, duration, started]);
+  }, [inView, value, duration]);
 
   return (
-    <span ref={ref} className="stat-number tabular-nums">
+    <span ref={ref} className="stat-number tabular-nums text-4xl font-bold text-white block my-2">
       {count.toLocaleString()}{suffix}
     </span>
   );

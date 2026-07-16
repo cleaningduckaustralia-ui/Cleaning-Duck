@@ -54,31 +54,17 @@ const ServiceAreasSection = () => {
             </motion.div>
           ))}
 
-          {/* "More areas" card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            <Link to="/service-areas" className="flex items-center justify-center h-full min-h-[120px] p-6 rounded-2xl border-2 border-dashed border-primary/30 hover:border-primary hover:bg-primary/5 transition-all duration-300 group text-center">
-              <div>
-                <div className="text-3xl mb-2">📍</div>
-                <p className="font-semibold text-primary group-hover:text-accent transition-colors">Not listed? Check all areas →</p>
-                <p className="text-neutral-400 text-sm mt-1">We may still service your area</p>
-              </div>
-            </Link>
-          </motion.div>
         </div>
 
-        {/* Map CTA */}
+        {/* Call CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 flex-wrap"
         >
-          <Link to="/service-areas" className="btn-secondary">View Full Service Area Map</Link>
-          <a href={BRAND.phoneHref.primary} className="btn-outline-primary">Call to Confirm Your Area</a>
+          <a href={BRAND.phoneHref.primary} className="btn-primary">Call {BRAND.phone.primary}</a>
+          <a href={BRAND.phoneHref.secondary} className="btn-primary">Call {BRAND.phone.secondary}</a>
         </motion.div>
       </div>
     </section>

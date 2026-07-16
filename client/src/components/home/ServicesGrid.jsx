@@ -10,7 +10,7 @@ const INTERIOR_SERVICES = [
     shortDescription:
       'Professional steam carpet cleaning that removes deep stains, allergens, and odours — leaving carpets fresh and like new.',
     icon: '🧹',
-    image: '/images/BondEnd of lease/IMG_3016.jpg',
+    image: '/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg',
     color: 'from-amber-500 to-orange-500',
   },
   {
@@ -33,7 +33,7 @@ const EXTERIOR_SERVICES = [
     shortDescription:
       'Complete exterior house wash that removes mould, mildew, dirt, and stains from walls, eaves, and pathways.',
     icon: '🏡',
-    image: '/images/Presale/IMG_3456.jpg',
+    image: '/images/exterior-house.jpg',
     color: 'from-blue-500 to-teal-500',
   },
   {
@@ -43,7 +43,7 @@ const EXTERIOR_SERVICES = [
     shortDescription:
       'Professional roof cleaning to remove lichen, moss and algae — extending the life of your roof and improving curb appeal.',
     icon: '🏗️',
-    image: '/images/Exterior Roof/IMG_2787.PNG',
+    image: '/images/Exterior Roof/IMG_2788.PNG',
     color: 'from-slate-500 to-blue-500',
   },
   {
@@ -53,7 +53,7 @@ const EXTERIOR_SERVICES = [
     shortDescription:
       'High-pressure wash for driveways, patios, decks, fences, and concrete — blasting away years of grime and grease.',
     icon: '💦',
-    image: '/images/Exterior Drivwway/e8b10b98-b80c-4dd0-97eb-bd8eecdd9822.PNG',
+    image: '/images/Exterior Drivwway/80fff1e8-5098-4dde-ad47-45b979652525.JPG',
     color: 'from-cyan-500 to-blue-500',
   },
   {
@@ -63,7 +63,7 @@ const EXTERIOR_SERVICES = [
     shortDescription:
       'Keep your gutters flowing freely. We clear leaves, debris and blockages to protect your home from water damage.',
     icon: '🌿',
-    image: '/images/Exterior Gutter/86d3155f-8706-4fcb-8914-cf9da4eef2eb.PNG',
+    image: '/images/Exterior Gutter/29768303-e678-4624-aba9-ed2acb7d2dd7.JPG',
     color: 'from-green-500 to-teal-500',
   },
   {
@@ -73,7 +73,7 @@ const EXTERIOR_SERVICES = [
     shortDescription:
       'Restore your solar panel efficiency with our specialist cleaning service — removing dust, bird droppings, and grime.',
     icon: '☀️',
-    image: '/images/Exterior Solar/f8492476-0f73-4554-ba5e-85c13e51d454.PNG',
+    image: '/images/Exterior Solar/f8492476-0ba0-4e1d-8d3e-55a102139a7b.JPG',
     color: 'from-yellow-400 to-orange-400',
   },
 ];
@@ -108,7 +108,7 @@ const ServiceCard = ({ service, index }) => {
             }}
           />
           {/* Gradient overlay */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-70 group-hover:opacity-60 transition-opacity duration-400`} />
+          <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-40 mix-blend-multiply group-hover:opacity-30 transition-opacity duration-400`} />
           {/* Icon */}
           <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-2xl border border-white/30">
             {service.icon}

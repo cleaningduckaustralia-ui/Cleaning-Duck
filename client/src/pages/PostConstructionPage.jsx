@@ -37,7 +37,7 @@ const PostConstructionPage = () => {
       <div className="page-hero">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=80"
+            src="/images/Post construction/IMG_3252.jpg"
             alt="Post construction cleaning"
             className="w-full h-full object-cover"
           />
@@ -122,7 +122,7 @@ const PostConstructionPage = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <img
-                src="https://images.unsplash.com/photo-1556909211-36987daf7b4d?w=800&q=80"
+                src="/images/Post construction/IMG_3241.jpg"
                 alt="Post construction clean property"
                 className="rounded-3xl shadow-2xl w-full h-80 object-cover"
               />
@@ -168,7 +168,7 @@ const PostConstructionPage = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {galleryImages
-              .filter((img) => img.category === 'Post con')
+              .filter((img) => img.category === 'Post construction')
               .slice(0, 8)
               .map((img, idx) => (
                 <div key={idx} className="relative aspect-square overflow-hidden rounded-xl shadow-sm group">

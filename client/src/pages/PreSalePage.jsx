@@ -36,7 +36,7 @@ const PreSalePage = () => {
       <div className="page-hero">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400&q=80"
+            src="/images/Presale/IMG_3623.jpg"
             alt="Pre-sale property cleaning"
             className="w-full h-full object-cover"
           />
@@ -126,7 +126,7 @@ const PreSalePage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <img
-                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80"
+                src="/images/Presale/IMG_3451.jpg"
                 alt="Sparkling clean home ready for sale"
                 className="rounded-3xl shadow-2xl w-full h-80 object-cover"
               />
@@ -152,6 +152,40 @@ const PreSalePage = () => {
                 ))}
               </ul>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery */}
+      <section className="section bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-neutral-800">Our Pre-Sale Preparation Work</h2>
+            <p className="text-neutral-500 mt-3">See the difference a professional pre-sale clean makes.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {galleryImages
+              .filter((img) => img.category === 'Presale')
+              .slice(0, 8)
+              .map((img, idx) => (
+                <div key={idx} className="relative aspect-square overflow-hidden rounded-xl shadow-sm group">
+                  <img 
+                    src={img.src} 
+                    alt={`Pre-sale cleaning example ${idx + 1}`} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <Link 
+                    to="/gallery"
+                    className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white font-medium text-sm"
+                  >
+                    View Full Gallery
+                  </Link>
+                </div>
+              ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link to="/gallery" className="btn-outline">View All Photos</Link>
           </div>
         </div>
       </section>

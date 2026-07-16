@@ -26,9 +26,14 @@ const CTABanner = () => (
           <Link to="/request-quote" className="btn bg-white text-accent hover:bg-neutral-100 shadow-lg font-bold btn-lg w-full sm:w-auto">
             Get Free Quote
           </Link>
-          <a href={BRAND.phoneHref.primary} className="btn border-2 border-white text-white hover:bg-white hover:text-accent btn-lg w-full sm:w-auto">
-            Call {BRAND.phone.primary}
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a href={BRAND.phoneHref.primary} className="btn border-2 border-white text-white hover:bg-white hover:text-accent btn-lg w-full sm:w-auto">
+              Call {BRAND.phone.primary}
+            </a>
+            <a href={BRAND.phoneHref.secondary} className="btn border-2 border-white text-white hover:bg-white hover:text-accent btn-lg w-full sm:w-auto">
+              Call {BRAND.phone.secondary}
+            </a>
+          </div>
         </div>
         <p className="text-white/60 text-sm mt-5">
           ABN {BRAND.abn} · Brisbane, Logan, Ipswich, Gold Coast, Sunshine Coast

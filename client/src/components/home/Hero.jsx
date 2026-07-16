@@ -5,7 +5,7 @@ import { BRAND } from '../../utils/constants';
 
 const heroSlides = [
   {
-    url: '/images/Presale/IMG_3461.jpg',
+    url: '/images/exterior-house.jpg',
     alt: 'Professional exterior house washing',
     link: '/services/exterior-house-washing',
   },
@@ -15,17 +15,17 @@ const heroSlides = [
     link: '/services/end-of-lease-cleaning',
   },
   {
-    url: '/images/Exterior Roof/IMG_2787.PNG',
+    url: '/images/Exterior Roof/IMG_2788.PNG',
     alt: 'Pressure washing roof and solar panels',
     link: '/services/roof-cleaning',
   },
   {
-    url: '/images/BondEnd of lease/IMG_3016.jpg',
+    url: '/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg',
     alt: 'Professional carpet steam cleaning',
     link: '/services/carpet-cleaning',
   },
   {
-    url: '/images/Exterior Drivwway/e8b10b98-b80c-4dd0-97eb-bd8eecdd9822.PNG',
+    url: '/images/Exterior Drivwway/e8b10b9b-721e-4c77-b6ae-57bd5c2d8f42.JPG',
     alt: 'Driveway pressure cleaning',
     link: '/services/pressure-cleaning',
   },
@@ -165,7 +165,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 flex-wrap"
         >
           <Link to="/request-quote" className="btn-primary btn-lg group w-full sm:w-auto">
             <svg className="w-5 h-5 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
@@ -178,6 +178,12 @@ const Hero = () => {
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
             </svg>
             Call {BRAND.phone.primary}
+          </a>
+          <a href={BRAND.phoneHref.secondary} className="btn-outline btn-lg group w-full sm:w-auto">
+            <svg className="w-5 h-5 transition-transform group-hover:rotate-12" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+            Call {BRAND.phone.secondary}
           </a>
         </motion.div>
 

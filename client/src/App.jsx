@@ -5,6 +5,7 @@ import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import FloatingButtons from './components/common/FloatingButtons';
+import ScrollToTop from './components/common/ScrollToTop';
 import './styles/index.css';
 
 // Public pages (eager loaded for LCP)
@@ -53,6 +54,7 @@ const App = () => (
   <HelmetProvider>
     <AuthProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Suspense fallback={<Spinner />}>
           <Routes>
             {/* Public routes */}

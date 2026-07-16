@@ -80,9 +80,10 @@ const QuoteFormSection = () => {
             {/* Contact options */}
             <div className="space-y-4">
               {[
-                { icon: '📞', label: 'Call Now', value: BRAND.phone.primary, href: BRAND.phoneHref.primary },
-                { icon: '📞', label: 'Also Available', value: BRAND.phone.secondary, href: BRAND.phoneHref.secondary },
-                { icon: '💬', label: 'WhatsApp', value: 'Chat with us', href: BRAND.whatsapp },
+                { icon: '📞', label: 'Primary Phone', value: BRAND.phone.primary, href: BRAND.phoneHref.primary },
+                { icon: '📞', label: 'Secondary Phone', value: BRAND.phone.secondary, href: BRAND.phoneHref.secondary },
+                { icon: '✉️', label: 'Email', value: BRAND.email, href: `mailto:${BRAND.email}` },
+                { icon: '📍', label: 'Service Area', value: 'Brisbane & South East QLD', href: '#' },
               ].map(({ icon, label, value, href }) => (
                 <a key={value} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl bg-white/10 hover:bg-white/15 transition-colors border border-white/10 group">
@@ -120,7 +121,7 @@ const QuoteFormSection = () => {
                 <p className="text-neutral-500 mb-6">
                   Thank you! Our team will be in touch within 2 business hours with your personalised quote.
                 </p>
-                <p className="text-sm text-neutral-400">Need it sooner? Call <a href={BRAND.phoneHref.primary} className="text-primary font-semibold">{BRAND.phone.primary}</a></p>
+                <p className="text-sm text-neutral-400">Need it sooner? Call <a href={BRAND.phoneHref.primary} className="text-primary font-semibold">{BRAND.phone.primary}</a> or <a href={BRAND.phoneHref.secondary} className="text-primary font-semibold">{BRAND.phone.secondary}</a></p>
                 <button onClick={() => setSuccess(false)} className="btn-secondary mt-6">Submit Another Quote</button>
               </div>
             ) : (

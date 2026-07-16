@@ -182,18 +182,16 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <a
-              href={BRAND.phoneHref.primary}
-              className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors"
-              aria-label="Call us"
-            >
-              <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                </svg>
-              </span>
-              {BRAND.phone.primary}
-            </a>
+            <div className="flex flex-col gap-1 items-end mr-2">
+              <a href={BRAND.phoneHref.primary} className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-xs">📞</span>
+                {BRAND.phone.primary}
+              </a>
+              <a href={BRAND.phoneHref.secondary} className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-xs">📞</span>
+                {BRAND.phone.secondary}
+              </a>
+            </div>
             <Link to="/request-quote" className="btn-primary btn-sm">
               Free Quote
             </Link>
@@ -282,10 +280,15 @@ const Navbar = () => {
                   href={BRAND.phoneHref.primary}
                   className="flex items-center justify-center gap-2 py-3 rounded-xl border border-white/30 text-white font-medium hover:bg-white/10 transition-colors"
                 >
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                  </svg>
+                  <span className="text-lg">📞</span>
                   {BRAND.phone.primary}
+                </a>
+                <a
+                  href={BRAND.phoneHref.secondary}
+                  className="flex items-center justify-center gap-2 py-3 rounded-xl border border-white/30 text-white font-medium hover:bg-white/10 transition-colors"
+                >
+                  <span className="text-lg">📞</span>
+                  {BRAND.phone.secondary}
                 </a>
                 <Link to="/request-quote" className="btn-primary w-full text-center py-3 rounded-xl block">
                   Get Free Quote

@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 // ─── Reliable Unsplash gallery images ─────────────────────────────────────────
 const galleryImages = [
   {
-    src: '/images/BondEnd of lease/IMG_3016.jpg',
+    src: '/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg',
     alt: 'Professional carpet steam cleaning result',
     label: 'Carpet Cleaning',
   },
@@ -14,7 +14,7 @@ const galleryImages = [
     label: 'Roof Washing',
   },
   {
-    src: '/images/Exterior Drivwway/80fff1eb-6638-4e08-ba90-af25c6dc8b09.PNG',
+    src: '/images/Exterior Drivwway/e8b10b9b-721e-4c77-b6ae-57bd5c2d8f42.JPG',
     alt: 'Pressure washing driveway concrete',
     label: 'Driveway Pressure Washing',
   },
@@ -24,7 +24,7 @@ const galleryImages = [
     label: 'Upholstery Cleaning',
   },
   {
-    src: '/images/Exterior Solar/3741b6fc-ddf2-49ce-a193-f111beaf82ad.PNG',
+    src: '/images/Exterior Solar/f8492476-0ba0-4e1d-8d3e-55a102139a7b.JPG',
     alt: 'Solar panel cleaning service Brisbane',
     label: 'Solar Panel Cleaning',
   },
@@ -34,12 +34,12 @@ const galleryImages = [
     label: 'End of Lease Cleaning',
   },
   {
-    src: '/images/Presale/IMG_3457.jpg',
+    src: '/images/exterior-house.jpg',
     alt: 'Exterior house washing Brisbane',
     label: 'House Washing',
   },
   {
-    src: '/images/Exterior Gutter/29768303-1250-48ee-a0f5-50280eb4c207.PNG',
+    src: '/images/Exterior Gutter/29768303-e678-4624-aba9-ed2acb7d2dd7.JPG',
     alt: 'Gutter cleaning clearing debris',
     label: 'Gutter Cleaning',
   },
