@@ -2,8 +2,11 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
+const isVercel = !!process.env.VERCEL;
+const isGitHubAction = !!process.env.GITHUB_ACTIONS;
+
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/Cleaning-Duck/' : '/',
+  base: process.env.VITE_BASE_URL || (isVercel ? '/' : isGitHubAction ? '/Cleaning-Duck/' : '/'),
   plugins: [react()],
   resolve: {
     alias: {
