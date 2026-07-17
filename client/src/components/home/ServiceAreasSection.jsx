@@ -24,10 +24,10 @@ const ServiceAreasSection = () => {
           className="text-center mb-12"
         >
           <span className="section-label">Where We Work</span>
-          <h2 className="section-title mt-2">Serving All of South East QLD</h2>
+          <h2 className="section-title mt-2">Serving All of All over QLD</h2>
           <p className="section-subtitle mx-auto mt-4">
             From Brisbane to the Gold Coast and up to the Sunshine Coast — our professional
-            cleaning teams are ready to serve you across South East Queensland.
+            cleaning teams are ready to serve you across All over QLD.
           </p>
         </motion.div>
 

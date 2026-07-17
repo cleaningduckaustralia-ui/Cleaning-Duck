@@ -83,7 +83,7 @@ const QuoteFormSection = () => {
                 { icon: '📞', label: 'Primary Phone', value: BRAND.phone.primary, href: BRAND.phoneHref.primary },
                 { icon: '📞', label: 'Secondary Phone', value: BRAND.phone.secondary, href: BRAND.phoneHref.secondary },
                 { icon: '✉️', label: 'Email', value: BRAND.email, href: `mailto:${BRAND.email}` },
-                { icon: '📍', label: 'Service Area', value: 'Brisbane & South East QLD', href: '#' },
+                { icon: '📍', label: 'Service Area', value: 'Brisbane & All over QLD', href: '#' },
               ].map(({ icon, label, value, href }) => (
                 <a key={value} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl bg-white/10 hover:bg-white/15 transition-colors border border-white/10 group">

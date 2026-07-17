@@ -27,7 +27,7 @@ const AboutPage = () => {
     <>
       <SEOHead
         title="About Cleaning Duck Australia | Brisbane Cleaning Experts"
-        description="Learn about Cleaning Duck Australia — a Brisbane-based professional cleaning company serving South East QLD since 2024. Meet our team, our values, and our mission."
+        description="Learn about Cleaning Duck Australia — a Brisbane-based professional cleaning company serving All over QLD since 2024. Meet our team, our values, and our mission."
         keywords={['about cleaning duck australia', 'Brisbane cleaning company', 'professional cleaners Brisbane']}
         canonical="/about"
         structuredData={[breadcrumb]}
@@ -64,7 +64,7 @@ const AboutPage = () => {
                 <p>
                   Cleaning Duck Australia was founded with one simple mission: to provide reliable,
                   high-quality cleaning services that homeowners and businesses across Brisbane and
-                  South East QLD can count on.
+                  All over QLD can count on.
                 </p>
                 <p>
                   Starting from humble beginnings in 2024, we've grown into a team of over 10

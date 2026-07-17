@@ -92,7 +92,7 @@ const TestimonialsSlider = () => {
           <span className="section-label">Customer Reviews</span>
           <h2 className="section-title mt-2">Trusted by 500+ Happy Clients</h2>
           <p className="section-subtitle mx-auto mt-4">
-            Don't just take our word for it — here's what our clients across Brisbane and South East QLD say.
+            Don't just take our word for it — here's what our clients across Brisbane and All over QLD say.
           </p>
           {/* Google rating badge */}
           <div className="flex items-center justify-center gap-3 mt-5">

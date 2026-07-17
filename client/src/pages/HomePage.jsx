@@ -18,7 +18,7 @@ const HomePage = () => {
     <>
       <SEOHead
         title={null}
-        description="Professional cleaning services in Brisbane & South East QLD. Carpet cleaning, bond cleaning, roof washing, upholstery, gutter & pressure cleaning. 5-star rated. Call 0412 664 540 for a free quote."
+        description="Professional cleaning services in Brisbane & All over QLD. Carpet cleaning, bond cleaning, roof washing, upholstery, gutter & pressure cleaning. 5-star rated. Call 0412 664 540 for a free quote."
         keywords={['cleaning services Brisbane', 'carpet cleaning Brisbane', 'bond cleaning Brisbane', 'roof cleaning Brisbane', 'pressure cleaning Brisbane', 'upholstery cleaning Brisbane', 'gutter cleaning Brisbane']}
         canonical="/"
         structuredData={[breadcrumb]}

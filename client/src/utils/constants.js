@@ -1,7 +1,7 @@
 // Brand constants (extracted from cleaningduckaustralia.com.au)
 export const BRAND = {
   name: 'Cleaning Duck Australia',
-  tagline: 'Professional Cleaning Services In Brisbane & South East QLD',
+  tagline: 'Professional Cleaning Services In Brisbane & All over QLD',
   abn: '89 383 045 240',
   phone: { primary: '0412 664 540', secondary: '0430 614 643' },
   phoneHref: { primary: 'tel:0412664540', secondary: 'tel:0430614643' },
@@ -16,9 +16,9 @@ export const BRAND = {
 };
 
 export const STATS = [
-  { value: 2000, suffix: '+', label: 'Jobs Completed' },
+  { value: 700, suffix: '+', label: 'Jobs Completed' },
   { value: 10,   suffix: '+', label: 'Expert Technicians' },
-  { value: 2500, suffix: '+', label: 'Satisfied Clients' },
+  { value: 700, suffix: '+', label: 'Satisfied Clients' },
   { value: 5,    suffix: '★', label: 'Google Rating' },
 ];
 
@@ -65,10 +65,9 @@ export const NAV_LINKS = [
         heading: 'Packages',
         icon: '📦',
         items: [
-          { label: 'P1 – The High Duck',   href: '/packages#p1' },
-          { label: 'P2 – The Ground Duck', href: '/packages#p2' },
-          { label: 'P3 – The Full Duck',   href: '/packages#p3' },
-          { label: 'P4 – The Total Duck',  href: '/packages#p4' },
+          { label: 'P1 – The High Duck',   href: '/packages/high-duck' },
+          { label: 'P2 – The Ground Duck', href: '/packages/ground-duck' },
+          { label: 'P3 – The Full Duck',   href: '/packages/full-duck' },
         ],
       },
       {
@@ -90,10 +89,9 @@ export const NAV_LINKS = [
       { label: 'Solar Cleaning',                href: '/services/solar-panel-cleaning' },
       { label: 'Driveway Pressure Washing',     href: '/services/pressure-cleaning' },
       { label: 'Gutter Cleaning',               href: '/services/gutter-cleaning' },
-      { label: 'P1 – The High Duck',            href: '/packages#p1' },
-      { label: 'P2 – The Ground Duck',          href: '/packages#p2' },
-      { label: 'P3 – The Full Duck',            href: '/packages#p3' },
-      { label: 'P4 – The Total Duck',           href: '/packages#p4' },
+      { label: 'P1 – The High Duck',            href: '/packages/high-duck' },
+      { label: 'P2 – The Ground Duck',          href: '/packages/ground-duck' },
+      { label: 'P3 – The Full Duck',            href: '/packages/full-duck' },
       { label: 'End of Lease / Bond Cleaning',  href: '/services/end-of-lease-cleaning' },
       { label: 'Post Construction Cleaning',    href: '/services/post-construction-cleaning' },
       { label: 'Pre Sale Cleaning',             href: '/services/pre-sale-cleaning' },

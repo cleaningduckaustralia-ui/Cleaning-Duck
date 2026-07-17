@@ -15,6 +15,9 @@ import HomePage from './pages/HomePage';
 const ServicesPage         = lazy(() => import('./pages/ServicesPage'));
 const ServiceDetailPage    = lazy(() => import('./pages/ServiceDetailPage'));
 const PackagesPage         = lazy(() => import('./pages/PackagesPage'));
+const HighDuckPage         = lazy(() => import('./pages/packages/HighDuckPage'));
+const GroundDuckPage       = lazy(() => import('./pages/packages/GroundDuckPage'));
+const FullDuckPage         = lazy(() => import('./pages/packages/FullDuckPage'));
 const EndOfLeasePage       = lazy(() => import('./pages/EndOfLeasePage'));
 const PostConstructionPage = lazy(() => import('./pages/PostConstructionPage'));
 const PreSalePage          = lazy(() => import('./pages/PreSalePage'));
@@ -65,6 +68,9 @@ const App = () => (
             <Route path="/services/pre-sale-cleaning" element={<PublicLayout><PreSalePage /></PublicLayout>} />
             <Route path="/services/:slug" element={<PublicLayout><ServiceDetailPage /></PublicLayout>} />
             <Route path="/packages" element={<PublicLayout><PackagesPage /></PublicLayout>} />
+            <Route path="/packages/high-duck" element={<PublicLayout><HighDuckPage /></PublicLayout>} />
+            <Route path="/packages/ground-duck" element={<PublicLayout><GroundDuckPage /></PublicLayout>} />
+            <Route path="/packages/full-duck" element={<PublicLayout><FullDuckPage /></PublicLayout>} />
             <Route path="/gallery" element={<PublicLayout><GalleryPage /></PublicLayout>} />
             <Route path="/about" element={<PublicLayout><AboutPage /></PublicLayout>} />
             <Route path="/contact" element={<PublicLayout><ContactPage /></PublicLayout>} />

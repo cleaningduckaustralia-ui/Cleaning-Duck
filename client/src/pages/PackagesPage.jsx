@@ -66,29 +66,6 @@ const PACKAGES = [
       'Our most popular interior package — a thorough top-to-bottom clean of the inside of your home. Great for spring cleans, after moving in, or preparing a property for sale.',
     image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80',
   },
-  {
-    id: 'p4',
-    name: 'The Total Duck',
-    tagline: 'Full Interior + Exterior Bundle',
-    emoji: '🦆',
-    color: 'from-emerald-600 to-teal-700',
-    accentColor: 'bg-emerald-50 border-emerald-200',
-    badgeColor: 'bg-emerald-600',
-    popular: false,
-    includes: [
-      'Everything in The Full Duck',
-      'Roof Washing (Soft Wash)',
-      'Exterior House Washing',
-      'Gutter Cleaning & Flush',
-      'Driveway Pressure Washing',
-      'Solar Panel Cleaning',
-      'Before & After Photos',
-      'Priority Scheduling',
-    ],
-    description:
-      'The ultimate whole-property clean. Combine our best interior and exterior services into one bundled package and save. Perfect for pre-sale preparation, end-of-lease or annual deep cleans.',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
-  },
 ];
 
 const PackageCard = ({ pkg, index }) => {
@@ -96,7 +73,6 @@ const PackageCard = ({ pkg, index }) => {
 
   return (
     <motion.div
-      ref={ref}
       id={pkg.id}
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -140,10 +116,10 @@ const PackageCard = ({ pkg, index }) => {
         </ul>
 
         <Link
-          to="/request-quote"
+          to={`/packages/${pkg.id.replace('p1', 'high-duck').replace('p2', 'ground-duck').replace('p3', 'full-duck')}`}
           className="btn-primary w-full text-center block py-3 rounded-2xl"
         >
-          Get a Quote for This Package
+          View Package Details
         </Link>
       </div>
     </motion.div>
@@ -186,23 +162,6 @@ const PackagesPage = () => (
       </div>
     </div>
 
-    {/* Package anchor nav */}
-    <div className="bg-white border-b border-neutral-100 sticky top-16 z-30 shadow-sm">
-      <div className="container-custom overflow-x-auto">
-        <div className="flex gap-1 py-3 min-w-max mx-auto justify-center">
-          {PACKAGES.map((pkg) => (
-            <a
-              key={pkg.id}
-              href={`#${pkg.id}`}
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold text-neutral-600 hover:bg-orange-50 hover:text-orange-600 transition-all whitespace-nowrap"
-            >
-              <span>{pkg.emoji}</span>
-              {pkg.name}
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
 
     {/* Packages Grid */}
     <section className="section bg-neutral-50">
@@ -215,7 +174,7 @@ const PackagesPage = () => (
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           {PACKAGES.map((pkg, i) => (
             <PackageCard key={pkg.id} pkg={pkg} index={i} />
           ))}

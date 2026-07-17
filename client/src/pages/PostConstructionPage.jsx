@@ -28,7 +28,7 @@ const PostConstructionPage = () => {
     <>
       <SEOHead
         title="Post Construction Cleaning Brisbane | Cleaning Duck Australia"
-        description="Professional post-construction cleaning in Brisbane & South East QLD. We remove dust, debris, paint and adhesives — leaving your new build or renovation spotless. Call 0412 664 540."
+        description="Professional post-construction cleaning in Brisbane & All over QLD. We remove dust, debris, paint and adhesives — leaving your new build or renovation spotless. Call 0412 664 540."
         keywords={['post construction cleaning Brisbane', 'builder clean Brisbane', 'after renovation cleaning Brisbane', 'new build cleaning Brisbane']}
         canonical="/services/post-construction-cleaning"
       />
@@ -54,7 +54,7 @@ const PostConstructionPage = () => {
             Post Construction Cleaning
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-white/75 text-lg max-w-2xl mx-auto mb-8">
-            Transform your freshly built or renovated property from a construction site to a move-in ready home. Specialist builder clean services across Brisbane & South East QLD.
+            Transform your freshly built or renovated property from a construction site to a move-in ready home. Specialist builder clean services across Brisbane & All over QLD.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/request-quote" className="btn-primary btn-lg">Get a Free Quote</Link>

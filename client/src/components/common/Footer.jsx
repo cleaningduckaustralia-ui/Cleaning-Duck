@@ -21,7 +21,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-5">
-              Trusted cleaning professionals serving Brisbane and South East Queensland since 2024.
+              Trusted cleaning professionals serving Brisbane and All over QLD since 2024.
               2,500+ satisfied clients. 5-star Google rated.
             </p>
             {/* Social icons */}

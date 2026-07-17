@@ -250,7 +250,7 @@ const ServicesPage = () => {
   return (
     <>
       <SEOHead
-        title="All Cleaning Services Brisbane & South East QLD"
+        title="All Cleaning Services Brisbane & All over QLD"
         description="Explore all professional cleaning services by Cleaning Duck Australia — bond, carpet, upholstery, roof, pressure, gutter, solar & more."
         keywords={['cleaning services Brisbane', 'professional cleaning Brisbane', 'bond cleaning', 'carpet cleaning', 'roof cleaning Brisbane']}
         canonical="/services"
@@ -267,7 +267,7 @@ const ServicesPage = () => {
             Our Cleaning Services
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-white/70 text-lg max-w-xl mx-auto">
-            Comprehensive interior &amp; exterior cleaning solutions across South East Queensland.
+            Comprehensive interior &amp; exterior cleaning solutions across All over QLD.
           </motion.p>
           <nav aria-label="Breadcrumb" className="mt-4">
             <ol className="flex items-center justify-center gap-2 text-sm text-white/50">

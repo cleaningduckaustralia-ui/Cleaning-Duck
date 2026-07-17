@@ -147,7 +147,7 @@ const Hero = () => {
           <span className="text-orange-400">
             Cleaning Services
           </span>{' '}
-          In Brisbane &amp; South East QLD
+          In Brisbane &amp; All over QLD
         </motion.h1>
 
         <motion.p

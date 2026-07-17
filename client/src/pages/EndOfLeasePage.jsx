@@ -28,7 +28,7 @@ const EndOfLeasePage = () => {
     <>
       <SEOHead
         title="End of Lease / Bond Cleaning Brisbane | Cleaning Duck Australia"
-        description="Professional end-of-lease bond cleaning in Brisbane & South East QLD. 100% bond-back guarantee. Fully insured, real estate standard cleaning. Call 0412 664 540."
+        description="Professional end-of-lease bond cleaning in Brisbane & All over QLD. 100% bond-back guarantee. Fully insured, real estate standard cleaning. Call 0412 664 540."
         keywords={['bond cleaning Brisbane', 'end of lease cleaning Brisbane', 'bond back cleaning Brisbane', 'exit cleaning Brisbane']}
         canonical="/services/end-of-lease-cleaning"
       />

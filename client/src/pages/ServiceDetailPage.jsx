@@ -15,7 +15,7 @@ const STATIC_SERVICES = {
     title: 'Bond Cleaning',
     slug: 'bond-cleaning',
     shortDescription: 'Thorough end-of-lease cleaning to get your full bond back — covering every room, appliance, skirting board, and surface.',
-    longDescription: '<p>Our professional bond cleaning service is specifically designed to meet real estate agent requirements across Brisbane and South East Queensland. We cover every area of your property from top to bottom, ensuring you get your full bond refund.</p><p>Our experienced team uses commercial-grade equipment and eco-friendly products to deliver spotless results that pass even the strictest property inspections.</p>',
+    longDescription: '<p>Our professional bond cleaning service is specifically designed to meet real estate agent requirements across Brisbane and All over QLD. We cover every area of your property from top to bottom, ensuring you get your full bond refund.</p><p>Our experienced team uses commercial-grade equipment and eco-friendly products to deliver spotless results that pass even the strictest property inspections.</p>',
     features: [
       'All rooms cleaned top-to-bottom', 'Kitchen — oven, stovetop, rangehood, cupboards',
       'Bathrooms & toilets scrubbed and sanitised', 'Windows, tracks & sills',

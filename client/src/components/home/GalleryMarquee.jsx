@@ -71,8 +71,8 @@ const GalleryCard = ({ image }) => (
       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       loading="lazy"
     />
-    {/* Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-t from-orange-900/80 via-orange-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+    {/* Subtle bottom gradient for text readability only on hover */}
+    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
       <span className="text-white text-sm font-semibold">{image.label}</span>
     </div>
@@ -124,7 +124,7 @@ const GalleryMarquee = () => {
           <span className="section-label">Our Work</span>
           <h2 className="section-title mt-2">Real Results, Real Homes</h2>
           <p className="section-subtitle mx-auto mt-4">
-            A glimpse of the transformations we deliver across Brisbane and South East Queensland.
+            A glimpse of the transformations we deliver across Brisbane and All over QLD.
           </p>
         </motion.div>
       </div>
@@ -136,8 +136,8 @@ const GalleryMarquee = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="space-y-4"
       >
-        <MarqueeRow images={row1} reverse={false} speed={35} />
-        <MarqueeRow images={row2} reverse={true} speed={45} />
+        <MarqueeRow images={row1} reverse={false} speed={12} />
+        <MarqueeRow images={row2} reverse={true} speed={15} />
       </motion.div>
 
       {/* CTA */}

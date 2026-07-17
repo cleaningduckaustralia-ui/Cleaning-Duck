@@ -6,12 +6,12 @@ import { generateFAQSchema } from '../../utils/seoData';
 import { Helmet } from 'react-helmet-async';
 
 const fallbackFAQs = [
-  { _id: '1', question: 'What areas do you service?', answer: 'Cleaning Duck Australia provides cleaning services throughout Brisbane, Logan, Ipswich, Gold Coast, and the Sunshine Coast. Our team works with homeowners, tenants, landlords, and businesses across South East Queensland.' },
+  { _id: '1', question: 'What areas do you service?', answer: 'Cleaning Duck Australia provides cleaning services throughout Brisbane, Logan, Ipswich, Gold Coast, and the Sunshine Coast. Our team works with homeowners, tenants, landlords, and businesses across All over QLD.' },
   { _id: '2', question: 'How do I get a quote?', answer: 'Getting a quote is easy! Submit a request through our online quote form, call us on 0412 664 540 or 0430 614 643, or send us an email. We typically respond within 2 business hours.' },
   { _id: '3', question: 'Are you insured?', answer: 'Yes, Cleaning Duck Australia is fully insured with public liability insurance. Our team members are background-checked and professionally trained.' },
   { _id: '4', question: 'Do you charge extra for weekend or evening bookings?', answer: 'We offer flexible time slots including morning, evening, and weekends. Please contact us for weekend and after-hours pricing.' },
   { _id: '5', question: 'Do you bring your own cleaning equipment and products?', answer: "Yes! We arrive fully equipped with all professional cleaning products and commercial-grade equipment. You don't need to provide anything." },
-  { _id: '6', question: 'How long have you been operating?', answer: 'Cleaning Duck Australia has been serving South East Queensland since 2024. We are proud to be trusted by over 500 happy clients and have completed more than 2,000 jobs.' },
+  { _id: '6', question: 'How long have you been operating?', answer: 'Cleaning Duck Australia has been serving All over QLD since 2024. We are proud to be trusted by over 500 happy clients and have completed more than 2,000 jobs.' },
 ];
 
 const FAQItem = ({ faq, isOpen, onToggle }) => (
@@ -86,7 +86,7 @@ const FAQAccordion = ({ limit, featured }) => {
           <span className="section-label">FAQ</span>
           <h2 className="section-title mt-2">Frequently Asked Questions</h2>
           <p className="section-subtitle mx-auto mt-4">
-            Everything you need to know about our cleaning services in Brisbane and South East QLD.
+            Everything you need to know about our cleaning services in Brisbane and All over QLD.
           </p>
         </motion.div>
 

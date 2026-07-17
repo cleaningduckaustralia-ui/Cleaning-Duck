@@ -27,7 +27,7 @@ const PreSalePage = () => {
     <>
       <SEOHead
         title="Pre Sale Cleaning Brisbane | Sell Faster & For More | Cleaning Duck Australia"
-        description="Professional pre-sale cleaning in Brisbane & South East QLD. Presentation-ready cleaning that helps sell your home faster and for a higher price. Call 0412 664 540."
+        description="Professional pre-sale cleaning in Brisbane & All over QLD. Presentation-ready cleaning that helps sell your home faster and for a higher price. Call 0412 664 540."
         keywords={['pre sale cleaning Brisbane', 'house cleaning before sale Brisbane', 'property presentation cleaning Brisbane', 'real estate cleaning Brisbane']}
         canonical="/services/pre-sale-cleaning"
       />

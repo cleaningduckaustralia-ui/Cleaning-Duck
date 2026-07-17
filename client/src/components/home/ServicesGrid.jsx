@@ -108,8 +108,7 @@ const ServiceCard = ({ service, index }) => {
               e.target.style.display = 'none';
             }}
           />
-          {/* Gradient overlay */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-40 mix-blend-multiply group-hover:opacity-30 transition-opacity duration-400`} />
+          {/* Clean photos - gradient overlay removed */}
           {/* Icon */}
           <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-2xl border border-white/30">
             {service.icon}

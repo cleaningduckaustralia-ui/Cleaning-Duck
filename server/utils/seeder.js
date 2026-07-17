@@ -75,7 +75,7 @@ const services = [
     isFeatured: true,
     seo: {
       title: 'Carpet Steam Cleaning Brisbane | Carpet Cleaning Service | Cleaning Duck Australia',
-      description: 'Professional carpet steam cleaning in Brisbane & South East QLD. Pet stain removal, allergen treatment. Commercial-grade equipment. Free quote today.',
+      description: 'Professional carpet steam cleaning in Brisbane & All over QLD. Pet stain removal, allergen treatment. Commercial-grade equipment. Free quote today.',
       keywords: ['carpet cleaning Brisbane', 'carpet steam cleaning Brisbane', 'carpet cleaner Brisbane', 'pet stain removal carpet'],
       speakable: ['.service-description', '.service-features'],
     },
@@ -100,7 +100,7 @@ const services = [
     serviceAreas: ['Brisbane', 'Logan', 'Ipswich', 'Gold Coast', 'Sunshine Coast'],
     faq: [
       { question: 'How long does upholstery cleaning take?', answer: 'A typical 3-seater sofa takes 30–60 minutes. Most furniture is dry within 1–2 hours.' },
-      { question: 'Do you offer curtain and rug pick-up?', answer: 'Yes! We offer a convenient pick-up and drop-off service for curtains and rugs across South East Queensland.' },
+      { question: 'Do you offer curtain and rug pick-up?', answer: 'Yes! We offer a convenient pick-up and drop-off service for curtains and rugs across All over QLD.' },
     ],
     order: 3,
     isActive: true,
@@ -377,7 +377,7 @@ const testimonials = [
 const faqs = [
   {
     question: 'What areas do you service?',
-    answer: 'Cleaning Duck Australia provides cleaning services throughout Brisbane, Logan, Ipswich, Gold Coast, and the Sunshine Coast. Our team works with homeowners, tenants, landlords, and businesses across South East Queensland.',
+    answer: 'Cleaning Duck Australia provides cleaning services throughout Brisbane, Logan, Ipswich, Gold Coast, and the Sunshine Coast. Our team works with homeowners, tenants, landlords, and businesses across All over QLD.',
     category: 'areas',
     order: 1,
     isActive: true,
@@ -425,7 +425,7 @@ const faqs = [
   },
   {
     question: 'How long have you been operating?',
-    answer: 'Cleaning Duck Australia has been serving South East Queensland since 2024. We are proud to be trusted by over 500 happy clients and have completed more than 2,000 jobs.',
+    answer: 'Cleaning Duck Australia has been serving All over QLD since 2024. We are proud to be trusted by over 500 happy clients and have completed more than 2,000 jobs.',
     category: 'general',
     order: 7,
     isActive: true,
@@ -443,7 +443,7 @@ const faqs = [
 
 const siteSettings = [
   { key: 'site_name', value: 'Cleaning Duck Australia', group: 'general', label: 'Site Name', isPublic: true },
-  { key: 'site_tagline', value: 'Professional Cleaning Services In Brisbane & South East QLD', group: 'general', label: 'Tagline', isPublic: true },
+  { key: 'site_tagline', value: 'Professional Cleaning Services In Brisbane & All over QLD', group: 'general', label: 'Tagline', isPublic: true },
   { key: 'abn', value: '89 383 045 240', group: 'general', label: 'ABN', isPublic: true },
   { key: 'phone_primary', value: '0412 664 540', group: 'contact', label: 'Primary Phone', isPublic: true },
   { key: 'phone_secondary', value: '0430 614 643', group: 'contact', label: 'Secondary Phone', isPublic: true },
