@@ -31,7 +31,6 @@ export const SERVICE_SLUGS = [
   'pressure-cleaning',
   'gutter-cleaning',
   'solar-panel-cleaning',
-  'mattress-cleaning',
 ];
 
 export const NAV_LINKS = [
@@ -120,7 +119,6 @@ export const SERVICE_OPTIONS = [
   'Pressure Cleaning',
   'Gutter Cleaning',
   'Solar Panel Cleaning',
-  'Mattress Cleaning',
   'Full Duck Package',
   'Multiple Services',
 ];

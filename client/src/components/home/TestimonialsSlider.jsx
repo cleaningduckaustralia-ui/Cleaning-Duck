@@ -61,7 +61,7 @@ const fallbackTestimonials = [
   { _id: '2', name: 'Nischal Karki', rating: 5, review: "Booked Cleaning Duck Australia for a full clean including carpets, couch, plus rug and curtain hand cleaning. The results were amazing, everything looks fresh, and the service was very professional. I wouldn't hesitate to recommend them.", service: 'Full Clean', location: 'Brisbane' },
   { _id: '3', name: 'Ada', rating: 5, review: "Booked carpet cleaning in Brisbane for my home in Annerley and I'm very satisfied with the results. The team was on time, worked efficiently, and removed old stains I couldn't get rid of myself. Great service overall.", service: 'Carpet Cleaning', location: 'Annerley, Brisbane' },
   { _id: '4', name: 'Tommy', rating: 5, review: 'I used Cleaning Duck Australia for upholstery cleaning in Coorparoo, and the difference is huge. My couch looks clean, feels soft, and no harsh smell at all. The whole experience was smooth and hassle-free.', service: 'Upholstery Cleaning', location: 'Coorparoo' },
-  { _id: '5', name: 'Pedrii', rating: 5, review: 'Very impressed with their mattress cleaning service. They removed dust and allergens thoroughly, and the mattress smells fresh again. Professional and friendly staff — great service in the Logan Central area.', service: 'Mattress Cleaning', location: 'Logan Central' },
+
 ];
 
 const TestimonialsSlider = () => {
@@ -77,7 +77,11 @@ const TestimonialsSlider = () => {
   const reviewSchema = generateReviewSchema(testimonials);
 
   return (
-    <section className="section bg-white" aria-label="Customer testimonials" id="testimonials" ref={ref}>
+    <section className="section bg-white relative overflow-hidden" aria-label="Customer testimonials" id="testimonials" ref={ref}>
+      {/* Background decoration */}
+      <div className="absolute top-1/2 left-0 w-72 h-72 bg-blue-50 rounded-full blur-[80px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-orange-50 rounded-full blur-[100px] -translate-y-1/4 translate-x-1/4 pointer-events-none" />
+
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(reviewSchema)}</script>
       </Helmet>

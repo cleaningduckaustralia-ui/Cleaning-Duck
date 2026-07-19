@@ -1,9 +1,5 @@
 [
   {
-    "src": "/images/Backgrond Of the icons 2/Screenshot 2026-06-30 165619.png",
-    "category": "Backgrond Of the icons 2"
-  },
-  {
     "src": "/images/BondEnd of lease/IMG_2811.jpg",
     "category": "BondEnd of lease"
   },
@@ -416,6 +412,10 @@
     "category": "Carpet cleaning"
   },
   {
+    "src": "/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53 5.jpg",
+    "category": "Carpet cleaning"
+  },
+  {
     "src": "/images/Carpet cleaning/PHOTO-2026-02-09-16-12-54.jpg",
     "category": "Carpet cleaning"
   },
@@ -425,6 +425,10 @@
   },
   {
     "src": "/images/Carpet cleaning/PHOTO-2026-02-09-16-12-54 3.jpg",
+    "category": "Carpet cleaning"
+  },
+  {
+    "src": "/images/Carpet cleaning/PHOTO-2026-02-09-16-12-54 4.jpg",
     "category": "Carpet cleaning"
   },
   {
@@ -486,5 +490,21 @@
   {
     "src": "/images/Upholstery/PHOTO-2026-02-09-16-11-53.jpg",
     "category": "Upholstery"
+  },
+  {
+    "src": "/images/Exterior Drivwway/ScreenRecording_03-14-2026 18-17-58_1.mov",
+    "category": "Exterior Drivwway"
+  },
+  {
+    "src": "/images/Exterior Roof/786b7a09-7385-4dc5-8ec5-9c25f12d9f96.MP4",
+    "category": "Exterior Roof"
+  },
+  {
+    "src": "/images/Exterior Roof/IMG_2790.MP4",
+    "category": "Exterior Roof"
+  },
+  {
+    "src": "/images/Exterior Solar/3741b6fc-da00-4a68-ab6b-2a24f75cc36b.MOV",
+    "category": "Exterior Solar"
   }
 ]

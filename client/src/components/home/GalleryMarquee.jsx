@@ -20,7 +20,7 @@ const galleryImages = [
     label: 'Driveway Pressure Washing',
   },
   {
-    src: publicAsset('/images/BondEnd of lease/IMG_3259.jpg'),
+    src: publicAsset('/images/Upholstery/PHOTO-2026-02-09-16-11-52.jpg'),
     alt: 'Sofa upholstery steam cleaning',
     label: 'Upholstery Cleaning',
   },
@@ -50,7 +50,7 @@ const galleryImages = [
     label: 'Pre Sale Cleaning',
   },
   {
-    src: publicAsset('/images/Post con/IMG_3240.jpg'),
+    src: publicAsset('/images/Post construction/IMG_3240.jpg'),
     alt: 'Post construction cleaning new build',
     label: 'Post Construction Cleaning',
   },

@@ -1,0 +1,50 @@
+# Cleaning Duck Australia — robots.txt
+# https://cleaningduckaustralia.com.au
+
+User-agent: *
+Allow: /
+
+# Block admin routes from all crawlers
+Disallow: /admin/
+Disallow: /admin
+
+# Block API routes
+Disallow: /api/
+
+# Allow all public content
+Allow: /services/
+Allow: /blog/
+Allow: /gallery
+Allow: /packages/
+Allow: /about
+Allow: /contact
+Allow: /request-quote
+
+# Sitemap
+Sitemap: https://cleaningduckaustralia.com.au/sitemap.xml
+
+# Allow major AI/LLM crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Crawl-delay for well-behaved bots
+User-agent: *
+Crawl-delay: 1

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SEOHead from '../../components/common/SEOHead';
 import { BRAND } from '../../utils/constants';
+import { publicAsset } from '../../utils/pathHelpers';
 
 const FullDuckPage = () => {
   return (
@@ -15,7 +16,7 @@ const FullDuckPage = () => {
       <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1600&q=80"
+            src={publicAsset('/images/BondEnd of lease/IMG_3398.jpg')}
             alt="Full Duck Cleaning"
             className="w-full h-full object-cover opacity-40"
           />
@@ -44,7 +45,7 @@ const FullDuckPage = () => {
               <h2 className="text-3xl font-bold text-slate-800 mb-6">Your home deserves a refresh inside and out.</h2>
               <div className="prose prose-lg text-slate-600 mb-8">
                 <p>
-                  Over time, dirt, mould, algae, grime, and clogged gutters can make your home look worn and tired. Cleaning Duck, trusted for years with carpet, couch, and mattress cleaning, now brings premium exterior cleaning services to your property.
+                  Over time, dirt, mould, algae, grime, and clogged gutters can make your home look worn and tired. Cleaning Duck, trusted for years with carpet and couch cleaning, now brings premium exterior cleaning services to your property.
                 </p>
                 <p>
                   The Full Duck package is our most comprehensive exterior cleaning solution, designed for homeowners who want everything done in a single visit — saving time, effort, and money. From your roof to your driveway, solar panels to gutters, we restore your home to its pristine, like-new condition.

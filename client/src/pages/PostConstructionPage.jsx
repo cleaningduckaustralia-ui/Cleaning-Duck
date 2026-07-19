@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import SEOHead from '../components/common/SEOHead';
 import { BRAND } from '../utils/constants';
 import galleryImages from '../data/galleryImages.json';
+import { publicAsset } from '../utils/pathHelpers';
 
 const features = [
   { icon: '🏗️', title: 'Dust & Debris Removal', desc: 'We remove all post-construction dust, plaster, sawdust and fine particles from every surface.' },
@@ -169,7 +170,6 @@ const PostConstructionPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {galleryImages
               .filter((img) => img.category === 'Post construction')
-              .slice(0, 8)
               .map((img, idx) => (
                 <div key={idx} className="relative aspect-square overflow-hidden rounded-xl shadow-sm group">
                   <img 

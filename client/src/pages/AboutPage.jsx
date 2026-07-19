@@ -9,7 +9,7 @@ const milestones = [
   { year: '2024', event: 'Founded Cleaning Duck Australia in Brisbane' },
   { year: '2024', event: 'Completed our first 500 jobs across Brisbane and Logan' },
   { year: '2025', event: 'Expanded to Gold Coast and Sunshine Coast' },
-  { year: '2025', event: 'Reached 2,000 completed jobs and 500+ satisfied clients' },
+  { year: '2025', event: 'Reached 700+ completed jobs and 700+ satisfied clients' },
   { year: '2026', event: 'Growing team of 10+ certified cleaning technicians' },
 ];
 

@@ -1,0 +1,42 @@
+{
+  "name": "Cleaning Duck Australia",
+  "short_name": "Cleaning Duck",
+  "description": "Professional cleaning services in Brisbane & All over QLD. Carpet, bond, roof, upholstery & pressure cleaning.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "lang": "en-AU",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cleaningduckaustralia.com.au/wp-content/uploads/2025/12/cropped-Untitled-design23-270x270.png",
+      "sizes": "270x270",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Get a Free Quote",
+      "short_name": "Free Quote",
+      "description": "Request a free cleaning quote",
+      "url": "/request-quote",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "View all cleaning services",
+      "url": "/services",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}

@@ -35,7 +35,7 @@ const heroSlides = [
 const trustBadges = [
   { icon: '⭐', text: '5-Star Google Rated' },
   { icon: '🛡️', text: 'Fully Insured' },
-  { icon: '✅', text: '2,000+ Jobs Done' },
+  { icon: '✅', text: '700+ Jobs Done' },
   { icon: '🦆', text: 'Trusted Since 2024' },
 ];
 

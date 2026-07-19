@@ -11,7 +11,7 @@ const fallbackFAQs = [
   { _id: '3', question: 'Are you insured?', answer: 'Yes, Cleaning Duck Australia is fully insured with public liability insurance. Our team members are background-checked and professionally trained.' },
   { _id: '4', question: 'Do you charge extra for weekend or evening bookings?', answer: 'We offer flexible time slots including morning, evening, and weekends. Please contact us for weekend and after-hours pricing.' },
   { _id: '5', question: 'Do you bring your own cleaning equipment and products?', answer: "Yes! We arrive fully equipped with all professional cleaning products and commercial-grade equipment. You don't need to provide anything." },
-  { _id: '6', question: 'How long have you been operating?', answer: 'Cleaning Duck Australia has been serving All over QLD since 2024. We are proud to be trusted by over 500 happy clients and have completed more than 2,000 jobs.' },
+  { _id: '6', question: 'How long have you been operating?', answer: 'Cleaning Duck Australia has been serving All over QLD since 2024. We are proud to be trusted by over 700+ happy clients and have completed more than 700+ jobs.' },
 ];
 
 const FAQItem = ({ faq, isOpen, onToggle }) => (
@@ -71,7 +71,11 @@ const FAQAccordion = ({ limit, featured }) => {
   const faqSchema = generateFAQSchema(displayed);
 
   return (
-    <section className="section bg-neutral-50" aria-label="Frequently asked questions" id="faq" ref={ref}>
+    <section className="section bg-neutral-50 relative overflow-hidden" aria-label="Frequently asked questions" id="faq" ref={ref}>
+      {/* Background decoration */}
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-orange-100/40 rounded-full blur-[100px] translate-y-1/3 translate-x-1/3 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-80 h-80 bg-blue-100/30 rounded-full blur-[80px] -translate-y-1/3 -translate-x-1/3 pointer-events-none" />
+
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>

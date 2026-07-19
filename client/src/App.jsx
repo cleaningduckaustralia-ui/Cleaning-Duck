@@ -22,6 +22,8 @@ const EndOfLeasePage       = lazy(() => import('./pages/EndOfLeasePage'));
 const PostConstructionPage = lazy(() => import('./pages/PostConstructionPage'));
 const PreSalePage          = lazy(() => import('./pages/PreSalePage'));
 const GalleryPage          = lazy(() => import('./pages/GalleryPage'));
+const BlogPage             = lazy(() => import('./pages/BlogPage'));
+const BlogDetailPage       = lazy(() => import('./pages/BlogDetailPage'));
 const AboutPage            = lazy(() => import('./pages/AboutPage'));
 const ContactPage          = lazy(() => import('./pages/ContactPage'));
 const RequestQuotePage     = lazy(() => import('./pages/RequestQuotePage'));
@@ -72,6 +74,8 @@ const App = () => (
             <Route path="/packages/ground-duck" element={<PublicLayout><GroundDuckPage /></PublicLayout>} />
             <Route path="/packages/full-duck" element={<PublicLayout><FullDuckPage /></PublicLayout>} />
             <Route path="/gallery" element={<PublicLayout><GalleryPage /></PublicLayout>} />
+            <Route path="/blog" element={<PublicLayout><BlogPage /></PublicLayout>} />
+            <Route path="/blog/:slug" element={<PublicLayout><BlogDetailPage /></PublicLayout>} />
             <Route path="/about" element={<PublicLayout><AboutPage /></PublicLayout>} />
             <Route path="/contact" element={<PublicLayout><ContactPage /></PublicLayout>} />
             <Route path="/request-quote" element={<PublicLayout><RequestQuotePage /></PublicLayout>} />

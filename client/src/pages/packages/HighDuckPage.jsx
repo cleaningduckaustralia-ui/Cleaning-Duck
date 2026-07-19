@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SEOHead from '../../components/common/SEOHead';
 import { BRAND } from '../../utils/constants';
+import { publicAsset } from '../../utils/pathHelpers';
 
 const HighDuckPage = () => {
   return (
@@ -16,7 +17,7 @@ const HighDuckPage = () => {
       <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80"
+            src={publicAsset('/images/Exterior Roof/IMG_2789.PNG')}
             alt="High Duck Cleaning"
             className="w-full h-full object-cover opacity-40"
           />
@@ -46,7 +47,7 @@ const HighDuckPage = () => {
               <h2 className="text-3xl font-bold text-slate-800 mb-6">Your home’s exterior deserves the same attention as your interiors.</h2>
               <div className="prose prose-lg text-slate-600 mb-8">
                 <p>
-                  While Cleaning Duck has long been trusted for carpets, couches, and mattresses, we’ve expanded our expertise to complete exterior home cleaning. Our High Duck package is designed for homeowners who want to maintain a clean, safe, and efficient property while protecting their investment. 
+                  While Cleaning Duck has long been trusted for carpets and couches, we’ve expanded our expertise to complete exterior home cleaning. Our High Duck package is designed for homeowners who want to maintain a clean, safe, and efficient property while protecting their investment. 
                 </p>
                 <p>
                   This package is perfect for houses with roof mould, lichen, dirty solar panels, or clogged gutters. One visit is all it takes to restore the exterior of your home to a pristine, like-new condition.

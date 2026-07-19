@@ -4,10 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SEOHead from '../components/common/SEOHead';
 import QuoteFormSection from '../components/home/QuoteFormSection';
 import api from '../services/api';
-import { generateServiceSchema, generateBreadcrumbSchema, generateFAQSchema } from '../utils/seoData';
+import { generateServiceSchema, generateBreadcrumbSchema, generateFAQSchema, generateDetailedServiceSchema } from '../utils/seoData';
 import { BRAND } from '../utils/constants';
 import { publicAsset } from '../utils/pathHelpers';
 import galleryImages from '../data/galleryImages.json';
+
+const isVideo = (src) => {
+  if (!src) return false;
+  const lower = src.toLowerCase();
+  return lower.endsWith('.mp4') || lower.endsWith('.mov') || lower.endsWith('.webm');
+};
 
 // ─── Static fallback service data (used when API unavailable) ─────────────────
 const STATIC_SERVICES = {
@@ -63,17 +69,6 @@ const STATIC_SERVICES = {
     galleryCategories: ['Upholstery'],
     faq: [{ question: 'Is cleaning safe for my leather sofa?', answer: 'Yes, we use specialist leather-safe cleaners and conditioners that clean and protect the leather.' }],
   },
-  'mattress-cleaning': {
-    title: 'Mattress Cleaning',
-    slug: 'mattress-cleaning',
-    shortDescription: 'Remove dust mites, allergens and stains for a healthier, more hygienic night\'s sleep.',
-    longDescription: '<p>The average mattress harbours millions of dust mites and bacteria. Our specialist mattress cleaning uses UV sanitisation and hot extraction to create a healthier sleep environment for you and your family.</p>',
-    features: ['UV sanitisation', 'Hot extraction cleaning', 'Dust mite treatment', 'Stain removal', 'Allergen reduction', 'Odour elimination', 'All mattress sizes', 'Same-day service available'],
-    benefits: ['99% dust mite reduction', 'Better sleep quality', 'Allergy relief', 'Safe for all ages'],
-    image: 'https://cleaningduckaustralia.com.au/wp-content/uploads/2025/04/mattress-cleaning.jpg',
-    galleryCategories: ['BondEnd of lease'],
-    faq: [{ question: 'How often should I have my mattress cleaned?', answer: 'We recommend every 6–12 months, especially if you have allergies or pets.' }],
-  },
   'exterior-house-washing': {
     title: 'Exterior House Washing',
     slug: 'exterior-house-washing',
@@ -82,7 +77,7 @@ const STATIC_SERVICES = {
     features: ['Walls, eaves & fascias', 'Driveway & paths', 'Fences & retaining walls', 'Soft wash for delicate surfaces', 'Mould & mildew treatment', 'Biodegradable detergents', 'Before & after photos', 'All house types'],
     benefits: ['Prevents long-term damage', 'Improves curb appeal', 'Removes health hazards', 'Protects paintwork'],
     image: publicAsset('/images/exterior-house.jpg'),
-    galleryCategories: null,
+    galleryCategories: ['Exterior House Washing', 'Exterior Roof'],
     faq: [{ question: 'Will pressure washing damage my render?', answer: 'No — we use soft washing at low pressure for rendered surfaces to safely remove mould without causing damage.' }],
   },
   'roof-cleaning': {
@@ -129,6 +124,39 @@ const STATIC_SERVICES = {
     galleryCategories: ['Exterior Solar'],
     faq: [{ question: 'Will cleaning damage my panels?', answer: 'No — we use a purified water and soft brush system specifically designed for solar panels with no harsh chemicals.' }],
   },
+  'post-construction-cleaning': {
+    title: 'Post Construction Cleaning',
+    slug: 'post-construction-cleaning',
+    shortDescription: 'Remove dust, debris, paint splatters and construction residue from every surface — getting your new build or renovation handover-ready.',
+    longDescription: '<p>After a building or renovation project, your property needs specialist cleaning to remove construction dust, adhesive residue, paint splatters, and debris from every surface. Our post-construction cleaning team has the equipment and expertise to transform a builder\'s handover into a move-in-ready home.</p>',
+    features: ['Fine dust removal from all surfaces', 'Paint splatter & adhesive removal', 'Window & glass cleaning', 'Floor scrub & polish', 'Tile & grout cleaning', 'Bathroom & kitchen sanitise', 'Rubbish & debris removal', 'Before & after photos'],
+    benefits: ['Move-in ready finish', 'Builder standard compliance', 'Safe dust-free environment', 'All trades areas covered'],
+    image: publicAsset('/images/Post construction/IMG_3239.jpg'),
+    galleryCategories: ['Post construction'],
+    faq: [{ question: 'How long does post-construction cleaning take?', answer: 'Depending on the scope of the build, it typically takes 4–8 hours for a standard 3-bedroom home after construction.' }],
+  },
+  'end-of-lease-cleaning': {
+    title: 'End of Lease Cleaning',
+    slug: 'end-of-lease-cleaning',
+    shortDescription: 'Thorough end-of-lease cleaning to get your full bond back — covering every room, appliance, skirting board, and surface.',
+    longDescription: '<p>Our professional end-of-lease cleaning service meets the exact requirements of real estate agents across Brisbane, Logan, Ipswich, Gold Coast, and the Sunshine Coast. We cover every area of your property from top to bottom, ensuring you get your full bond refund.</p>',
+    features: ['All rooms cleaned top-to-bottom', 'Kitchen — oven, stovetop, rangehood, cupboards', 'Bathrooms & toilets scrubbed and sanitised', 'Windows, tracks & sills', 'Skirting boards, light switches & power points', 'Carpet steam cleaning (optional add-on)', 'Wall spot cleaning', 'Bond-back guarantee'],
+    benefits: ['Guaranteed bond refund', '100% satisfaction guarantee', 'Same-day service available', 'Fully insured team'],
+    image: publicAsset('/images/BondEnd of lease/IMG_3067.jpg'),
+    galleryCategories: ['BondEnd of lease'],
+    faq: [{ question: 'Do you offer a bond-back guarantee?', answer: 'Yes! If your agent finds any issues related to our cleaning, we come back and fix it free of charge.' }],
+  },
+  'pre-sale-cleaning': {
+    title: 'Pre Sale Cleaning',
+    slug: 'pre-sale-cleaning',
+    shortDescription: 'Maximise your sale price with a presentation-ready clean — prepped for photography, open homes, and buyer inspections.',
+    longDescription: '<p>First impressions sell homes. A professional pre-sale clean removes years of built-up grime and presents your property at its absolute best for photography, open houses, and buyer inspections. We cover the full interior and exterior to help you achieve the highest possible sale price.</p>',
+    features: ['Full interior deep clean', 'Carpet steam clean', 'Window cleaning inside & out', 'Exterior wash', 'Kitchen & bathrooms detailed', 'Photo-ready presentation', 'Garage & outdoor areas', 'Rubbish removal'],
+    benefits: ['Higher sale price', 'More buyer interest', 'Professional photography ready', 'Faster sale time'],
+    image: publicAsset('/images/Presale/IMG_3341.jpg'),
+    galleryCategories: ['Presale'],
+    faq: [{ question: 'How far in advance should I book?', answer: 'We recommend booking at least 5–7 days before your first open home or photography session.' }],
+  },
 };
 
 // ─── Service Detail Page ─────────────────────────────────────────────────────
@@ -160,13 +188,14 @@ const ServiceDetailPage = () => {
   if (!service) return <Navigate to="/services" replace />;
 
   const serviceSchema = generateServiceSchema(service);
+  const detailedSchema = generateDetailedServiceSchema(service);
   const breadcrumb = generateBreadcrumbSchema([
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
     { name: service.title, path: `/services/${service.slug}` },
   ]);
   const faqSchema = service.faq?.length ? generateFAQSchema(service.faq.map((f, i) => ({ ...f, _id: i }))) : null;
-  const schemas = [serviceSchema, breadcrumb, ...(faqSchema ? [faqSchema] : [])];
+  const schemas = [serviceSchema, detailedSchema, breadcrumb, ...(faqSchema ? [faqSchema] : [])];
   const heroImage = service.image || STATIC_SERVICES[slug]?.image;
 
   return (
@@ -175,8 +204,10 @@ const ServiceDetailPage = () => {
         title={service.seo?.title || service.title}
         description={service.seo?.description || service.shortDescription}
         keywords={service.seo?.keywords || []}
+        ogImage={heroImage}
         canonical={`/services/${service.slug}`}
         structuredData={schemas}
+        speakableSelectors={['.service-description', '.faq-question', 'h1']}
       />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
@@ -211,9 +242,9 @@ const ServiceDetailPage = () => {
           </nav>
 
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            {service.pricing?.from && (
+            {['carpet-cleaning', 'upholstery-cleaning'].includes(service.slug) && (
               <span className="inline-block bg-orange-500 text-white px-4 py-1.5 rounded-full font-bold text-sm mb-4">
-                {service.pricing.displayText || service.pricing.from}
+                Starts from $33
               </span>
             )}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
@@ -239,7 +270,7 @@ const ServiceDetailPage = () => {
             {[
               { icon: '⭐', text: '5-Star Rated' },
               { icon: '🛡️', text: 'Fully Insured' },
-              { icon: '✅', text: '2,000+ Jobs Done' },
+              { icon: '✅', text: '700+ Jobs Done' },
               { icon: '⚡', text: 'Same-Day Available' },
             ].map(({ icon, text }) => (
               <div key={text} className="flex items-center gap-2 text-white text-sm font-medium">
@@ -336,21 +367,31 @@ const ServiceDetailPage = () => {
                 </div>
               )}
               {/* Gallery Section */}
-              {service.galleryCategories && (
+              {(service.galleryCategories?.length > 0 || STATIC_SERVICES[slug]?.galleryCategories?.length > 0) && (
                 <div className="mt-12 border-t border-neutral-100 pt-10">
                   <h2 className="text-2xl font-bold text-neutral-800 mb-6">Our Work Gallery</h2>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                     {galleryImages
-                      .filter((img) => service.galleryCategories.includes(img.category))
-                      .slice(0, 6) // limit to 6 images on service detail page
+                      .filter((img) => (service.galleryCategories?.length > 0 ? service.galleryCategories : STATIC_SERVICES[slug]?.galleryCategories).includes(img.category))
                       .map((img, idx) => (
                         <div key={idx} className="relative aspect-square overflow-hidden rounded-xl shadow-sm group">
-                          <img 
-                            src={img.src} 
-                            alt={`${service.title} example ${idx + 1}`} 
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            loading="lazy"
-                          />
+                          {isVideo(img.src) ? (
+                            <video 
+                              src={img.src} 
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                              autoPlay
+                              muted
+                              loop
+                              playsInline
+                            />
+                          ) : (
+                            <img 
+                              src={img.src} 
+                              alt={`${service.title} example ${idx + 1}`} 
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                              loading="lazy"
+                            />
+                          )}
                           <Link 
                             to="/gallery"
                             className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white font-medium text-sm"
@@ -393,25 +434,7 @@ const ServiceDetailPage = () => {
                 </div>
               </div>
 
-              {/* Pricing */}
-              {service.pricing && (
-                <div className="card border border-orange-100">
-                  <h3 className="text-lg font-bold text-neutral-800 mb-3">Pricing</h3>
-                  <div className="text-4xl font-bold text-orange-600 mb-2">
-                    {service.pricing.from === 'Call for quote' ? 'Call for Quote' : service.pricing.from}
-                  </div>
-                  <p className="text-neutral-500 text-xs">Prices vary based on property size & condition. Get a free custom quote.</p>
-                  {service.pricing.included?.length > 0 && (
-                    <ul className="space-y-1.5 mt-4 border-t border-neutral-100 pt-4">
-                      {service.pricing.included.map((item) => (
-                        <li key={item} className="flex items-center gap-2 text-sm text-neutral-600">
-                          <span className="text-green-500 font-bold">✓</span> {item}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              )}
+
 
               {/* Service areas */}
               <div className="card border border-orange-100">

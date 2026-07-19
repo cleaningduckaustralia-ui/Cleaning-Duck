@@ -43,17 +43,18 @@ export const localBusinessSchema = {
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Cleaning Services',
+    name: 'Cleaning Services Brisbane',
     itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bond Cleaning / End of Lease Cleaning' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Carpet Steam Cleaning' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Upholstery Cleaning' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Roof Cleaning', price: '999', priceCurrency: 'AUD' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pressure Cleaning', price: '333', priceCurrency: 'AUD' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gutter Cleaning', price: '169', priceCurrency: 'AUD' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Solar Panel Cleaning', price: '18', priceCurrency: 'AUD' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mattress Cleaning' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Exterior House Washing', price: '599', priceCurrency: 'AUD' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bond Cleaning / End of Lease Cleaning', url: 'https://cleaningduckaustralia.com.au/services/end-of-lease-cleaning' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Carpet Steam Cleaning', url: 'https://cleaningduckaustralia.com.au/services/carpet-cleaning' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Upholstery Cleaning', url: 'https://cleaningduckaustralia.com.au/services/upholstery-cleaning' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Roof Cleaning', url: 'https://cleaningduckaustralia.com.au/services/roof-cleaning' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pressure Cleaning', url: 'https://cleaningduckaustralia.com.au/services/pressure-cleaning' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gutter Cleaning', url: 'https://cleaningduckaustralia.com.au/services/gutter-cleaning' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Solar Panel Cleaning', url: 'https://cleaningduckaustralia.com.au/services/solar-panel-cleaning' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Exterior House Washing', url: 'https://cleaningduckaustralia.com.au/services/exterior-house-washing' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Post Construction Cleaning', url: 'https://cleaningduckaustralia.com.au/services/post-construction-cleaning' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pre Sale Cleaning', url: 'https://cleaningduckaustralia.com.au/services/pre-sale-cleaning' } },
     ],
   },
   sameAs: [
@@ -159,3 +160,69 @@ export const generateHowToSchema = (title, steps) => ({
     text: step.text,
   })),
 });
+
+// ─── BlogPosting Schema (for blog article pages — enables Rich Results) ───────
+export const generateBlogPostingSchema = (blog, imageUrl) => ({
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: blog.title,
+  description: blog.excerpt || blog.title,
+  image: imageUrl || 'https://cleaningduckaustralia.com.au/images/exterior-house.jpg',
+  datePublished: blog.createdAt || new Date().toISOString(),
+  dateModified: blog.updatedAt || blog.createdAt || new Date().toISOString(),
+  author: {
+    '@type': 'Organization',
+    name: 'Cleaning Duck Australia',
+    url: 'https://cleaningduckaustralia.com.au',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Cleaning Duck Australia',
+    url: 'https://cleaningduckaustralia.com.au',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://cleaningduckaustralia.com.au/wp-content/uploads/2025/12/cropped-Untitled-design23-270x270.png',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://cleaningduckaustralia.com.au/blog/${blog.slug}`,
+  },
+  keywords: (blog.tags || []).join(', '),
+  articleSection: 'Cleaning Tips & Guides',
+  inLanguage: 'en-AU',
+});
+
+// ─── Service Page Schema (rich result for individual service pages) ────────────
+export const generateDetailedServiceSchema = (service) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: service.title,
+  serviceType: service.title,
+  description: service.shortDescription || service.longDescription,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Cleaning Duck Australia',
+    '@id': 'https://cleaningduckaustralia.com.au/#business',
+    telephone: '+61412664540',
+    url: 'https://cleaningduckaustralia.com.au',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Brisbane' },
+    { '@type': 'City', name: 'Logan' },
+    { '@type': 'City', name: 'Ipswich' },
+    { '@type': 'City', name: 'Gold Coast' },
+    { '@type': 'City', name: 'Sunshine Coast' },
+  ],
+  url: `https://cleaningduckaustralia.com.au/services/${service.slug}`,
+  image: service.image,
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: `${service.title} Packages`,
+    itemListElement: (service.features || []).map((f) => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: f },
+    })),
+  },
+});
+

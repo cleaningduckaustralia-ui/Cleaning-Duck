@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import SEOHead from '../components/common/SEOHead';
 import { BRAND } from '../utils/constants';
 import galleryImages from '../data/galleryImages.json';
+import { publicAsset } from '../utils/pathHelpers';
 
 const features = [
   { icon: '✨', title: 'Deep Interior Clean', desc: 'Every room deep-cleaned to presentation standard — kitchens, bathrooms, living areas and bedrooms.' },
@@ -126,7 +127,7 @@ const PreSalePage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <img
-                src={publicAsset('/images/Presale/IMG_3451.jpg')}
+                src={publicAsset('/images/Presale/IMG_3341.jpg')}
                 alt="Sparkling clean home ready for sale"
                 className="rounded-3xl shadow-2xl w-full h-80 object-cover"
               />
@@ -166,7 +167,6 @@ const PreSalePage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {galleryImages
               .filter((img) => img.category === 'Presale')
-              .slice(0, 8)
               .map((img, idx) => (
                 <div key={idx} className="relative aspect-square overflow-hidden rounded-xl shadow-sm group">
                   <img 

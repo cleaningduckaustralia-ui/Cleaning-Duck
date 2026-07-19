@@ -24,7 +24,7 @@ const SPECIALISED_SERVICES = [
     subtitle: 'Builder Clean Specialists',
     description: 'Remove dust, debris, paint splatters, adhesive and construction residue from every surface. Get your new build or renovation handover-ready.',
     icon: '🏗️',
-    image: publicAsset('/images/Post con/IMG_3239.jpg'),
+    image: publicAsset('/images/Post construction/IMG_3239.jpg'),
     features: ['Dust & debris removal', 'Paint splatter removal', 'Floor & tile cleaning', 'Window & glass clean'],
     color: 'from-slate-600 to-blue-700',
   },
@@ -45,7 +45,7 @@ const PACKAGE_CARDS = [
   { id: 'p1', name: 'The High Duck', emoji: '🏗️', tagline: 'Roof + House + Gutters', color: 'from-slate-600 to-blue-700' },
   { id: 'p2', name: 'The Ground Duck', emoji: '☀️', tagline: 'Driveway + Solar + Paths', color: 'from-amber-500 to-orange-600' },
   { id: 'p3', name: 'The Full Duck', emoji: '🏠', tagline: 'Complete Interior Bundle', color: 'from-orange-500 to-red-600', popular: true },
-  { id: 'p4', name: 'The Total Duck', emoji: '🦆', tagline: 'Full Interior + Exterior', color: 'from-emerald-600 to-teal-700' },
+
 ];
 
 // ─── Static service data ──────────────────────────────────────────────────────
@@ -57,7 +57,7 @@ const INTERIOR_SERVICES = [
     description:
       'Professional steam carpet cleaning that removes deep stains, allergens, pet odours and bacteria — leaving carpets fresh, sanitised, and looking brand new.',
     icon: '🧹',
-    image: publicAsset('/images/BondEnd of lease/IMG_3016.jpg'),
+    image: publicAsset('/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg'),
     features: ['Hot water extraction', 'Stain pre-treatment', 'Pet odour removal', 'Dry in 2–4 hours'],
     color: 'from-amber-500 to-orange-500',
     bg: 'bg-amber-50',
@@ -70,7 +70,7 @@ const INTERIOR_SERVICES = [
     description:
       'Restore your sofas, lounges, chairs and fabric surfaces with our safe deep-clean upholstery service. Safe for all fabric types including microfibre and velvet.',
     icon: '🛋️',
-    image: publicAsset('/images/BondEnd of lease/IMG_3259.jpg'),
+    image: publicAsset('/images/Upholstery/PHOTO-2026-02-09-16-11-51.jpg'),
     features: ['All fabric types', 'Stain & odour removal', 'Safe for kids & pets', 'Fast drying'],
     color: 'from-orange-400 to-amber-500',
     bg: 'bg-orange-50',
@@ -86,7 +86,7 @@ const EXTERIOR_SERVICES = [
     description:
       'Professional roof cleaning to remove lichen, moss and algae — extending the life of your roof and dramatically improving your home\'s curb appeal.',
     icon: '🏗️',
-    image: publicAsset('/images/Exterior Roof/IMG_2787.PNG'),
+    image: publicAsset('/images/Exterior Roof/IMG_2788.PNG'),
     features: ['Lichen & moss removal', 'Soft wash technique', 'All roof types', 'Extends roof life'],
     color: 'from-slate-500 to-blue-500',
     bg: 'bg-slate-50',
@@ -99,7 +99,7 @@ const EXTERIOR_SERVICES = [
     description:
       'Complete exterior house wash that removes mould, mildew, dirt, and stains from walls, eaves, fences and pathways — restoring your home\'s original look.',
     icon: '🏡',
-    image: publicAsset('/images/Presale/IMG_3456.jpg'),
+    image: publicAsset('/images/exterior-house.jpg'),
     features: ['Soft & pressure wash', 'Mould & mildew removal', 'Eaves & gutters', 'All surface types'],
     color: 'from-blue-500 to-teal-500',
     bg: 'bg-blue-50',
@@ -112,7 +112,7 @@ const EXTERIOR_SERVICES = [
     description:
       'Restore your solar panel efficiency with our specialist cleaning — removing dust, bird droppings and grime that reduce power output by up to 30%.',
     icon: '☀️',
-    image: publicAsset('/images/Exterior Solar/f8492476-0f73-4554-ba5e-85c13e51d454.PNG'),
+    image: publicAsset('/images/Exterior Solar/05a118f6-76ce-4a1e-a0c6-5aa514cca7e3.JPG'),
     features: ['Purified water system', 'No harsh chemicals', 'All panel types', 'Output optimised'],
     color: 'from-yellow-400 to-orange-400',
     bg: 'bg-yellow-50',
@@ -125,7 +125,7 @@ const EXTERIOR_SERVICES = [
     description:
       'High-pressure wash for driveways, patios, decks, fences and concrete — blasting away years of grime, oil stains, algae and discolouration.',
     icon: '💦',
-    image: publicAsset('/images/Exterior Drivwway/e8b10b98-b80c-4dd0-97eb-bd8eecdd9822.PNG'),
+    image: publicAsset('/images/Exterior Drivwway/80fff1e8-5098-4dde-ad47-45b979652525.JPG'),
     features: ['Driveways & patios', 'Decks & fences', 'Oil & grease removal', 'Concrete & pavers'],
     color: 'from-cyan-500 to-blue-500',
     bg: 'bg-cyan-50',
@@ -138,7 +138,7 @@ const EXTERIOR_SERVICES = [
     description:
       'Keep your gutters flowing freely. We clear leaves, debris and blockages to protect your home from water damage, leaks and overflow.',
     icon: '🌿',
-    image: publicAsset('/images/Exterior Gutter/86d3155f-8706-4fcb-8914-cf9da4eef2eb.PNG'),
+    image: publicAsset('/images/Exterior Gutter/29768303-e678-4624-aba9-ed2acb7d2dd7.JPG'),
     features: ['Leaf & debris removal', 'Downpipe flush', 'Damage inspection', 'Before & after photos'],
     color: 'from-green-500 to-teal-500',
     bg: 'bg-green-50',
@@ -170,7 +170,7 @@ const ServiceCard = ({ service, index }) => {
             loading="lazy"
             onError={(e) => { e.target.style.display = 'none'; }}
           />
-          <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-70 group-hover:opacity-60 transition-opacity`} />
+
           <div className="absolute top-4 left-4 w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-2xl">
             {service.icon}
           </div>
@@ -220,16 +220,15 @@ const CategorySection = ({ icon, title, subtitle, accentClass, services }) => {
         initial={{ opacity: 0, x: -30 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.5 }}
-        className="flex items-center gap-4 mb-10"
+        className="flex items-center gap-5 mb-10 bg-white p-5 md:p-6 rounded-3xl shadow-sm border border-neutral-100"
       >
-        <div className={`flex items-center justify-center w-16 h-16 rounded-2xl text-3xl shadow-lg ${accentClass}`}>
+        <div className={`flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl text-3xl shadow-md flex-shrink-0 ${accentClass}`}>
           {icon}
         </div>
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-800">{title}</h2>
-          <p className="text-neutral-500 text-sm mt-0.5">{subtitle}</p>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-800 tracking-tight">{title}</h2>
+          <p className="text-neutral-500 text-sm mt-1">{subtitle}</p>
         </div>
-        <div className="flex-1 h-px bg-gradient-to-r from-neutral-200 to-transparent ml-4 hidden sm:block" />
       </motion.div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((s, i) => (

@@ -1,39 +1,182 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="en-AU" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0B1F45" />
+    <meta name="theme-color" content="#f97316" />
+    <meta name="color-scheme" content="light" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://cleaningduckaustralia.com.au/wp-content/uploads/2025/12/cropped-Untitled-design23-270x270.png" />
+    <!-- ══ Favicon ═══════════════════════════════════════════════════════════ -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="https://cleaningduckaustralia.com.au/wp-content/uploads/2025/12/cropped-Untitled-design23-270x270.png" />
+    <link rel="manifest" href="/manifest.json" />
 
-    <!-- Preconnect for performance -->
+    <!-- ══ Preconnect for performance ════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://res.cloudinary.com" />
+    <link rel="dns-prefetch" href="https://cleaningduckaustralia.com.au" />
 
-    <!-- Google Fonts — Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- ══ Google Fonts — Poppins (display=swap prevents FOIT) ═══════════════ -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Primary SEO -->
-    <title>Professional Cleaning Services In Brisbane | Cleaning Duck Australia</title>
-    <meta name="description" content="Professional cleaning services in Brisbane & All over QLD. Carpet cleaning, bond cleaning, roof washing, upholstery & pressure cleaning. 5-star rated. Free quote: 0412 664 540." />
-    <meta name="robots" content="index, follow" />
+    <!-- ══ Primary SEO (fallback for JS-disabled crawlers) ═══════════════════ -->
+    <title>Professional Cleaning Services Brisbane &amp; QLD | Cleaning Duck Australia</title>
+    <meta
+      name="description"
+      content="Professional cleaning services in Brisbane &amp; All over QLD. Carpet cleaning, bond cleaning, roof washing, upholstery &amp; pressure cleaning. 5-star rated. Free quote: 0412 664 540."
+    />
+    <meta name="author" content="Cleaning Duck Australia" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="application-name" content="Cleaning Duck Australia" />
+    <link rel="canonical" href="https://cleaningduckaustralia.com.au/" />
 
-    <!-- Open Graph defaults -->
+    <!-- ══ Open Graph (Social &amp; AI previews) ══════════════════════════════════ -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Cleaning Duck Australia" />
     <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://cleaningduckaustralia.com.au/" />
+    <meta property="og:title" content="Professional Cleaning Services Brisbane &amp; QLD | Cleaning Duck Australia" />
+    <meta property="og:description" content="Professional cleaning services in Brisbane &amp; All over QLD. Carpet, bond, roof, upholstery &amp; pressure cleaning. 5-star rated. Free quote: 0412 664 540." />
+    <meta property="og:image" content="https://cleaningduckaustralia.com.au/images/exterior-house.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Cleaning Duck Australia — Professional House Cleaning Brisbane" />
 
-    <!-- Geo meta -->
+    <!-- ══ Twitter Card ═══════════════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@cleaningduckau" />
+    <meta name="twitter:title" content="Professional Cleaning Services Brisbane | Cleaning Duck Australia" />
+    <meta name="twitter:description" content="5-star rated cleaning services across Brisbane, Logan, Ipswich, Gold Coast &amp; Sunshine Coast. Call 0412 664 540." />
+    <meta name="twitter:image" content="https://cleaningduckaustralia.com.au/images/exterior-house.jpg" />
+
+    <!-- ══ Geo Meta (local SEO) ═══════════════════════════════════════════════ -->
     <meta name="geo.region" content="AU-QLD" />
-    <meta name="geo.placename" content="Brisbane" />
+    <meta name="geo.placename" content="Brisbane, Queensland, Australia" />
+    <meta name="geo.position" content="-27.4705;153.0260" />
+    <meta name="ICBM" content="-27.4705, 153.0260" />
+
+    <!-- ══ AI / LLM SEO Hints ════════════════════════════════════════════════ -->
+    <meta name="language" content="English" />
+    <meta name="content-language" content="en-AU" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="General" />
+
+    <!-- Business info for AI crawlers (Facebook Open Graph extensions) -->
+    <meta name="business:contact_data:phone_number" content="+61412664540" />
+    <meta name="business:contact_data:website" content="https://cleaningduckaustralia.com.au" />
+    <meta name="business:contact_data:locality" content="Brisbane" />
+    <meta name="business:contact_data:region" content="QLD" />
+    <meta name="business:contact_data:country_name" content="Australia" />
+    <meta name="business:contact_data:email" content="info@cleaningduckaustralia.com.au" />
+
+    <!-- ══ Structured Data — LocalBusiness (Fallback for JS-disabled crawlers) ══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://cleaningduckaustralia.com.au/#business",
+      "name": "Cleaning Duck Australia",
+      "alternateName": "Cleaning Duck",
+      "description": "Professional cleaning services in Brisbane & All over QLD. Carpet cleaning, bond/end-of-lease cleaning, roof washing, upholstery cleaning, gutter cleaning, solar panel cleaning, pressure cleaning and more.",
+      "url": "https://cleaningduckaustralia.com.au",
+      "telephone": ["+61412664540", "+61430614643"],
+      "email": "info@cleaningduckaustralia.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brisbane",
+        "addressRegion": "QLD",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.4705,
+        "longitude": 153.0260
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Brisbane" },
+        { "@type": "City", "name": "Logan" },
+        { "@type": "City", "name": "Ipswich" },
+        { "@type": "City", "name": "Gold Coast" },
+        { "@type": "City", "name": "Sunshine Coast" }
+      ],
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "07:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "08:00", "closes": "17:00" }
+      ],
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "18",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "sameAs": [
+        "https://www.facebook.com/cleaningduckaustralia",
+        "https://www.instagram.com/cleaningduckaustralia"
+      ],
+      "foundingDate": "2024",
+      "identifier": { "@type": "PropertyValue", "name": "ABN", "value": "89 383 045 240" }
+    }
+    </script>
+
+    <!-- ══ WebSite schema with SearchAction ══════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://cleaningduckaustralia.com.au",
+      "name": "Cleaning Duck Australia",
+      "description": "Professional cleaning services in Brisbane & All over QLD",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://cleaningduckaustralia.com.au/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
+
   <body>
+    <!-- ══ No-Script fallback for crawlers without JS ══════════════════════ -->
+    <noscript>
+      <div style="font-family:sans-serif;max-width:800px;margin:40px auto;padding:20px;line-height:1.6">
+        <h1>Cleaning Duck Australia — Professional Cleaning Services Brisbane &amp; QLD</h1>
+        <p>We provide professional carpet cleaning, bond/end-of-lease cleaning, roof washing, upholstery cleaning, gutter cleaning, solar panel cleaning and pressure washing services across Brisbane, Logan, Ipswich, Gold Coast and the Sunshine Coast.</p>
+        <p><strong>Call us:</strong> <a href="tel:+61412664540">0412 664 540</a> or <a href="tel:+61430614643">0430 614 643</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@cleaningduckaustralia.com.au">info@cleaningduckaustralia.com.au</a></p>
+        <h2>Our Services</h2>
+        <ul>
+          <li><a href="/services/end-of-lease-cleaning">Bond &amp; End of Lease Cleaning Brisbane</a></li>
+          <li><a href="/services/carpet-cleaning">Carpet Steam Cleaning Brisbane</a></li>
+          <li><a href="/services/upholstery-cleaning">Upholstery &amp; Sofa Cleaning</a></li>
+          <li><a href="/services/roof-cleaning">Roof Cleaning Brisbane</a></li>
+          <li><a href="/services/gutter-cleaning">Gutter Cleaning Brisbane</a></li>
+          <li><a href="/services/solar-panel-cleaning">Solar Panel Cleaning Brisbane</a></li>
+          <li><a href="/services/pressure-cleaning">Pressure &amp; Driveway Cleaning</a></li>
+          <li><a href="/services/exterior-house-washing">Exterior House Washing</a></li>
+          <li><a href="/services/post-construction-cleaning">Post Construction Cleaning</a></li>
+          <li><a href="/services/pre-sale-cleaning">Pre Sale Cleaning</a></li>
+        </ul>
+        <p>ABN: 89 383 045 240 &middot; © 2026 Cleaning Duck Australia. All rights reserved.</p>
+      </div>
+    </noscript>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

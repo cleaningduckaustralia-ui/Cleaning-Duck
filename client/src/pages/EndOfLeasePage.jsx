@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import SEOHead from '../components/common/SEOHead';
 import { BRAND } from '../utils/constants';
 import galleryImages from '../data/galleryImages.json';
+import { publicAsset } from '../utils/pathHelpers';
 
 const features = [
   { icon: '🏠', title: 'All Rooms & Bathrooms', desc: 'Every room cleaned to real estate standard — bathrooms, kitchens, bedrooms, and living areas.' },
@@ -37,7 +38,7 @@ const EndOfLeasePage = () => {
       <div className="page-hero">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1400&q=80"
+            src={publicAsset('/images/BondEnd of lease/IMG_3259.jpg')}
             alt="End of lease cleaning"
             className="w-full h-full object-cover"
           />
@@ -139,7 +140,6 @@ const EndOfLeasePage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {galleryImages
               .filter((img) => img.category === 'BondEnd of lease')
-              .slice(0, 8)
               .map((img, idx) => (
                 <div key={idx} className="relative aspect-square overflow-hidden rounded-xl shadow-sm group">
                   <img 

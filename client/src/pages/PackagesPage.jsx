@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import SEOHead from '../components/common/SEOHead';
 import { BRAND } from '../utils/constants';
+import { publicAsset } from '../utils/pathHelpers';
 
 const PACKAGES = [
   {
@@ -23,7 +24,7 @@ const PACKAGES = [
     ],
     description:
       'Perfect for homeowners focused on the exterior and roof of their property. Combine roof washing, house washing and gutter cleaning for a complete top-to-bottom exterior clean.',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+    image: publicAsset('/images/Exterior Roof/IMG_2788.PNG'),
   },
   {
     id: 'p2',
@@ -43,7 +44,7 @@ const PACKAGES = [
     ],
     description:
       'Revitalise the ground-level exterior of your property. From oil-stained driveways to grimy solar panels — this package puts the shine back in everything at ground level and above.',
-    image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&q=80',
+    image: publicAsset('/images/Exterior Drivwway/80fff1e8-5098-4dde-ad47-45b979652525.JPG'),
   },
   {
     id: 'p3',
@@ -57,14 +58,13 @@ const PACKAGES = [
     includes: [
       'Carpet Steam Cleaning (all rooms)',
       'Upholstery Cleaning (sofa & chairs)',
-      'Mattress Deep Clean & Sanitise',
       'Window Sill & Skirting Wipe Down',
       'Odour Neutralisation Treatment',
       'Before & After Photos',
     ],
     description:
       'Our most popular interior package — a thorough top-to-bottom clean of the inside of your home. Great for spring cleans, after moving in, or preparing a property for sale.',
-    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80',
+    image: publicAsset('/images/Carpet cleaning/PHOTO-2026-02-09-16-12-53.jpg'),
   },
 ];
 

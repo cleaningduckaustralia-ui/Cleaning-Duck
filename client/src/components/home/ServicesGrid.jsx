@@ -21,7 +21,7 @@ const INTERIOR_SERVICES = [
     shortDescription:
       'Restore your sofas, lounges, chairs and fabric surfaces with our safe, deep-clean upholstery service.',
     icon: '🛋️',
-    image: publicAsset('/images/BondEnd of lease/IMG_3259.jpg'),
+    image: publicAsset('/images/Upholstery/PHOTO-2026-02-09-16-11-51.jpg'),
     color: 'from-orange-400 to-amber-500',
   },
 ];
@@ -141,7 +141,6 @@ const ServiceCard = ({ service, index }) => {
   );
 };
 
-// ─── Section Header ───────────────────────────────────────────────────────────
 const CategoryHeader = ({ icon, title, subtitle, accent }) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   return (
@@ -150,24 +149,28 @@ const CategoryHeader = ({ icon, title, subtitle, accent }) => {
       initial={{ opacity: 0, x: -30 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.5 }}
-      className="flex items-center gap-4 mb-8"
+      className="flex items-center gap-5 mb-8 bg-white p-5 md:p-6 rounded-3xl shadow-sm border border-neutral-100"
     >
-      <div className={`flex items-center justify-center w-14 h-14 rounded-2xl text-3xl shadow-lg ${accent}`}>
+      <div className={`flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl text-3xl shadow-md flex-shrink-0 ${accent}`}>
         {icon}
       </div>
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold text-neutral-800">{title}</h2>
-        <p className="text-neutral-500 text-sm mt-0.5">{subtitle}</p>
+        <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-800 tracking-tight">{title}</h2>
+        <p className="text-neutral-500 text-sm mt-1">{subtitle}</p>
       </div>
-      <div className="flex-1 h-px bg-gradient-to-r from-neutral-200 to-transparent ml-4 hidden sm:block" />
     </motion.div>
   );
 };
 
 // ─── Main ServicesGrid ────────────────────────────────────────────────────────
 const ServicesGrid = () => (
-  <section className="section bg-neutral-50" aria-label="Our cleaning services" id="services">
-    <div className="container-custom">
+  <section className="py-24 bg-background relative overflow-hidden" id="services">
+    {/* Background blobs for visual interest */}
+    <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-orange-100/50 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+    <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-50/60 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3 pointer-events-none" />
+    <div className="absolute top-1/2 left-1/2 w-[700px] h-[700px] bg-orange-50/40 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+
+    <div className="container-custom relative z-10">
       {/* Section heading */}
       <div className="text-center mb-14">
         <span className="section-label">What We Offer</span>

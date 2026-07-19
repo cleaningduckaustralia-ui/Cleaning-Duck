@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SEOHead from '../../components/common/SEOHead';
 import { BRAND } from '../../utils/constants';
+import { publicAsset } from '../../utils/pathHelpers';
 
 const GroundDuckPage = () => {
   return (
@@ -15,7 +16,7 @@ const GroundDuckPage = () => {
       <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=1600&q=80"
+            src={publicAsset('/images/Exterior Drivwway/69fdbb49-61cc-4de1-955b-79b8c1041f2f.JPG')}
             alt="Ground Duck Cleaning"
             className="w-full h-full object-cover opacity-40"
           />

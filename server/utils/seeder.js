@@ -83,12 +83,11 @@ const services = [
   {
     title: 'Upholstery Cleaning',
     slug: 'upholstery-cleaning',
-    shortDescription: 'Deep clean for sofas, couches, armchairs, mattresses, rugs, and curtains — restoring freshness and removing allergens without harsh chemicals.',
-    longDescription: '<p>Our upholstery cleaning service breathes new life into your furniture. Using gentle but effective low-moisture cleaning methods, we remove dust, stains, pet hair, and allergens from your sofas, chairs, mattresses, rugs, and curtains. We also offer convenient rug and curtain pick-up and drop-off service.</p>',
+    shortDescription: 'Deep clean for sofas, couches, armchairs, rugs, and curtains — restoring freshness and removing allergens without harsh chemicals.',
+    longDescription: '<p>Our upholstery cleaning service breathes new life into your furniture. Using gentle but effective low-moisture cleaning methods, we remove dust, stains, pet hair, and allergens from your sofas, chairs, rugs, and curtains. We also offer convenient rug and curtain pick-up and drop-off service.</p>',
     features: [
       'Sofa and couch deep cleaning',
       'Armchair and recliner cleaning',
-      'Mattress cleaning and sanitising',
       'Rug cleaning (in-home or pick-up & drop-off)',
       'Curtain cleaning with pick-up and drop-off',
       'Pet hair removal and deodorising',
@@ -107,8 +106,8 @@ const services = [
     isFeatured: true,
     seo: {
       title: 'Upholstery Cleaning Brisbane | Sofa & Couch Cleaning | Cleaning Duck Australia',
-      description: 'Professional upholstery cleaning in Brisbane. Sofa, couch, mattress, rug & curtain cleaning. Pet hair and allergen removal. Book your free quote today.',
-      keywords: ['upholstery cleaning Brisbane', 'sofa cleaning Brisbane', 'couch cleaning Brisbane', 'mattress cleaning Brisbane'],
+      description: 'Professional upholstery cleaning in Brisbane. Sofa, couch, rug & curtain cleaning. Pet hair and allergen removal. Book your free quote today.',
+      keywords: ['upholstery cleaning Brisbane', 'sofa cleaning Brisbane', 'couch cleaning Brisbane'],
     },
   },
   {
@@ -261,37 +260,6 @@ const services = [
       keywords: ['solar panel cleaning Brisbane', 'solar cleaning Brisbane', 'solar panel wash Brisbane', 'solar cleaning Gold Coast'],
     },
   },
-  {
-    title: 'Mattress Cleaning',
-    slug: 'mattress-cleaning',
-    shortDescription: 'Deep mattress cleaning that removes dust mites, allergens, sweat, stains, and bacteria — creating a healthier sleeping environment for your family.',
-    longDescription: '<p>We spend a third of our lives in bed, yet mattresses are rarely cleaned professionally. Our mattress cleaning service uses dry steam and UV treatment to kill dust mites, bacteria, and allergens deep inside the mattress, while removing stains and odours from the surface. The result is a fresh, hygienic sleeping environment.</p>',
-    features: [
-      'Dry steam treatment — kills dust mites and bacteria',
-      'UV sanitising treatment',
-      'Stain removal treatment',
-      'Deodorising and freshening',
-      'Safe for all mattress types (memory foam, spring, latex)',
-      'No harsh chemicals — safe for children and allergy sufferers',
-      'Fast dry time — usually ready within 1–2 hours',
-    ],
-    benefits: ['Kills 99.9% of dust mites', 'Improves sleep quality', 'Safe for allergy sufferers', 'No chemical residue'],
-    icon: 'fa-bed',
-    pricing: { from: 'Call for quote', displayText: 'Free Quote', included: ['Steam treatment', 'UV sanitise', 'Stain removal'] },
-    serviceAreas: ['Brisbane', 'Logan', 'Ipswich', 'Gold Coast', 'Sunshine Coast'],
-    faq: [
-      { question: 'How long does mattress cleaning take?', answer: 'A single mattress typically takes 30–45 minutes to clean. The mattress can usually be used again within 1–2 hours.' },
-      { question: 'Is mattress cleaning safe for children?', answer: 'Absolutely. We use no harsh chemicals — only steam, UV light, and gentle enzyme treatments that are completely safe for children and allergy sufferers.' },
-    ],
-    order: 9,
-    isActive: true,
-    isFeatured: false,
-    seo: {
-      title: 'Mattress Cleaning Brisbane | Dust Mite & Allergen Removal | Cleaning Duck Australia',
-      description: 'Professional mattress cleaning in Brisbane. Kills dust mites & bacteria, removes stains & odours. Safe for children. Free quote — call 0412 664 540.',
-      keywords: ['mattress cleaning Brisbane', 'mattress steam cleaning Brisbane', 'dust mite treatment Brisbane', 'mattress sanitising Brisbane'],
-    },
-  },
 ];
 
 const testimonials = [
@@ -340,17 +308,6 @@ const testimonials = [
     order: 4,
   },
   {
-    name: 'Pedrii',
-    rating: 5,
-    review: 'Very impressed with their mattress cleaning service. They removed dust and allergens thoroughly, and the mattress smells fresh again. Professional and friendly staff — great service in the Logan Central area.',
-    service: 'Mattress Cleaning',
-    location: 'Logan Central',
-    source: 'Google',
-    isActive: true,
-    isFeatured: true,
-    order: 5,
-  },
-  {
     name: 'Abishekh Oad',
     rating: 5,
     review: "Booked them to clean our sofa and rug, and the results were excellent. They removed all the pet hair and stains without leaving any strong smell. Really impressed.",
@@ -359,18 +316,7 @@ const testimonials = [
     source: 'Google',
     isActive: true,
     isFeatured: false,
-    order: 6,
-  },
-  {
-    name: 'Ekka Kulung',
-    rating: 5,
-    review: '"Had my mattress deep cleaned at our place in the Sunny bank and I\'m really happy with the outcome. The stains are gone and there\'s no strong chemical smell. Very professional technician."',
-    service: 'Mattress Cleaning',
-    location: 'Sunnybank, Brisbane',
-    source: 'Google',
-    isActive: true,
-    isFeatured: false,
-    order: 7,
+    order: 5,
   },
 ];
 

@@ -30,7 +30,7 @@ const Navbar = () => {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
-          scrolled ? 'bg-orange-700 shadow-lg py-2' : 'bg-transparent py-4'
+          scrolled ? 'bg-orange-800/40 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'
         }`}
       >
         <nav className="container-custom flex items-center justify-between" aria-label="Main navigation">
@@ -43,9 +43,9 @@ const Navbar = () => {
               loading="eager"
               width="48" height="48"
             />
-            <div>
-              <div className="text-white font-bold text-base leading-tight">Cleaning Duck</div>
-              <div className="text-orange-300 text-xs font-medium">Australia</div>
+            <div className="flex items-center gap-1.5">
+              <span className="text-white font-bold text-lg leading-tight">Cleaning Duck</span>
+              <span className="text-orange-300 text-lg font-medium">Australia</span>
             </div>
           </Link>
 

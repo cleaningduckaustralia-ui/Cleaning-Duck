@@ -63,8 +63,12 @@ const WhyChooseUs = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section className="section bg-white" aria-label="Why choose Cleaning Duck Australia" id="why-choose-us" ref={ref}>
-      <div className="container-custom">
+    <section className="section bg-white relative overflow-hidden" aria-label="Why choose Cleaning Duck Australia" id="why-choose-us" ref={ref}>
+      {/* Subtle graphic decorations */}
+      <div className="absolute top-0 left-0 w-80 h-80 bg-orange-50 rounded-full blur-[80px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-50/70 rounded-full blur-[100px] translate-y-1/3 translate-x-1/3 pointer-events-none" />
+      
+      <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left — image/visual */}
           <motion.div
@@ -94,7 +98,7 @@ const WhyChooseUs = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="absolute -bottom-6 -right-6 glass-dark rounded-2xl px-6 py-4 shadow-lg border border-white/10"
             >
-              <div className="text-3xl font-bold text-white">2,500+</div>
+              <div className="text-3xl font-bold text-white">700+</div>
               <div className="text-white/60 text-sm">Satisfied Clients</div>
               <div className="flex gap-0.5 mt-1">
                 {'★★★★★'.split('').map((s, i) => <span key={i} className="text-yellow-400 text-sm">{s}</span>)}
