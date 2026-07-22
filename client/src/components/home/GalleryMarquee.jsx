@@ -136,8 +136,8 @@ const GalleryMarquee = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="space-y-4"
       >
-        <MarqueeRow images={row1} reverse={false} speed={12} />
-        <MarqueeRow images={row2} reverse={true} speed={15} />
+        <MarqueeRow images={row1} reverse={false} speed={4} />
+        <MarqueeRow images={row2} reverse={true} speed={5} />
       </motion.div>
 
       {/* CTA */}

@@ -139,7 +139,7 @@ const PackagesPage = () => (
     <div className="page-hero">
       <div className="container-custom relative z-10 text-center text-white">
         <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="flex justify-center mb-4">
-          <img src={BRAND.logoUrl} alt="Cleaning Duck" className="w-16 h-16 rounded-full ring-4 ring-orange-400/60" />
+          <img src={BRAND.logoUrl} alt="Cleaning Duck" className="w-16 h-16 rounded-full object-cover ring-4 ring-orange-400/60" />
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-4">
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-orange-500/20 backdrop-blur-sm border border-orange-400/40 text-orange-300 text-sm font-medium">

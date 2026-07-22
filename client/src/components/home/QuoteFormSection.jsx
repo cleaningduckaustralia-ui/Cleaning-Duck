@@ -66,11 +66,11 @@ const QuoteFormSection = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-accent mb-3 px-4 py-1.5 rounded-full bg-accent/20">
+            <span className="inline-block text-xs font-bold uppercase tracking-widest text-yellow-300 mb-3 px-4 py-1.5 rounded-full bg-yellow-400/10 border border-yellow-400/20">
               Free Quote
             </span>
             <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
-              Get Your <span className="text-accent">Free Quote</span> Today
+              Get Your <span className="text-yellow-300">Free Quote</span> Today
             </h2>
             <p className="text-white/70 leading-relaxed mb-8">
               Fill in the form and our team will respond within 2 business hours with a

@@ -57,7 +57,7 @@ const BlogPage = () => {
       />
 
       {/* Hero Section */}
-      <section className="bg-primary pt-40 pb-20 relative overflow-hidden">
+      <section className="bg-primary pt-24 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 pattern-dots opacity-10" />
         <div className="container-custom relative z-10 text-center">
           <motion.h1

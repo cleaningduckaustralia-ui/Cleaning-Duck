@@ -94,7 +94,7 @@ const BlogDetailPage = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
         
-        <div className="container-custom relative z-10 pb-16 pt-36">
+        <div className="container-custom relative z-10 pb-16 pt-24">
           <nav aria-label="Breadcrumb" className="mb-5">
             <ol className="flex items-center gap-2 text-sm text-white/60">
               <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>

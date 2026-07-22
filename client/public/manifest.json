@@ -10,16 +10,10 @@
   "scope": "/",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://cleaningduckaustralia.com.au/wp-content/uploads/2025/12/cropped-Untitled-design23-270x270.png",
+      "src": "/logo.png",
       "sizes": "270x270",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     }
   ],
   "categories": ["business", "utilities"],
@@ -29,14 +23,14 @@
       "short_name": "Free Quote",
       "description": "Request a free cleaning quote",
       "url": "/request-quote",
-      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+      "icons": [{ "src": "/logo.png", "sizes": "270x270" }]
     },
     {
       "name": "Our Services",
       "short_name": "Services",
       "description": "View all cleaning services",
       "url": "/services",
-      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+      "icons": [{ "src": "/logo.png", "sizes": "270x270" }]
     }
   ]
 }

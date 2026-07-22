@@ -1,6 +1,7 @@
 require('dotenv').config();
 require('express-async-errors');
 
+// Trigger nodemon reload to read updated .env variables
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
@@ -48,9 +49,13 @@ app.use(helmet({
 }));
 
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production'
-    ? ['https://cleaningduckaustralia.com.au', 'https://www.cleaningduckaustralia.com.au']
-    : [process.env.CLIENT_URL || 'http://localhost:5173'],
+  origin: [
+    'http://localhost:5173',
+    'http://127.0.0.1:5173',
+    'https://cleaningduckaustralia.com.au',
+    'https://www.cleaningduckaustralia.com.au',
+    process.env.CLIENT_URL
+  ].filter(Boolean),
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],

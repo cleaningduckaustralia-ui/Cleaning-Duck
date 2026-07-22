@@ -229,7 +229,7 @@ const ServiceDetailPage = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
         {/* Content */}
-        <div className="container-custom relative z-10 pb-16 pt-36">
+        <div className="container-custom relative z-10 pb-16 pt-24">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-5">
             <ol className="flex items-center gap-2 text-sm text-white/50">
@@ -412,7 +412,7 @@ const ServiceDetailPage = () => {
               <div className="rounded-3xl overflow-hidden shadow-xl" style={{ background: 'linear-gradient(135deg, #7c3200, #c05411)' }}>
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <img src={BRAND.logoUrl} alt="Cleaning Duck" className="w-12 h-12 rounded-full ring-2 ring-orange-300/50" />
+                    <img src={BRAND.logoUrl} alt="Cleaning Duck" className="w-12 h-12 rounded-full object-cover ring-2 ring-orange-300/50" />
                     <div>
                       <h3 className="text-white font-bold text-lg leading-tight">Get a Free Quote</h3>
                       <p className="text-orange-200 text-xs">Reply within 2 hours</p>

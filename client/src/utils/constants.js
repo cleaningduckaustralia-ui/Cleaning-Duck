@@ -8,11 +8,17 @@ export const BRAND = {
   whatsapp: 'https://wa.me/61412664540',
   email: 'info@cleaningduckaustralia.com.au',
   address: 'Brisbane, Queensland, Australia',
-  businessHours: 'Mon–Sat: 7:00am – 6:00pm',
+  businessHours: 'Mon–Sat: 7:00am – 5:00pm',
+  googleReviewsUrl: 'https://search.google.com/local/reviews?placeid=ChIJIyityxQbHwQR55-2nOHlIwE',
   serviceAreas: ['Brisbane', 'Logan', 'Ipswich', 'Gold Coast', 'Sunshine Coast'],
-  googleMapsUrl: 'https://maps.google.com/?q=Cleaning+Duck+Australia+Brisbane',
-  googleReviewUrl: 'https://admin.trustindex.io/api/googleWriteReview?place-id=ChIJIyityxQbHwQR55-2nOHlIwE',
+  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Cleaning+Duck+Australia+Brisbane&query_place_id=ChIJIyityxQbHwQR55-2nOHlIwE',
+  googleReviewUrl: 'https://search.google.com/local/writereview?placeid=ChIJIyityxQbHwQR55-2nOHlIwE',
   logoUrl: 'https://cleaningduckaustralia.com.au/wp-content/uploads/2025/12/cropped-Untitled-design23-270x270.png',
+  social: {
+    facebook: 'https://www.facebook.com/profile.php?id=61575881576884#',
+    instagram: 'https://www.instagram.com/cleaningduck.au/',
+    tiktok: 'https://www.tiktok.com/@cleaningduck.au',
+  },
 };
 
 export const STATS = [

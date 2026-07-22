@@ -77,7 +77,7 @@ const WhyChooseUs = () => {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-card-lg aspect-[4/3]">
+          <div className="relative rounded-3xl overflow-hidden shadow-card-lg aspect-[4/3]">
               <img
                 src="https://cleaningduckaustralia.com.au/wp-content/uploads/2026/02/6-1.png"
                 alt="Professional cleaning technician at work"
@@ -89,32 +89,32 @@ const WhyChooseUs = () => {
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+
+              {/* Floating stat card — inside image to prevent mobile overflow */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="absolute bottom-4 right-4 glass-dark rounded-2xl px-4 py-3 shadow-lg border border-white/10"
+              >
+                <div className="text-2xl font-bold text-white">700+</div>
+                <div className="text-white/60 text-xs">Satisfied Clients</div>
+                <div className="flex gap-0.5 mt-1">
+                  {'★★★★★'.split('').map((s, i) => <span key={i} className="text-yellow-400 text-sm">{s}</span>)}
+                </div>
+              </motion.div>
+
+              {/* Experience badge — inside image to prevent mobile overflow */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="absolute top-4 left-4 bg-accent text-white rounded-2xl px-4 py-3 shadow-lg"
+              >
+                <div className="text-xl font-bold">10+</div>
+                <div className="text-white/80 text-xs">Expert Technicians</div>
+              </motion.div>
             </div>
-
-            {/* Floating stat card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="absolute -bottom-6 -right-6 glass-dark rounded-2xl px-6 py-4 shadow-lg border border-white/10"
-            >
-              <div className="text-3xl font-bold text-white">700+</div>
-              <div className="text-white/60 text-sm">Satisfied Clients</div>
-              <div className="flex gap-0.5 mt-1">
-                {'★★★★★'.split('').map((s, i) => <span key={i} className="text-yellow-400 text-sm">{s}</span>)}
-              </div>
-            </motion.div>
-
-            {/* Experience badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="absolute -top-6 -left-6 bg-accent text-white rounded-2xl px-5 py-4 shadow-lg"
-            >
-              <div className="text-2xl font-bold">10+</div>
-              <div className="text-white/80 text-xs">Expert Technicians</div>
-            </motion.div>
           </motion.div>
 
           {/* Right — content */}
@@ -154,9 +154,9 @@ const WhyChooseUs = () => {
               ))}
             </div>
 
-            <div className="mt-8 flex gap-4">
-              <Link to="/request-quote" className="btn-primary">Get Free Quote</Link>
-              <Link to="/about" className="btn-outline-primary">Learn More</Link>
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Link to="/request-quote" className="btn-primary text-center">Get Free Quote</Link>
+              <Link to="/about" className="btn-outline-primary text-center">Learn More</Link>
             </div>
           </motion.div>
         </div>

@@ -260,7 +260,7 @@ const ServicesPage = () => {
       <div className="page-hero">
         <div className="container-custom relative z-10 text-center text-white">
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="flex justify-center mb-4">
-            <img src={BRAND.logoUrl} alt="Cleaning Duck" className="w-16 h-16 rounded-full ring-4 ring-orange-400/60" />
+            <img src={BRAND.logoUrl} alt="Cleaning Duck" className="w-16 h-16 rounded-full object-cover ring-4 ring-orange-400/60" />
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-5xl font-bold mb-4">
             Our Cleaning Services

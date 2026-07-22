@@ -1,6 +1,6 @@
 const Quote = require('../models/Quote');
 const ErrorResponse = require('../utils/errorResponse');
-const { sendQuoteNotification, sendQuoteConfirmation } = require('../services/emailService');
+const { sendQuoteNotification } = require('../services/emailService');
 const winston = require('../utils/logger');
 
 // @desc    Submit quote request (public)
@@ -17,13 +17,12 @@ exports.submitQuote = async (req, res, next) => {
 
   const quote = await Quote.create(quoteData);
 
-  // Send notifications (non-blocking)
-  Promise.all([
-    sendQuoteNotification(quote).catch((err) => winston.error('Quote admin email failed:', err.message)),
-    sendQuoteConfirmation(quote).catch((err) => winston.error('Quote confirm email failed:', err.message)),
-  ]).then(async () => {
-    await Quote.findByIdAndUpdate(quote._id, { emailNotificationSent: true });
-  });
+  // Send notification (non-blocking)
+  sendQuoteNotification(quote)
+    .then(async () => {
+      await Quote.findByIdAndUpdate(quote._id, { emailNotificationSent: true });
+    })
+    .catch((err) => winston.error('Quote admin email failed:', err.message));
 
   res.status(201).json({
     success: true,

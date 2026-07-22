@@ -58,8 +58,9 @@ export const localBusinessSchema = {
     ],
   },
   sameAs: [
-    'https://www.facebook.com/cleaningduckaustralia',
-    'https://www.instagram.com/cleaningduckaustralia',
+    BRAND.social.facebook,
+    BRAND.social.instagram,
+    BRAND.social.tiktok,
   ],
   foundingDate: '2024',
   taxID: '89383045240',
