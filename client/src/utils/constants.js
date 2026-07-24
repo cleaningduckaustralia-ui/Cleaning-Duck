@@ -6,7 +6,7 @@ export const BRAND = {
   phone: { primary: '0412 664 540', secondary: '0430 614 643' },
   phoneHref: { primary: 'tel:0412664540', secondary: 'tel:0430614643' },
   whatsapp: 'https://wa.me/61412664540',
-  email: 'info@cleaningduckaustralia.com.au',
+  email: 'cleaningduckaustralia@gmail.com',
   address: 'Brisbane, Queensland, Australia',
   businessHours: 'Mon–Sat: 7:00am – 5:00pm',
   googleReviewsUrl: 'https://search.google.com/local/reviews?placeid=ChIJIyityxQbHwQR55-2nOHlIwE',

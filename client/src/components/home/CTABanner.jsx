@@ -15,7 +15,7 @@ const CTABanner = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <div className="text-5xl mb-4">🦆</div>
+        <div className="text-5xl mb-4">✨</div>
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           Ready for a Sparkling Clean?
         </h2>

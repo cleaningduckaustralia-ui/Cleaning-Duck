@@ -7,7 +7,7 @@ import GalleryMarquee from '../components/home/GalleryMarquee';
 import TestimonialsSlider from '../components/home/TestimonialsSlider';
 import ServiceAreasSection from '../components/home/ServiceAreasSection';
 import FAQAccordion from '../components/home/FAQAccordion';
-import QuoteFormSection from '../components/home/QuoteFormSection';
+
 import CTABanner from '../components/home/CTABanner';
 import { generateBreadcrumbSchema } from '../utils/seoData';
 
@@ -33,7 +33,7 @@ const HomePage = () => {
         <TestimonialsSlider />
         <ServiceAreasSection />
         <FAQAccordion limit={6} featured />
-        <QuoteFormSection />
+
         <CTABanner />
       </main>
     </>

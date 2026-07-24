@@ -393,7 +393,7 @@ const siteSettings = [
   { key: 'abn', value: '89 383 045 240', group: 'general', label: 'ABN', isPublic: true },
   { key: 'phone_primary', value: '0412 664 540', group: 'contact', label: 'Primary Phone', isPublic: true },
   { key: 'phone_secondary', value: '0430 614 643', group: 'contact', label: 'Secondary Phone', isPublic: true },
-  { key: 'email_contact', value: 'info@cleaningduckaustralia.com.au', group: 'contact', label: 'Contact Email', isPublic: true },
+  { key: 'email_contact', value: 'cleaningduckaustralia@gmail.com', group: 'contact', label: 'Contact Email', isPublic: true },
   { key: 'address', value: 'Brisbane, Queensland, Australia', group: 'contact', label: 'Address', isPublic: true },
   { key: 'service_areas', value: ['Brisbane', 'Logan', 'Ipswich', 'Gold Coast', 'Sunshine Coast'], group: 'general', label: 'Service Areas', isPublic: true },
   { key: 'business_hours', value: 'Mon–Sat: 7:00am – 6:00pm | Sun: By appointment', group: 'general', label: 'Business Hours', isPublic: true },

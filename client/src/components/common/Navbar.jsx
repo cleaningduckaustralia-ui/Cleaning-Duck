@@ -34,28 +34,29 @@ const Navbar = () => {
           isHome ? 'fixed top-0 left-0 right-0' : 'sticky top-0'
         } ${
           !isHome || scrolled
-            ? 'bg-orange-900/95 backdrop-blur-md shadow-lg py-2'
+            ? 'backdrop-blur-md shadow-lg py-2'
             : 'bg-transparent py-4'
         }`}
+        style={(!isHome || scrolled) ? { background: 'linear-gradient(135deg, #c2500a 0%, #ea580c 60%, #f97316 100%)' } : {}}
       >
         <nav className="container-custom flex items-center justify-between" aria-label="Main navigation">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3" aria-label="Cleaning Duck Australia Home">
+          <Link to="/" className="flex items-center gap-2.5 flex-shrink-0" aria-label="Cleaning Duck Australia Home">
             <img
               src={BRAND.logoUrl}
               alt="Cleaning Duck Australia Logo"
-              className="w-12 h-12 rounded-full object-cover ring-2 ring-orange-400/70 shadow-lg"
+              className="w-11 h-11 rounded-full object-cover ring-2 ring-orange-400/70 shadow-lg flex-shrink-0"
               loading="eager"
-              width="48" height="48"
+              width="44" height="44"
             />
-            <div className="flex items-center gap-1.5">
-              <span className="text-white font-bold text-lg leading-tight">Cleaning Duck</span>
-              <span className="text-orange-300 text-lg font-medium">Australia</span>
+            <div className="hidden sm:flex items-center gap-1 whitespace-nowrap">
+              <span className="text-white font-bold text-base leading-tight drop-shadow-sm">Cleaning Duck</span>
+              <span className="text-orange-200 text-base font-medium">Australia</span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-7" ref={dropdownRef}>
+          <div className="hidden lg:flex items-center gap-4 xl:gap-7" ref={dropdownRef}>
             {NAV_LINKS.map((link) => {
               if (link.grouped) {
                 /* ── Mega grouped dropdown ── */
@@ -186,18 +187,18 @@ const Navbar = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
-            <div className="flex flex-col gap-1 items-end mr-2">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3">
+            <div className="hidden xl:flex flex-col gap-1 items-end mr-2">
               <a href={BRAND.phoneHref.primary} className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
-                <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-xs">📞</span>
+                <span className="w-5 h-5 rounded-full bg-white/15 flex items-center justify-center text-xs">📞</span>
                 {BRAND.phone.primary}
               </a>
               <a href={BRAND.phoneHref.secondary} className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
-                <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-xs">📞</span>
+                <span className="w-5 h-5 rounded-full bg-white/15 flex items-center justify-center text-xs">📞</span>
                 {BRAND.phone.secondary}
               </a>
             </div>
-            <Link to="/request-quote" className="btn-primary btn-sm">
+            <Link to="/request-quote" className="btn-primary btn-sm whitespace-nowrap">
               Free Quote
             </Link>
           </div>
@@ -205,7 +206,7 @@ const Navbar = () => {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-white p-2 rounded-xl hover:bg-white/10 transition-colors"
+            className="lg:hidden text-white p-2 rounded-xl hover:bg-white/15 transition-colors"
             aria-label="Toggle mobile menu"
             aria-expanded={mobileOpen}
           >
@@ -227,7 +228,7 @@ const Navbar = () => {
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
             className="fixed inset-y-0 right-0 z-40 w-80 max-w-full shadow-2xl overflow-y-auto"
-            style={{ background: 'linear-gradient(180deg, #7c3200 0%, #c05411 100%)' }}
+            style={{ background: 'linear-gradient(160deg, #b84509 0%, #ea580c 50%, #f97316 100%)' }}
           >
             <div className="p-6 pt-24 pb-10">
               <nav className="space-y-1">
@@ -237,16 +238,16 @@ const Navbar = () => {
                       <div key={link.label}>
                         <Link
                           to={link.href}
-                          className="block px-4 py-2.5 text-white font-bold rounded-xl hover:bg-white/10 transition-colors"
+                          className="block px-4 py-2.5 text-white font-bold rounded-xl hover:bg-white/15 transition-colors"
                         >
                           {link.label}
                         </Link>
                         <div className="ml-3 mt-1 mb-3 space-y-3">
                           {link.groups.map((group) => (
-                            <div key={group.heading} className="border-l-2 border-white/15 pl-4">
+                            <div key={group.heading} className="border-l-2 border-white/20 pl-4">
                               <div className="flex items-center gap-1.5 py-1 mb-0.5">
                                 <span className="text-sm">{group.icon}</span>
-                                <span className="text-xs font-bold text-orange-300 uppercase tracking-wider">
+                                <span className="text-xs font-bold text-orange-200 uppercase tracking-wider">
                                   {group.heading}
                                 </span>
                               </div>
@@ -254,7 +255,7 @@ const Navbar = () => {
                                 <Link
                                   key={item.href}
                                   to={item.href}
-                                  className="block py-1.5 pl-2 text-sm text-white/70 hover:text-white transition-colors"
+                                  className="block py-1.5 pl-2 text-sm text-white/75 hover:text-white transition-colors"
                                 >
                                   {item.label}
                                 </Link>
@@ -270,7 +271,7 @@ const Navbar = () => {
                     <div key={link.label}>
                       <Link
                         to={link.href}
-                        className="block px-4 py-3 text-white font-medium rounded-xl hover:bg-white/10 transition-colors"
+                        className="block px-4 py-3 text-white font-medium rounded-xl hover:bg-white/15 transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -283,14 +284,14 @@ const Navbar = () => {
               <div className="mt-8 space-y-3">
                 <a
                   href={BRAND.phoneHref.primary}
-                  className="flex items-center justify-center gap-2 py-3 rounded-xl border border-white/30 text-white font-medium hover:bg-white/10 transition-colors"
+                  className="flex items-center justify-center gap-2 py-3 rounded-xl border border-white/30 text-white font-medium hover:bg-white/15 transition-colors"
                 >
                   <span className="text-lg">📞</span>
                   {BRAND.phone.primary}
                 </a>
                 <a
                   href={BRAND.phoneHref.secondary}
-                  className="flex items-center justify-center gap-2 py-3 rounded-xl border border-white/30 text-white font-medium hover:bg-white/10 transition-colors"
+                  className="flex items-center justify-center gap-2 py-3 rounded-xl border border-white/30 text-white font-medium hover:bg-white/15 transition-colors"
                 >
                   <span className="text-lg">📞</span>
                   {BRAND.phone.secondary}
@@ -300,10 +301,10 @@ const Navbar = () => {
                 </Link>
               </div>
 
-              <div className="mt-8 p-4 rounded-xl bg-white/5">
-                <p className="text-white/50 text-xs mb-2">Service Areas</p>
+              <div className="mt-8 p-4 rounded-xl bg-white/10">
+                <p className="text-white/55 text-xs mb-2">Service Areas</p>
                 <p className="text-white text-sm">{BRAND.serviceAreas.join(' · ')}</p>
-                <p className="text-white/50 text-xs mt-3">ABN {BRAND.abn}</p>
+                <p className="text-white/55 text-xs mt-3">ABN {BRAND.abn}</p>
               </div>
 
               {/* Social Links */}
@@ -319,7 +320,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/25 flex items-center justify-center transition-colors duration-200"
+                    className="w-10 h-10 rounded-xl bg-white/15 hover:bg-white/30 flex items-center justify-center transition-colors duration-200"
                   >
                     <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d={icon} />

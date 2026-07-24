@@ -10,7 +10,7 @@ export const localBusinessSchema = {
   description: 'Professional cleaning services in Brisbane & All over QLD. Carpet cleaning, bond cleaning, roof cleaning, upholstery, pressure cleaning, gutter cleaning, solar panel cleaning and more.',
   url: 'https://cleaningduckaustralia.com.au',
   telephone: ['+61412664540', '+61430614643'],
-  email: 'info@cleaningduckaustralia.com.au',
+  email: 'cleaningduckaustralia@gmail.com',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Brisbane',

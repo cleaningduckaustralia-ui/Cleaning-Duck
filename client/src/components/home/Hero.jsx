@@ -36,7 +36,7 @@ const trustBadges = [
   { icon: '⭐', text: '5-Star Google Rated' },
   { icon: '🛡️', text: 'Fully Insured' },
   { icon: '✅', text: '700+ Jobs Done' },
-  { icon: '🦆', text: 'Trusted Since 2024' },
+  { icon: '🗓️', text: 'Trusted Since 2024' },
 ];
 
 const Hero = () => {
@@ -131,7 +131,7 @@ const Hero = () => {
           className="flex items-center justify-center gap-2 mb-5"
         >
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-orange-500/20 backdrop-blur-sm border border-orange-400/40 text-orange-300 text-sm font-medium tracking-wide">
-            🦆 Brisbane's Trusted Cleaning Experts
+            ✨ Brisbane's Trusted Cleaning Experts
           </span>
         </motion.div>
 
