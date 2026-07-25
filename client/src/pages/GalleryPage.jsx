@@ -5,6 +5,7 @@ import { generateBreadcrumbSchema } from '../utils/seoData';
 import galleryImagesLocal from '../data/galleryImages.json';
 import CTABanner from '../components/home/CTABanner';
 import api from '../services/api';
+import { cdnUrl } from '../utils/cloudinaryHelpers';
 
 const isVideo = (src) => {
   if (!src) return false;
@@ -25,11 +26,12 @@ const GalleryPage = () => {
 
   useEffect(() => {
     const fetchImages = async () => {
+      setLoading(true);
       try {
         const { data } = await api.get('/media?folder=cleaning-duck/gallery');
-        // Map DB images to match the UI format
+        // Map DB images to match the UI format, preferring secureUrl
         const formatted = data.data.map(img => ({
-          src: img.url,
+          src: img.secureUrl || img.url,
           category: img.tags?.[0] || 'Gallery', // If we use tags for category
           id: img._id
         }));
@@ -44,7 +46,13 @@ const GalleryPage = () => {
   }, []);
 
   const activeImages = dbImages.length > 0 ? dbImages : galleryImagesLocal;
-  const filteredImages = activeImages;
+  
+  // Dynamically extract categories
+  const categories = ['All', ...new Set(activeImages.map(img => img.category).filter(Boolean))];
+
+  const filteredImages = filter === 'All'
+    ? activeImages
+    : activeImages.filter(img => img.category === filter);
 
   return (
     <>
@@ -80,6 +88,22 @@ const GalleryPage = () => {
       {/* Gallery Section */}
       <section className="section bg-neutral-50 min-h-screen">
         <div className="container-custom">
+          {/* Category Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-2 mb-10">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  filter === cat
+                    ? 'bg-primary text-white shadow-md'
+                    : 'bg-white text-neutral-600 hover:bg-neutral-100 border border-neutral-200'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
 
           {loading ? (
             <div className="flex justify-center items-center py-20">
@@ -103,7 +127,7 @@ const GalleryPage = () => {
                     >
                       {isVideo(image.src) ? (
                         <video
-                          src={image.src}
+                          src={cdnUrl(image.src, { width: 600 })}
                           className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700"
                           autoPlay
                           muted
@@ -112,7 +136,7 @@ const GalleryPage = () => {
                         />
                       ) : (
                         <img
-                          src={image.src}
+                          src={cdnUrl(image.src, { width: 600 })}
                           alt={`${image.category} cleaning example`}
                           className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700"
                           loading="lazy"
@@ -164,7 +188,7 @@ const GalleryPage = () => {
                 initial={{ scale: 0.9, y: 20 }}
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.9, y: 20 }}
-                src={selectedImage.src}
+                src={cdnUrl(selectedImage.src, { width: 1400 })}
                 className="max-w-full max-h-[85vh] rounded-lg shadow-2xl"
                 controls
                 autoPlay
@@ -176,7 +200,7 @@ const GalleryPage = () => {
                 initial={{ scale: 0.9, y: 20 }}
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.9, y: 20 }}
-                src={selectedImage.src}
+                src={cdnUrl(selectedImage.src, { width: 1400 })}
                 alt={selectedImage.category}
                 className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
                 onClick={(e) => e.stopPropagation()}

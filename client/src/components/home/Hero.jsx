@@ -72,7 +72,7 @@ const Hero = () => {
               className="w-full h-full object-cover"
               loading="eager"
               fetchPriority="high"
-              onError={(e) => { e.target.src = 'https://cleaningduckaustralia.com.au/wp-content/uploads/2026/02/Cleaning_Duck-01.jpg'; }}
+              onError={(e) => { e.target.src = publicAsset('/images/exterior-house.jpg'); }}
             />
           </motion.div>
         </AnimatePresence>

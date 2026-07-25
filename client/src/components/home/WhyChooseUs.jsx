@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
+import { publicAsset } from '../../utils/pathHelpers';
 
 const features = [
   {
@@ -79,7 +80,7 @@ const WhyChooseUs = () => {
           >
           <div className="relative rounded-3xl overflow-hidden shadow-card-lg aspect-[4/3]">
               <img
-                src="https://cleaningduckaustralia.com.au/wp-content/uploads/2026/02/6-1.png"
+                src={publicAsset('/images/exterior-house.jpg')}
                 alt="Professional cleaning technician at work"
                 className="w-full h-full object-cover"
                 loading="lazy"

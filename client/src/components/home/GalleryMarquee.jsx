@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 import { publicAsset } from '../../utils/pathHelpers';
 
 // ─── Reliable Unsplash gallery images ─────────────────────────────────────────
@@ -147,14 +148,12 @@ const GalleryMarquee = () => {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="container-custom mt-10 text-center"
       >
-        <a
-          href="https://cleaningduckaustralia.com.au/gallery/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/gallery"
           className="btn-outline-primary inline-flex"
         >
-          View Full Gallery ↗
-        </a>
+          View Full Gallery
+        </Link>
       </motion.div>
     </section>
   );
