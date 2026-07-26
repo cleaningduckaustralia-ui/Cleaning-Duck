@@ -39,7 +39,7 @@ jobs:
           password: ${{ secrets.FTP_FRONTEND_PASSWORD }}
           protocol: ftps
           local-dir: ./client/dist/
-          server-dir: ./cleaningduckaustralia.com.au/
+          server-dir: ./public_html/
           exclude: |
             **/.git*
             **/.git*/**
