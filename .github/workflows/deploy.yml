@@ -31,16 +31,15 @@ jobs:
       - name: Create SPA fallback page
         run: cp client/dist/index.html client/dist/404.html
 
-      - name: Deploy to cPanel via FTP
+      - name: Deploy frontend to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.0
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT || 21 }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_FRONTEND_USERNAME }}
+          password: ${{ secrets.FTP_FRONTEND_PASSWORD }}
           protocol: ftps
           local-dir: ./client/dist/
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          server-dir: ./
           exclude: |
             **/.git*
             **/.git*/**
