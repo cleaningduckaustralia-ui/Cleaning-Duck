@@ -95,14 +95,7 @@ app.use('/api/contacts', contactRoutes);
 app.use('/api/settings', settingsRoutes);
 
 // ─── Serve Frontend in Production ────────────────────────────────────────────
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/dist')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'));
-  });
-} else {
-  app.get('/', (req, res) => res.json({ message: 'API running in development mode' }));
-}
+app.get('/', (req, res) => res.json({ message: 'Cleaning Duck Australia API is running' }));
 
 // ─── 404 Handler ────────────────────────────────────────────────────────────
 app.use((req, res) => {
