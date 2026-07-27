@@ -6,3 +6,5 @@ build
 coverage
 server/logs/
 .vscode/
+*.zip
+dist-upload.zip
