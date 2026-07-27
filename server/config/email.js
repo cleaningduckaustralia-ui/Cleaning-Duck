@@ -9,7 +9,11 @@ const sendEmail = async ({ to, subject, html }) => {
     }
     const resend = new Resend(apiKey);
 
-    const from = process.env.EMAIL_FROM || 'Cleaning Duck Australia <onboarding@resend.dev>';
+    // Resend unverified domain requirement: must send from onboarding@resend.dev until domain is verified on Resend
+    let from = 'Cleaning Duck Australia <onboarding@resend.dev>';
+    if (process.env.EMAIL_FROM && !process.env.EMAIL_FROM.includes('cleaningduckaustralia.com.au')) {
+      from = process.env.EMAIL_FROM;
+    }
     const recipient = to || process.env.EMAIL_NOTIFY || 'cleaningduckaustralia@gmail.com';
 
     const response = await resend.emails.send({
