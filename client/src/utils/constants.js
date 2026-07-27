@@ -13,7 +13,7 @@ export const BRAND = {
   serviceAreas: ['Brisbane', 'Logan', 'Ipswich', 'Gold Coast', 'Sunshine Coast'],
   googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Cleaning+Duck+Australia+Brisbane&query_place_id=ChIJIyityxQbHwQR55-2nOHlIwE',
   googleReviewUrl: 'https://search.google.com/local/writereview?placeid=ChIJIyityxQbHwQR55-2nOHlIwE',
-  logoUrl: 'https://cleaningduckaustralia.com.au/wp-content/uploads/2025/12/cropped-Untitled-design23-270x270.png',
+  logoUrl: '/logo.png',
   social: {
     facebook: 'https://www.facebook.com/profile.php?id=61575881576884#',
     instagram: 'https://www.instagram.com/cleaningduck.au/',
