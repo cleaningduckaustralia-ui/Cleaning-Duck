@@ -52,18 +52,21 @@ app.use(cors({
   origin: (origin, callback) => {
     // Allow requests with no origin (mobile apps, curl, server-to-server)
     if (!origin) return callback(null, true);
-    const allowed = [
+    const extraOrigins = process.env.CLIENT_URL
+      ? process.env.CLIENT_URL.split(',').map(u => u.trim())
+      : [];
+    const allowed = new Set([
       'http://localhost:5173',
+      'http://localhost:3000',
       'http://127.0.0.1:5173',
       'https://cleaningduckaustralia.com.au',
       'https://www.cleaningduckaustralia.com.au',
-      ...(process.env.CLIENT_URL ? process.env.CLIENT_URL.split(',').map(u => u.trim()) : []),
-    ];
-    // Also allow any netlify.app subdomain
-    if (allowed.includes(origin) || origin.endsWith('.netlify.app')) {
+      ...extraOrigins,
+    ]);
+    if (allowed.has(origin)) {
       return callback(null, true);
     }
-    return callback(new Error('Not allowed by CORS'));
+    return callback(new Error(`CORS: origin ${origin} not allowed`));
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
