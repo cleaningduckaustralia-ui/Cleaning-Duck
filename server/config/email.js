@@ -1,29 +1,34 @@
-const axios = require('axios');
+const { Resend } = require('resend');
 const winston = require('../utils/logger');
 
 const sendEmail = async ({ to, subject, html }) => {
   try {
-    const cpanelUrl = process.env.CPANEL_MAIL_URL || 'https://cleaningduckaustralia.com.au/api-mail.php';
-    const secret = process.env.CPANEL_MAIL_SECRET || 'cda_mail_secret_2026_key';
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      throw new Error('RESEND_API_KEY environment variable is missing.');
+    }
+    const resend = new Resend(apiKey);
 
-    const response = await axios.post(
-      cpanelUrl,
-      { to, subject, html },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Mail-Secret': secret,
-        },
-        timeout: 10000,
-      }
-    );
+    const from = process.env.EMAIL_FROM || 'Cleaning Duck Australia <onboarding@resend.dev>';
+    const recipient = to || process.env.EMAIL_NOTIFY || 'cleaningduckaustralia@gmail.com';
 
-    winston.info(`Email sent via cPanel relay to ${to}`);
+    const response = await resend.emails.send({
+      from,
+      to: recipient,
+      subject,
+      html,
+    });
+
+    if (response.error) {
+      winston.error(`Resend API error: ${JSON.stringify(response.error)}`);
+      throw new Error(response.error.message);
+    }
+
+    winston.info(`Email sent via Resend with ID: ${response.data.id}`);
     return response.data;
   } catch (error) {
-    const errorMsg = error.response ? JSON.stringify(error.response.data) : error.message;
-    winston.error(`Email sending failed via cPanel relay: ${errorMsg}`);
-    throw new Error(`Email sending failed: ${errorMsg}`);
+    winston.error(`Email sending failed via Resend: ${error.message}`);
+    throw error;
   }
 };
 
