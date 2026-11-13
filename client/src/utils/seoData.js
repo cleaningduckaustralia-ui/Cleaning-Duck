@@ -9,7 +9,7 @@ export const localBusinessSchema = {
   alternateName: 'Cleaning Duck',
   description: 'Professional cleaning services in Brisbane & All over QLD. Carpet cleaning, bond cleaning, roof cleaning, upholstery, pressure cleaning, gutter cleaning, solar panel cleaning and more.',
   url: 'https://cleaningduckaustralia.com.au',
-  telephone: ['+61412664540', '+61430614643'],
+  telephone: '+61430614643',
   email: 'cleaningduckaustralia@gmail.com',
   address: {
     '@type': 'PostalAddress',
@@ -205,7 +205,7 @@ export const generateDetailedServiceSchema = (service) => ({
     '@type': 'LocalBusiness',
     name: 'Cleaning Duck Australia',
     '@id': 'https://cleaningduckaustralia.com.au/#business',
-    telephone: '+61412664540',
+    telephone: '+61430614643',
     url: 'https://cleaningduckaustralia.com.au',
   },
   areaServed: [

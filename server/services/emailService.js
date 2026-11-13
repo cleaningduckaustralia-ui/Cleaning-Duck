@@ -63,7 +63,7 @@ const quoteConfirmationTemplate = (quote) => `
     <p>We've received your quote request for <strong>${quote.service}</strong> and our team will be in touch shortly to provide a personalised quote.</p>
     <div class="highlight">
       <p style="margin:0 0 8px;font-weight:600;">Need to speak to us urgently?</p>
-      <div class="phone">📞 0412 664 540 or 0430 614 643</div>
+      <div class="phone">📞 0430 614 643</div>
     </div>
     <p><strong>What happens next?</strong></p>
     <ol>

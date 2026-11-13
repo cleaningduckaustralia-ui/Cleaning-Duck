@@ -48,7 +48,7 @@ const ContactPage = () => {
     <>
       <SEOHead
         title="Contact Us | Cleaning Duck Australia Brisbane"
-        description="Get in touch with Cleaning Duck Australia. Call 0412 664 540, WhatsApp, or fill our contact form. We respond within 2 business hours. Serving Brisbane & All over QLD."
+        description="Get in touch with Cleaning Duck Australia. Call 0430 614 643, WhatsApp, or fill our contact form. We respond within 2 business hours. Serving Brisbane & All over QLD."
         keywords={['contact cleaning duck australia', 'Brisbane cleaning service contact', 'cleaning quote Brisbane']}
         canonical="/contact"
         structuredData={[breadcrumb]}
@@ -82,8 +82,7 @@ const ContactPage = () => {
               </div>
 
               {[
-                { icon: '📞', label: 'Primary Phone', value: BRAND.phone.primary, href: BRAND.phoneHref.primary },
-                { icon: '📞', label: 'Secondary Phone', value: BRAND.phone.secondary, href: BRAND.phoneHref.secondary },
+                { icon: '📞', label: 'Phone', value: BRAND.phone.primary, href: BRAND.phoneHref.primary },
                 { icon: '📧', label: 'Email', value: BRAND.email, href: `mailto:${BRAND.email}` },
                 { icon: '💬', label: 'WhatsApp', value: 'Chat with us', href: BRAND.whatsapp },
                 { icon: '📍', label: 'Location', value: BRAND.address, href: BRAND.googleMapsUrl },

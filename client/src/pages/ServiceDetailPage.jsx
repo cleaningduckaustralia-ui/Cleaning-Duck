@@ -425,9 +425,6 @@ const ServiceDetailPage = () => {
                   <a href={BRAND.phoneHref.primary} className="flex items-center justify-center gap-2 mt-3 text-white/70 hover:text-white text-sm transition-colors">
                     📞 {BRAND.phone.primary}
                   </a>
-                  <a href={BRAND.phoneHref.secondary} className="flex items-center justify-center gap-2 mt-1.5 text-white/70 hover:text-white text-sm transition-colors">
-                    📞 {BRAND.phone.secondary}
-                  </a>
                   <a href={BRAND.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 mt-1.5 text-white/70 hover:text-white text-sm transition-colors">
                     💬 WhatsApp Us
                   </a>

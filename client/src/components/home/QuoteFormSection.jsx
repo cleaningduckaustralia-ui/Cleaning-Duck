@@ -80,8 +80,7 @@ const QuoteFormSection = () => {
             {/* Contact options */}
             <div className="space-y-4">
               {[
-                { icon: '📞', label: 'Primary Phone', value: BRAND.phone.primary, href: BRAND.phoneHref.primary },
-                { icon: '📞', label: 'Secondary Phone', value: BRAND.phone.secondary, href: BRAND.phoneHref.secondary },
+                { icon: '📞', label: 'Phone', value: BRAND.phone.primary, href: BRAND.phoneHref.primary },
                 { icon: '✉️', label: 'Email', value: BRAND.email, href: `mailto:${BRAND.email}` },
                 { icon: '📍', label: 'Service Area', value: 'Brisbane & All over QLD', href: '#' },
               ].map(({ icon, label, value, href }) => (
@@ -121,7 +120,7 @@ const QuoteFormSection = () => {
                 <p className="text-neutral-500 mb-6">
                   Thank you! Our team will be in touch within 2 business hours with your personalised quote.
                 </p>
-                <p className="text-sm text-neutral-400">Need it sooner? Call <a href={BRAND.phoneHref.primary} className="text-primary font-semibold">{BRAND.phone.primary}</a> or <a href={BRAND.phoneHref.secondary} className="text-primary font-semibold">{BRAND.phone.secondary}</a></p>
+                <p className="text-sm text-neutral-400">Need it sooner? Call <a href={BRAND.phoneHref.primary} className="text-primary font-semibold">{BRAND.phone.primary}</a></p>
                 <button onClick={() => setSuccess(false)} className="btn-secondary mt-6">Submit Another Quote</button>
               </div>
             ) : (

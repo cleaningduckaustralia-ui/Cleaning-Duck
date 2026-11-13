@@ -43,7 +43,7 @@ const services = [
     isFeatured: true,
     seo: {
       title: 'Bond Cleaning Brisbane | End of Lease Cleaning | Cleaning Duck Australia',
-      description: 'Professional bond cleaning in Brisbane, Logan, Ipswich & Gold Coast. REIQ-approved checklist, bond-back guarantee. Free quote — call 0412 664 540.',
+      description: 'Professional bond cleaning in Brisbane, Logan, Ipswich & Gold Coast. REIQ-approved checklist, bond-back guarantee. Free quote — call 0430 614 643.',
       keywords: ['bond cleaning Brisbane', 'end of lease cleaning Brisbane', 'bond back cleaning', 'end of tenancy cleaning Brisbane'],
       speakable: ['.service-description', '.service-features'],
     },
@@ -136,7 +136,7 @@ const services = [
     isFeatured: true,
     seo: {
       title: 'Exterior House Washing Brisbane | Soft Wash Service | Cleaning Duck Australia',
-      description: 'Professional exterior house washing in Brisbane from $599. Soft wash technology removes mould, algae & grime safely. Free quote — call 0412 664 540.',
+      description: 'Professional exterior house washing in Brisbane from $599. Soft wash technology removes mould, algae & grime safely. Free quote — call 0430 614 643.',
       keywords: ['house washing Brisbane', 'exterior cleaning Brisbane', 'soft wash Brisbane', 'mould removal Brisbane'],
     },
   },
@@ -167,7 +167,7 @@ const services = [
     isFeatured: true,
     seo: {
       title: 'Roof Cleaning Brisbane | Soft Wash Roof Cleaning from $999 | Cleaning Duck Australia',
-      description: 'Professional roof cleaning in Brisbane from $999. Soft wash, manual lichen scrubbing & biodegradable mould treatment. Free quote — call 0412 664 540.',
+      description: 'Professional roof cleaning in Brisbane from $999. Soft wash, manual lichen scrubbing & biodegradable mould treatment. Free quote — call 0430 614 643.',
       keywords: ['roof cleaning Brisbane', 'roof wash Brisbane', 'lichen removal roof Brisbane', 'soft wash roof Brisbane'],
     },
   },
@@ -256,7 +256,7 @@ const services = [
     isFeatured: false,
     seo: {
       title: 'Solar Panel Cleaning Brisbane | From $18 Per Panel | Cleaning Duck Australia',
-      description: 'Professional solar panel cleaning in Brisbane from $18/panel. Pure water rinse restores up to 25% lost efficiency. Free quote — call 0412 664 540.',
+      description: 'Professional solar panel cleaning in Brisbane from $18/panel. Pure water rinse restores up to 25% lost efficiency. Free quote — call 0430 614 643.',
       keywords: ['solar panel cleaning Brisbane', 'solar cleaning Brisbane', 'solar panel wash Brisbane', 'solar cleaning Gold Coast'],
     },
   },
@@ -331,7 +331,7 @@ const faqs = [
   },
   {
     question: 'How do I get a quote?',
-    answer: 'Getting a quote is easy! You can submit a request through our online quote form, call us on 0412 664 540 or 0430 614 643, or send us an email. We typically respond within 2 business hours.',
+    answer: 'Getting a quote is easy! You can submit a request through our online quote form, call us on 0430 614 643, or send us an email. We typically respond within 2 business hours.',
     category: 'booking',
     order: 2,
     isActive: true,
@@ -391,8 +391,7 @@ const siteSettings = [
   { key: 'site_name', value: 'Cleaning Duck Australia', group: 'general', label: 'Site Name', isPublic: true },
   { key: 'site_tagline', value: 'Professional Cleaning Services In Brisbane & All over QLD', group: 'general', label: 'Tagline', isPublic: true },
   { key: 'abn', value: '89 383 045 240', group: 'general', label: 'ABN', isPublic: true },
-  { key: 'phone_primary', value: '0412 664 540', group: 'contact', label: 'Primary Phone', isPublic: true },
-  { key: 'phone_secondary', value: '0430 614 643', group: 'contact', label: 'Secondary Phone', isPublic: true },
+  { key: 'phone_primary', value: '0430 614 643', group: 'contact', label: 'Primary Phone', isPublic: true },
   { key: 'email_contact', value: 'cleaningduckaustralia@gmail.com', group: 'contact', label: 'Contact Email', isPublic: true },
   { key: 'address', value: 'Brisbane, Queensland, Australia', group: 'contact', label: 'Address', isPublic: true },
   { key: 'service_areas', value: ['Brisbane', 'Logan', 'Ipswich', 'Gold Coast', 'Sunshine Coast'], group: 'general', label: 'Service Areas', isPublic: true },
@@ -405,10 +404,10 @@ const siteSettings = [
   { key: 'stats_clients', value: '2500+', group: 'general', label: 'Satisfied Clients', isPublic: true },
   { key: 'facebook_url', value: '', group: 'social', label: 'Facebook URL', isPublic: true },
   { key: 'instagram_url', value: '', group: 'social', label: 'Instagram URL', isPublic: true },
-  { key: 'whatsapp_number', value: '61412664540', group: 'contact', label: 'WhatsApp Number (international)', isPublic: true },
+  { key: 'whatsapp_number', value: '61430614643', group: 'contact', label: 'WhatsApp Number (international)', isPublic: true },
   { key: 'footer_text', value: '© 2024 Cleaning Duck Australia. ABN 89 383 045 240. All rights reserved.', group: 'general', label: 'Footer Copyright Text', isPublic: true },
   { key: 'seo_default_title', value: 'Professional Cleaning Services In Brisbane | Free Quote | Cleaning Duck Australia', group: 'seo', label: 'Default SEO Title', isPublic: false },
-  { key: 'seo_default_description', value: 'Need reliable cleaning services in Brisbane? We offer carpet, roof, upholstery & house cleaning. Get your free quote today. Call 0412 664 540.', group: 'seo', label: 'Default Meta Description', isPublic: false },
+  { key: 'seo_default_description', value: 'Need reliable cleaning services in Brisbane? We offer carpet, roof, upholstery & house cleaning. Get your free quote today. Call 0430 614 643.', group: 'seo', label: 'Default Meta Description', isPublic: false },
 ];
 
 // ─── Seeder Function ──────────────────────────────────────────────────────────

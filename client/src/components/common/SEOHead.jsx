@@ -5,7 +5,7 @@ import { BRAND } from '../../utils/constants';
 const SITE_NAME = 'Cleaning Duck Australia';
 const BASE_URL = 'https://cleaningduckaustralia.com.au';
 const DEFAULT_OG_IMAGE = `${BASE_URL}/images/exterior-house.jpg`;
-const DEFAULT_DESC = 'Professional cleaning services in Brisbane & All over QLD. Carpet cleaning, bond cleaning, roof washing, upholstery & pressure cleaning. 5-star rated. Free quote: 0412 664 540.';
+const DEFAULT_DESC = 'Professional cleaning services in Brisbane & All over QLD. Carpet cleaning, bond cleaning, roof washing, upholstery & pressure cleaning. 5-star rated. Free quote: 0430 614 643.';
 
 /**
  * Safely build a page title WITHOUT double-appending " | Cleaning Duck Australia".
@@ -108,7 +108,7 @@ const SEOHead = ({
       <meta name="revisit-after" content="7 days" />
 
       {/* Business info for AI crawlers */}
-      <meta name="business:contact_data:phone_number" content="+61412664540" />
+      <meta name="business:contact_data:phone_number" content="+61430614643" />
       <meta name="business:contact_data:locality" content="Brisbane" />
       <meta name="business:contact_data:region" content="QLD" />
       <meta name="business:contact_data:country_name" content="Australia" />

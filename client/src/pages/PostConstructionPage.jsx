@@ -29,7 +29,7 @@ const PostConstructionPage = () => {
     <>
       <SEOHead
         title="Post Construction Cleaning Brisbane | Cleaning Duck Australia"
-        description="Professional post-construction cleaning in Brisbane & All over QLD. We remove dust, debris, paint and adhesives — leaving your new build or renovation spotless. Call 0412 664 540."
+        description="Professional post-construction cleaning in Brisbane & All over QLD. We remove dust, debris, paint and adhesives — leaving your new build or renovation spotless. Call 0430 614 643."
         keywords={['post construction cleaning Brisbane', 'builder clean Brisbane', 'after renovation cleaning Brisbane', 'new build cleaning Brisbane']}
         canonical="/services/post-construction-cleaning"
       />

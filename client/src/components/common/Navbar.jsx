@@ -188,14 +188,10 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-2 xl:gap-3">
-            <div className="hidden xl:flex flex-col gap-1 items-end mr-2">
+            <div className="hidden xl:flex items-center mr-2">
               <a href={BRAND.phoneHref.primary} className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
                 <span className="w-5 h-5 rounded-full bg-white/15 flex items-center justify-center text-xs">📞</span>
                 {BRAND.phone.primary}
-              </a>
-              <a href={BRAND.phoneHref.secondary} className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
-                <span className="w-5 h-5 rounded-full bg-white/15 flex items-center justify-center text-xs">📞</span>
-                {BRAND.phone.secondary}
               </a>
             </div>
             <Link to="/request-quote" className="btn-primary btn-sm whitespace-nowrap">
@@ -288,13 +284,6 @@ const Navbar = () => {
                 >
                   <span className="text-lg">📞</span>
                   {BRAND.phone.primary}
-                </a>
-                <a
-                  href={BRAND.phoneHref.secondary}
-                  className="flex items-center justify-center gap-2 py-3 rounded-xl border border-white/30 text-white font-medium hover:bg-white/15 transition-colors"
-                >
-                  <span className="text-lg">📞</span>
-                  {BRAND.phone.secondary}
                 </a>
                 <Link to="/request-quote" className="btn-primary w-full text-center py-3 rounded-xl block">
                   Get Free Quote
