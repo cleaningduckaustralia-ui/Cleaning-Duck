@@ -98,7 +98,7 @@ const WhyChooseUs = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="absolute bottom-4 right-4 glass-dark rounded-2xl px-4 py-3 shadow-lg border border-white/10"
               >
-                <div className="text-2xl font-bold text-white">700+</div>
+                <div className="text-2xl font-bold text-white">745+</div>
                 <div className="text-white/60 text-xs">Satisfied Clients</div>
                 <div className="flex gap-0.5 mt-1">
                   {'★★★★★'.split('').map((s, i) => <span key={i} className="text-yellow-400 text-sm">{s}</span>)}

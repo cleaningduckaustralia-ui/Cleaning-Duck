@@ -22,9 +22,9 @@ export const BRAND = {
 };
 
 export const STATS = [
-  { value: 700, suffix: '+', label: 'Jobs Completed' },
+  { value: 745, suffix: '+', label: 'Jobs Completed' },
   { value: 10,   suffix: '+', label: 'Expert Technicians' },
-  { value: 700, suffix: '+', label: 'Satisfied Clients' },
+  { value: 745, suffix: '+', label: 'Satisfied Clients' },
   { value: 5,    suffix: '★', label: 'Google Rating' },
 ];
 

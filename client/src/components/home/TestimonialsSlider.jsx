@@ -90,7 +90,7 @@ const TestimonialsSlider = () => {
       <div className="container-custom">
         <div className="text-center mb-14">
           <span className="section-label">Customer Reviews</span>
-          <h2 className="section-title mt-2">Trusted by 700+ Happy Clients</h2>
+          <h2 className="section-title mt-2">Trusted by 745+ Happy Clients</h2>
           <p className="section-subtitle mx-auto mt-4">
             Don't just take our word for it — here's what our clients across Brisbane and All over QLD say.
           </p>

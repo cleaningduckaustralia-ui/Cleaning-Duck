@@ -270,7 +270,7 @@ const ServiceDetailPage = () => {
             {[
               { icon: '⭐', text: '5-Star Rated' },
               { icon: '🛡️', text: 'Fully Insured' },
-              { icon: '✅', text: '700+ Jobs Done' },
+              { icon: '✅', text: '745+ Jobs Done' },
               { icon: '⚡', text: 'Same-Day Available' },
             ].map(({ icon, text }) => (
               <div key={text} className="flex items-center gap-2 text-white text-sm font-medium">

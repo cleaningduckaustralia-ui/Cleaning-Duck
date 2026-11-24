@@ -58,7 +58,7 @@ const areas = [
 
 const stats = [
   { value: '315+', label: 'Suburbs Covered' },
-  { value: '700+', label: 'Jobs Completed' },
+  { value: '745+', label: 'Jobs Completed' },
   { value: '5 ★', label: 'Google Rating' },
 ];
 

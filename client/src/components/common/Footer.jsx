@@ -22,7 +22,7 @@ const Footer = () => {
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-5">
               Trusted cleaning professionals serving Brisbane and All over QLD since 2024.
-              700+ satisfied clients. 5-star Google rated.
+              745+ satisfied clients. 5-star Google rated.
             </p>
             {/* Social icons */}
             <div className="flex gap-3">

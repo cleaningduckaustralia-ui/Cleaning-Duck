@@ -11,7 +11,7 @@ const fallbackFAQs = [
   { _id: '3', question: 'Are you insured?', answer: 'Yes, Cleaning Duck Australia is fully insured with public liability insurance. Our team members are background-checked and professionally trained.' },
   { _id: '4', question: 'Do you charge extra for weekend or evening bookings?', answer: 'We offer flexible time slots including morning, evening, and weekends. Please contact us for weekend and after-hours pricing.' },
   { _id: '5', question: 'Do you bring your own cleaning equipment and products?', answer: "Yes! We arrive fully equipped with all professional cleaning products and commercial-grade equipment. You don't need to provide anything." },
-  { _id: '6', question: 'How long have you been operating?', answer: 'Cleaning Duck Australia has been serving All over QLD since 2024. We are proud to be trusted by over 700+ happy clients and have completed more than 700+ jobs.' },
+  { _id: '6', question: 'How long have you been operating?', answer: 'Cleaning Duck Australia has been serving All over QLD since 2024. We are proud to be trusted by over 745+ happy clients and have completed more than 745+ jobs.' },
 ];
 
 const FAQItem = ({ faq, isOpen, onToggle }) => (
