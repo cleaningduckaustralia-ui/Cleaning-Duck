@@ -4,22 +4,30 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { publicAsset } from '../../utils/pathHelpers';
 import { BRAND } from '../../utils/constants';
 
+// In-memory flag so navigating between pages within the SPA doesn't repeatedly trigger the pop-up
+let hasShownInCurrentSession = false;
+
 const AnniversaryModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Show on website load (once per browser session)
-    const seen = sessionStorage.getItem('cleaning_duck_anniversary_seen');
-    if (!seen) {
+    // Clear any previous persistent session suppression so all users see it on entrance/refresh
+    try {
+      sessionStorage.removeItem('cleaning_duck_anniversary_seen');
+    } catch {
+      // Ignore if storage is inaccessible
+    }
+
+    if (!hasShownInCurrentSession) {
       const timer = setTimeout(() => {
         setIsOpen(true);
-      }, 600);
+      }, 400);
       return () => clearTimeout(timer);
     }
   }, []);
 
   const handleClose = () => {
-    sessionStorage.setItem('cleaning_duck_anniversary_seen', 'true');
+    hasShownInCurrentSession = true;
     setIsOpen(false);
   };
 
@@ -36,14 +44,14 @@ const AnniversaryModal = () => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 bg-black/70 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100]"
             onClick={handleClose}
             aria-hidden="true"
           />
@@ -57,7 +65,7 @@ const AnniversaryModal = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 15 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-orange-200/50 z-10 my-auto"
+            className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-orange-200/50 z-[101] my-auto"
           >
             {/* Close Button */}
             <button
