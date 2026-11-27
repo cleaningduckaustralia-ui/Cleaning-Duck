@@ -2,6 +2,10 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { publicAsset } from '../../utils/pathHelpers';
 
+// In-memory flag so internal route navigation doesn't re-trigger intro,
+// but refreshing/opening the website always displays it
+let hasPlayedInAppSession = false;
+
 const MarvelIntro = ({ onFinish }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [isZooming, setIsZooming] = useState(false);
@@ -12,9 +16,12 @@ const MarvelIntro = ({ onFinish }) => {
   const transitionTriggeredRef = useRef(false);
 
   useEffect(() => {
-    // Check if user already saw the intro in this tab session
-    const seen = sessionStorage.getItem('cleaning_duck_intro_seen');
-    if (seen === 'true') {
+    // Clear any previous persistent session block
+    try {
+      sessionStorage.removeItem('cleaning_duck_intro_seen');
+    } catch {}
+
+    if (hasPlayedInAppSession) {
       setIsVisible(false);
       if (onFinish) onFinish();
       return;
@@ -27,47 +34,55 @@ const MarvelIntro = ({ onFinish }) => {
     };
   }, [onFinish]);
 
-  // Attempt to autoplay UNMUTED by default
-  useEffect(() => {
-    if (!isVisible) return;
-
+  const startPlayback = () => {
     const video = videoRef.current;
-    if (video) {
-      video.muted = false;
-      setIsMuted(false);
-      video.play()
-        .then(() => setHasStarted(true))
+    if (!video) return;
+
+    // Attempt unmuted play first
+    video.muted = false;
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          setIsMuted(false);
+          setHasStarted(true);
+        })
         .catch(() => {
-          // If browser policy blocks unmuted autoplay without prior user interaction,
-          // fallback to muted playback so the intro doesn't freeze, and allow tap anywhere to unmute
-          setIsMuted(true);
+          // If browser autoplay policy blocks unmuted audio without prior interaction,
+          // play with mute enabled so video doesn't freeze
           video.muted = true;
-          video.play().then(() => setHasStarted(true)).catch(() => {});
+          setIsMuted(true);
+          video.play()
+            .then(() => setHasStarted(true))
+            .catch((err) => {
+              console.warn('Playback error:', err);
+            });
         });
     }
+  };
+
+  useEffect(() => {
+    if (!isVisible) return;
+    startPlayback();
   }, [isVisible]);
 
-  // Listen for replay requests
+  // Listen for replay requests from floating button
   useEffect(() => {
     const handleReplay = () => {
-      sessionStorage.removeItem('cleaning_duck_intro_seen');
+      hasPlayedInAppSession = false;
       transitionTriggeredRef.current = false;
       setIsZooming(false);
       setProgress(0);
-      setIsMuted(false);
       setIsVisible(true);
       document.body.style.overflow = 'hidden';
-      if (videoRef.current) {
-        videoRef.current.currentTime = 0;
-        videoRef.current.muted = false;
-        videoRef.current.play().catch(() => {
-          if (videoRef.current) {
-            videoRef.current.muted = true;
-            setIsMuted(true);
-            videoRef.current.play().catch(() => {});
-          }
-        });
-      }
+
+      setTimeout(() => {
+        if (videoRef.current) {
+          videoRef.current.currentTime = 0;
+          startPlayback();
+        }
+      }, 100);
     };
 
     window.addEventListener('replay-intro', handleReplay);
@@ -81,9 +96,9 @@ const MarvelIntro = ({ onFinish }) => {
     // Trigger Marvel-style dramatic camera zoom into the logo
     setIsZooming(true);
 
-    // After the zoom & flash effect (approx 900ms), reveal the website
+    // Reveal the website after zoom & flash effect (950ms)
     setTimeout(() => {
-      sessionStorage.setItem('cleaning_duck_intro_seen', 'true');
+      hasPlayedInAppSession = true;
       setIsVisible(false);
       document.body.style.overflow = '';
       if (onFinish) onFinish();
@@ -98,14 +113,15 @@ const MarvelIntro = ({ onFinish }) => {
     const pct = (video.currentTime / video.duration) * 100;
     setProgress(pct);
 
-    // Trigger the Marvel zoom into the logo ~1.2s before the end of the video
+    // Trigger Marvel zoom ~1.2s before the end of the video
     if (video.duration > 3 && video.currentTime >= video.duration - 1.2) {
       triggerZoomAndFinish();
     }
   };
 
-  const handleSkip = () => {
-    sessionStorage.setItem('cleaning_duck_intro_seen', 'true');
+  const handleSkip = (e) => {
+    if (e) e.stopPropagation();
+    hasPlayedInAppSession = true;
     setIsVisible(false);
     document.body.style.overflow = '';
     if (videoRef.current) {
@@ -115,18 +131,27 @@ const MarvelIntro = ({ onFinish }) => {
     window.dispatchEvent(new CustomEvent('intro-completed'));
   };
 
-  const toggleSound = () => {
+  const toggleSound = (e) => {
+    if (e) e.stopPropagation();
     if (videoRef.current) {
       videoRef.current.muted = !isMuted;
       setIsMuted(!isMuted);
     }
   };
 
-  const handleContainerClick = (e) => {
-    // If clicked anywhere on the intro while muted, unmute
-    if (isMuted && videoRef.current && !e.target.closest('button')) {
-      videoRef.current.muted = false;
-      setIsMuted(false);
+  const handleScreenClick = (e) => {
+    // If clicked anywhere on the intro screen while muted, immediately unmute and ensure playing
+    if (e.target.closest('button')) return;
+
+    const video = videoRef.current;
+    if (video) {
+      if (video.paused) {
+        video.play().catch(() => {});
+      }
+      if (video.muted) {
+        video.muted = false;
+        setIsMuted(false);
+      }
     }
   };
 
@@ -140,23 +165,11 @@ const MarvelIntro = ({ onFinish }) => {
         animate={{ opacity: isZooming ? [1, 1, 0] : 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6 }}
-        onClick={handleContainerClick}
+        onClick={handleScreenClick}
         className="fixed inset-0 z-[9999] bg-neutral-950 flex items-center justify-center overflow-hidden select-none cursor-pointer"
       >
-        {/* Dynamic Ambient Background Blur for Desktop screens */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40 blur-3xl scale-125">
-          <video
-            src={publicAsset('/videos/intro.mp4')}
-            muted
-            loop
-            playsInline
-            autoPlay
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Cinematic Vignette Overlay */}
-        <div className="absolute inset-0 bg-radial-gradient pointer-events-none z-10 bg-[radial-gradient(circle_at_center,transparent_30%,rgba(0,0,0,0.85)_100%)]" />
+        {/* Cinematic Ambient Glow Background (Ultra-light, No duplicate video) */}
+        <div className="absolute inset-0 bg-radial-gradient pointer-events-none z-10 bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.18)_0%,rgba(0,0,0,0.92)_75%)]" />
 
         {/* Top Control Bar */}
         <div className="absolute top-4 sm:top-6 inset-x-4 sm:inset-x-8 z-30 flex items-center justify-between">
@@ -172,7 +185,7 @@ const MarvelIntro = ({ onFinish }) => {
             <button
               onClick={toggleSound}
               type="button"
-              className="px-3.5 py-1.5 rounded-full bg-black/60 hover:bg-black/85 text-white/90 hover:text-white border border-white/20 hover:border-orange-500/60 backdrop-blur-md text-xs font-medium transition-all duration-200 flex items-center gap-1.5 shadow-lg"
+              className="px-3.5 py-1.5 rounded-full bg-black/70 hover:bg-black/90 text-white/90 hover:text-white border border-white/20 hover:border-orange-500/60 backdrop-blur-md text-xs font-medium transition-all duration-200 flex items-center gap-1.5 shadow-lg active:scale-95"
               title={isMuted ? "Unmute audio" : "Mute audio"}
             >
               {isMuted ? (
@@ -209,12 +222,11 @@ const MarvelIntro = ({ onFinish }) => {
           animate={
             isZooming
               ? {
-                  scale: [1, 1.35, 6, 18],
-                  rotate: [0, 0.5, -0.5, 0],
+                  scale: [1, 1.4, 6, 18],
                   filter: [
                     'brightness(1) contrast(1)',
-                    'brightness(1.5) contrast(1.2) blur(0px)',
-                    'brightness(2.5) contrast(1.5) blur(4px)',
+                    'brightness(1.6) contrast(1.2) blur(0px)',
+                    'brightness(2.8) contrast(1.5) blur(4px)',
                     'brightness(5) contrast(2) blur(12px)',
                   ],
                 }
@@ -226,11 +238,13 @@ const MarvelIntro = ({ onFinish }) => {
           }}
           className="relative z-20 w-full h-full flex items-center justify-center origin-center"
         >
-          <div className="relative w-full h-full max-w-[440px] max-h-[880px] sm:rounded-2xl sm:overflow-hidden sm:shadow-[0_0_60px_rgba(249,115,22,0.3)] sm:border sm:border-white/10 flex items-center justify-center bg-black">
+          <div className="relative w-full h-full max-w-[440px] max-h-[880px] sm:rounded-2xl sm:overflow-hidden sm:shadow-[0_0_80px_rgba(249,115,22,0.35)] sm:border sm:border-white/10 flex items-center justify-center bg-black">
             <video
               ref={videoRef}
               src={publicAsset('/videos/intro.mp4')}
+              autoPlay
               playsInline
+              webkit-playsinline="true"
               preload="auto"
               onTimeUpdate={handleTimeUpdate}
               onEnded={triggerZoomAndFinish}
@@ -239,7 +253,16 @@ const MarvelIntro = ({ onFinish }) => {
           </div>
         </motion.div>
 
-        {/* Marvel Light Flash Burst (Triggers during zoom) */}
+        {/* Unmute floating banner if browser autoplay policy forced mute */}
+        {isMuted && !isZooming && (
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
+            <div className="bg-orange-600/95 text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold tracking-wide flex items-center gap-2 shadow-2xl border border-white/20 animate-bounce">
+              <span>🔊 Tap anywhere to unmute sound</span>
+            </div>
+          </div>
+        )}
+
+        {/* Marvel Light Flash Burst */}
         {isZooming && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -247,18 +270,6 @@ const MarvelIntro = ({ onFinish }) => {
             transition={{ duration: 0.9, times: [0, 0.4, 0.7, 1] }}
             className="absolute inset-0 z-40 bg-gradient-to-tr from-orange-400 via-white to-amber-200 pointer-events-none mix-blend-screen"
           />
-        )}
-
-        {/* Unmute prompt if browser policy forced muted state */}
-        {isMuted && !isZooming && (
-          <div
-            onClick={toggleSound}
-            className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 cursor-pointer"
-          >
-            <div className="bg-orange-600/90 hover:bg-orange-500 text-white px-4 py-2 rounded-full text-xs font-bold tracking-wide flex items-center gap-2 shadow-xl border border-white/20 animate-bounce transition-transform hover:scale-105">
-              <span>🔊 Tap anywhere for Sound</span>
-            </div>
-          </div>
         )}
 
         {/* Bottom Progress Bar */}
