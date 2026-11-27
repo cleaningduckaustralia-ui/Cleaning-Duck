@@ -69,9 +69,10 @@ const Hero = () => {
             <img
               src={heroSlides[current].url}
               alt={heroSlides[current].alt}
-              className="w-full h-full object-cover"
-              loading="eager"
-              fetchPriority="high"
+              className="w-full h-full object-cover transform-gpu"
+              loading={current === 0 ? "eager" : "lazy"}
+              fetchPriority={current === 0 ? "high" : "low"}
+              decoding="async"
               onError={(e) => { e.target.src = publicAsset('/images/exterior-house.jpg'); }}
             />
           </motion.div>
