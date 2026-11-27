@@ -2,6 +2,16 @@ import { BRAND } from '../../utils/constants';
 
 const FloatingButtons = () => (
   <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3" aria-label="Quick contact buttons">
+    {/* Replay Intro */}
+    <button
+      onClick={() => window.dispatchEvent(new CustomEvent('replay-intro'))}
+      aria-label="Watch intro video"
+      className="fab bg-neutral-900/90 hover:bg-neutral-900 text-orange-400 border border-orange-500/40 shadow-xl hover:scale-110 transition-transform backdrop-blur-sm"
+      title="Watch Cinematic Intro"
+    >
+      <span className="text-xl">🎬</span>
+    </button>
+
     {/* WhatsApp */}
     <a
       href={BRAND.whatsapp}

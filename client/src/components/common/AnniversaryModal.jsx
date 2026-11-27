@@ -18,12 +18,27 @@ const AnniversaryModal = () => {
       // Ignore if storage is inaccessible
     }
 
-    if (!hasShownInCurrentSession) {
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-      }, 400);
+    const showModal = () => {
+      if (!hasShownInCurrentSession) {
+        return setTimeout(() => {
+          setIsOpen(true);
+        }, 600);
+      }
+    };
+
+    // If intro has already been seen in this session, show modal after brief delay
+    const introSeen = sessionStorage.getItem('cleaning_duck_intro_seen');
+    if (introSeen === 'true') {
+      const timer = showModal();
       return () => clearTimeout(timer);
     }
+
+    // Otherwise, wait for Marvel intro to finish or be skipped
+    const onIntroComplete = () => {
+      showModal();
+    };
+    window.addEventListener('intro-completed', onIntroComplete, { once: true });
+    return () => window.removeEventListener('intro-completed', onIntroComplete);
   }, []);
 
   const handleClose = () => {
