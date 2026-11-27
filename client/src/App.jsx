@@ -7,7 +7,7 @@ import Footer from './components/common/Footer';
 import FloatingButtons from './components/common/FloatingButtons';
 import ScrollToTop from './components/common/ScrollToTop';
 import AnniversaryModal from './components/common/AnniversaryModal';
-import MarvelIntro from './components/common/MarvelIntro';
+import IntroVideoModal from './components/common/IntroVideoModal';
 import './styles/index.css';
 
 // Public pages (eager loaded for LCP)
@@ -51,7 +51,7 @@ const PublicLayout = ({ children }) => {
       <Footer />
       <FloatingButtons />
       <AnniversaryModal />
-      <MarvelIntro />
+      <IntroVideoModal />
     </>
   );
 };

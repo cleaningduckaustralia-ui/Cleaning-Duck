@@ -22,23 +22,17 @@ const AnniversaryModal = () => {
       if (!hasShownInCurrentSession) {
         return setTimeout(() => {
           setIsOpen(true);
-        }, 600);
+        }, 300);
       }
     };
 
-    // If intro has already been seen in this session, show modal after brief delay
-    const introSeen = sessionStorage.getItem('cleaning_duck_intro_seen');
-    if (introSeen === 'true') {
-      const timer = showModal();
-      return () => clearTimeout(timer);
-    }
-
-    // Otherwise, wait for Marvel intro to finish or be skipped
-    const onIntroComplete = () => {
+    // Listen for event from IntroVideoModal (when user closes video or video ends)
+    const handleOpen = () => {
       showModal();
     };
-    window.addEventListener('intro-completed', onIntroComplete, { once: true });
-    return () => window.removeEventListener('intro-completed', onIntroComplete);
+
+    window.addEventListener('open-anniversary-modal', handleOpen);
+    return () => window.removeEventListener('open-anniversary-modal', handleOpen);
   }, []);
 
   const handleClose = () => {
